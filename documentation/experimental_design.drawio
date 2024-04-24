@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" modified="2023-08-22T21:05:36.831Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" version="21.6.8" etag="UC35kJflaeazq_AHQHs7" type="device">
+  <diagram id="yLK4YPeAoCoCnFe4qMYU" name="Page-1">
+    <mxGraphModel dx="318" dy="216" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2uRe6uCk1tFSP6qTcgU9-24" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="980" y="391" width="30" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="18" style="edgeStyle=none;html=1;" parent="1" source="2" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2" value="&lt;b&gt;Survey Part I&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. AI &amp;amp; Fake news detection&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. Information literacy&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3. Information-seeking behaviour&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="453" y="224" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="&lt;b&gt;Survey Part II&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. AI sytem evaluation&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. News Ver. Dashboard evaluation&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3. Demographics&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="453" y="524" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;b&gt;Experimental part (News Verification Dashboard)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="203" y="334" width="720" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="12" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5" target="8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="&lt;b&gt;State I&lt;/b&gt;&lt;br&gt;News item &amp;amp; truthfulness input&lt;br&gt;(&quot;Read and Rate&quot;)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="213" y="374" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="13" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="&lt;b&gt;State II&lt;/b&gt;&lt;br&gt;News item &amp;amp; AI system output&lt;br&gt;(&quot;Inform&quot;)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="374" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="14" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="&lt;b&gt;State III&lt;/b&gt;&lt;br&gt;News item &amp;amp; AI system output* &amp;amp; truthfulness input&lt;br&gt;(&quot;Repeat Rating&quot;)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="493" y="374" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="15" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="&lt;b&gt;Control question&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="653" y="374" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="&lt;b&gt;Local evaluation&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;Trust,&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Exp. usefulness,&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Understandability&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="793" y="374" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="22" style="edgeStyle=none;html=1;entryX=0.931;entryY=-0.001;entryDx=0;entryDy=0;strokeColor=#000000;exitX=0.93;exitY=1.008;exitDx=0;exitDy=0;dashed=1;entryPerimeter=0;exitPerimeter=0;" parent="1" source="4" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="873" y="514" />
+              <mxPoint x="963" y="514" />
+              <mxPoint x="963" y="314" />
+              <mxPoint x="873" y="314" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="Repeat for&amp;nbsp;&lt;br&gt;each news item" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=2" parent="22" vertex="1" connectable="0">
+          <mxGeometry x="0.05" y="1" relative="1" as="geometry">
+            <mxPoint x="5" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

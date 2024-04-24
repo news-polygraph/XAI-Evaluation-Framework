@@ -1,0 +1,28 @@
+{
+  "name": "XAIExperiment_beta3",
+  "title": "XAI Experiment",
+  "description": "<p>The experiment is conducted by the <b>***</b>. The goal of the study is to gain knowledge about the usefulness of explainability approaches for the use case of fake news detection. Your task will be answering several questions and rate the <b>usefulness of different explanations</b> given by an <b>Artificial Intelligence</b> system for detecting fake news.</p>",
+  "category": "SURVEY",
+  "maxAssignments": 10,
+  "assignmentDurationInSec": 1800,
+  "averageAssignmentDurationInSec": 900,
+  "language": "EN",
+  "autoApproval": {
+    "autoApprovalDelayInSec": 432000,
+    "autoRejectionDelayInSec": 172800
+  },
+  "settings": {
+    "showTimer": false,
+    "logType": "FINE"
+  },
+  "taskGenerator": {
+    "repetitions": 10
+  },
+  "rewards": [
+    {
+      "currency": "EUR",
+      "amount": 5.5
+    }
+  ],
+  "html": ""
+}
