@@ -11,6 +11,7 @@
 
 If you find this toolkit or its companion paper "Evaluating Human-Centered AI Explanations: Introduction of an XAI Evaluation Framework for Fact-Checking" interesting or useful in your research, use the following Bibtex annotation to cite us:
 
+```
 @inproceedings{schmitt_mad,
     author = {Schmitt, Vera and Csomor, Balazs and Meyer, Joachim and Villa-Arenas, Luis-Felipe and Jakob, Charlott and Polzehl, Tim and Möller, Sebastian},
     title = {Evaluating Human-Centered AI Explanations: Introduction of an XAI Evaluation Framework for Fact-Checking},
@@ -23,6 +24,7 @@ If you find this toolkit or its companion paper "Evaluating Human-Centered AI Ex
     location = {Phuket, Thailand},
     series = {MAD '24}
     }
+```
 
 ## Web App implementation
 
