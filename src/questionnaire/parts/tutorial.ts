@@ -5,7 +5,7 @@ import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import tutorialText from "./tutorial-text";
 import getRandomClassNames from "@/helper/get-randomized-classnames";
 
-let exampleItem: NewsItem = {...exampleNewsItem as NewsItem, randomizedImages: getRandomClassNames()};
+let exampleItem: NewsItem = {...exampleNewsItem as NewsItem, randomizedImages: getRandomClassNames(exampleNewsItem as NewsItem)};
 //let exampleNewsItem: NewsItem = {...exampleNewsItem, randomizedImages: getRandomClassNames()}
 
 const getTutorialPageForStep = (

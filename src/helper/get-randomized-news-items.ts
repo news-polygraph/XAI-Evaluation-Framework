@@ -22,7 +22,7 @@ const getRandomizedNewsItems = (
       groupItems.sort(() => Math.random() - 0.5);
 
       groupItems.forEach((item) => {
-        item.randomizedImages = getRandomClassNames();
+        item.randomizedImages = getRandomClassNames(item);
       })
 
       return groupItems;
@@ -45,12 +45,12 @@ const getRandomizedNewsItems = (
       // groupItems.splice(5, 0, trueNegative as NewsItem);
       
       console.assert(
-        groupItems.length === 6,
+        groupItems.length === 9,
         "There should be 6 items in the main part"
         );
         
         groupItems.forEach((item) => {
-          item.randomizedImages = getRandomClassNames();
+          item.randomizedImages = getRandomClassNames(item);
         })
         
       return groupItems;
@@ -81,7 +81,7 @@ const getRandomizedNewsItems = (
       );
 
       groupItems.forEach((item) => {
-        item.randomizedImages = getRandomClassNames();
+        item.randomizedImages = getRandomClassNames(item);
       })
       
       return groupItems;

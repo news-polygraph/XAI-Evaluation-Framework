@@ -6,10 +6,11 @@ import classUrls from "@/components/urls";
 
 // Function to extract the classname from the provided format
 const extractClassName = (value: string): string => {
-  // Split by underscore and take the second and third part
+  // Split by underscore and take the first four parts
   const parts = value.split('_');
-  return `${parts[1]}_${parts[2]}_${parts[3]}`;
+  return `${parts[1]}_${parts[2]}_${parts[3]}_${parts[4]}_`;
 };
+
 
 const getPagesForNewsItem = (
   newsItem: NewsItem,

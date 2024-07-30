@@ -9,7 +9,7 @@ type Paths = {
 
 const getRandomElement = <T>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 
-const getRandomClassNames = (): Paths => {
+const getRandomClassNames = (item: NewsItem): Paths => {
   const classNames: Paths = {
     leaning: '',
     parties: '',
@@ -17,16 +17,19 @@ const getRandomClassNames = (): Paths => {
   };
 
   // Get all class names from styles object
-  const allClassNames = Object.keys(styles);
+  // const allClassNames = Object.keys(styles);
 
-  // const id = item.id
+  const idString = `item_${item.id}_`;
+
+  const idClassNames = Object.keys(styles).filter(className => className.includes(idString));
 
   // Filter and map to populate classNames with random class names
-  classNames.leaning = getRandomElement(allClassNames.filter(className => className.startsWith('leaning')).map(className => styles[className]));
-  classNames.parties = getRandomElement(allClassNames.filter(className => className.startsWith('parties')).map(className => styles[className]));
-  classNames.ideology = getRandomElement(allClassNames.filter(className => className.startsWith('ideology')).map(className => styles[className]));
+  classNames.leaning = getRandomElement(idClassNames.filter(className => className.startsWith('leaning')).map(className => styles[className]));
+  classNames.parties = getRandomElement(idClassNames.filter(className => className.startsWith('parties')).map(className => styles[className]));
+  classNames.ideology = getRandomElement(idClassNames.filter(className => className.startsWith('ideology')).map(className => styles[className]));
 
   return classNames;
 };
 
 export default getRandomClassNames;
+
