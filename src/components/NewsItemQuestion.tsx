@@ -4,6 +4,12 @@ import { Question, Serializer, ElementFactory } from "survey-core";
 import { SurveyElementBase, ReactQuestionFactory } from "survey-react-ui";
 import NewsItemComponent from "./NewsItemComponent";
 
+type Paths = {
+  leaning: string,
+  parties: string,
+  ideology: string
+};
+
 const QUESTION_TYPE = "newsitem";
 
 export const registerMyQuestion = () => {
@@ -53,6 +59,7 @@ export class NewsItemQuestion extends SurveyElementBase<
     return this.props.question;
   }
 
+  // const classNames: Paths = getRandomClassNames();
   render() {
     if (!this.question) return null;
     return (
@@ -67,6 +74,7 @@ export class NewsItemQuestion extends SurveyElementBase<
         tutorialTooltip={this.question.tutorialTooltip as any}
         defaultRatingValue={this.question.value}
         showError={this.question.hasVisibleErrors}
+        randomizedImages={this.question.newsitem.randomizedImages}
       />
     );
   }

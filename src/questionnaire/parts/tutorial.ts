@@ -1,8 +1,12 @@
-import exampleNewsItem from "@/data/example-news-item.json";
 import NewsItem from "@/model/news-item";
+import exampleNewsItem from "@/data/example-news-item.json";
 import { TutorialTooltipStep } from "@/model/tutorial-tooltip-step";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import tutorialText from "./tutorial-text";
+import getRandomClassNames from "@/helper/get-randomized-classnames";
+
+let exampleItem: NewsItem = {...exampleNewsItem as NewsItem, randomizedImages: getRandomClassNames()};
+//let exampleNewsItem: NewsItem = {...exampleNewsItem, randomizedImages: getRandomClassNames()}
 
 const getTutorialPageForStep = (
   newsItem: NewsItem,
@@ -63,11 +67,12 @@ const getTutorialPagesForNewsItem = (
       step: "your-rating",
       isRequired: true,
     }),
-    getTutorialPageForStep(newsItem, {
-      isInput: false,
-      xaiFeatures: xaiFeatures,
-      step: "ai-rating",
-    }),
+    xaiFeatures === "visualizations" &&
+      getTutorialPageForStep(newsItem, {
+        isInput: false,
+        xaiFeatures: xaiFeatures,
+        step: "visualizations",
+      }),
     xaiFeatures === "salient" &&
       getTutorialPageForStep(newsItem, {
         isInput: false,
@@ -106,7 +111,7 @@ const experimentPages = (xaiFeatures: XAIFeatureLevel) => {
 
   return [
     tutorialTextPage,
-    ...getTutorialPagesForNewsItem(exampleNewsItem as any, xaiFeatures),
+    ...getTutorialPagesForNewsItem(exampleItem as any, xaiFeatures),
   ];
 };
 

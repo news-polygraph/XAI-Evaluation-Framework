@@ -8,7 +8,7 @@ const qualificationStartPage = {
           <p style="text-align: center;">Welcome to the <b>"XAI Evaluation"</b> Experiment!</p>
           </br>
           <p>
-          The experiment is conducted by the <b>***</b> to gain some understanding which features of Artificial Intelligence help humans to detect fake news. In this study you will be asked to read news items and decide if there are fake or true with the help of an <b>AI System</b>.
+          The experiment is conducted by the <b>***</b> to gain some understanding of what information helps humans to detect fake news. In this study you will be asked to read news items and decide if they are fake or true with the help of Political Viewpoint visualizations.
           </p>
           </br>
           <p>
@@ -16,11 +16,11 @@ const qualificationStartPage = {
           </p>
           </br>
           <p>
-          <b>1. Qualification job:</b> please read two news items carefully and answer the control questions correctly to get access to the main job (7-9min).
+          <b>1. Qualification job:</b> Please read three news items carefully and accurately rate their truthfulness to get access to the main job. You will also be asked to answer a short questionnaire. (7-9min).
           </p>
           </br>
           <p>
-          <b>2. Main job:</b> You will be asked to rate <b>6 news items</b> if they are true or fake (1 €). If you answer <b>5</b> of the <b>6</b> control questions correctly you will receive a <b>bonus of 5 € (overall 6 €)</b>. Please pay attention to the control questions and read the news items carefully (15-20min).
+          <b>2. Main job:</b> You will be asked to rate <b>6 news items</b> if they are true or fake (3 €). If you correctly rate each news item as true or fake, you will receive a <b>bonus of 3 € (overall 6 €)</b>. Please read the news items carefully (15-20min).
           </p>
           </br>
           <p>
@@ -28,7 +28,7 @@ const qualificationStartPage = {
           </p>
           </br>
           <p style="text-align: center;">
-          <b>Thank you for supporting our research and help to investigate on fake news!</b>
+          <b>Thank you for supporting our research and helping to investigate fake news!</b>
           </p>
         </div>
     `,

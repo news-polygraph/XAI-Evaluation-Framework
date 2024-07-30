@@ -2,6 +2,14 @@ import { agreementLikert7 } from "@/helper/likert-scales";
 import NewsItem from "@/model/news-item";
 import { SurveyPart } from "@/model/survey-part";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
+import classUrls from "@/components/urls";
+
+// Function to extract the classname from the provided format
+const extractClassName = (value: string): string => {
+  // Split by underscore and take the second and third part
+  const parts = value.split('_');
+  return `${parts[1]}_${parts[2]}_${parts[3]}`;
+};
 
 const getPagesForNewsItem = (
   newsItem: NewsItem,
@@ -40,7 +48,7 @@ const getPagesForNewsItem = (
           hideNumber: true,
           titleLocation: "hidden",
           newsitem: newsItem,
-          xaiFeatures: xaiFeatures,
+          xaiFeatures: "visualizations",
           isInput: false,
         },
       ],
@@ -55,10 +63,38 @@ const getPagesForNewsItem = (
           hideNumber: true,
           titleLocation: "hidden",
           newsitem: newsItem,
-          xaiFeatures: xaiFeatures,
+          xaiFeatures: "visualizations",
           isInput: true,
           isRequired: true,
         },
+      ],
+    },
+    {
+      title: "Evaluate the visualizations",
+      description: "Choose which visualization was more helpful to you when evaluating the truthfulness of the news item.",
+      elements: [
+        {
+          type: "imagepicker",
+          name: `newsitem.${newsItem.id}.visualization-evaluation`,
+          title: "Visualization Choice",
+          hideNumber: true,
+          newsitem: newsItem,
+          choices: [
+            {
+              value: "Leaning",
+              imageLink: classUrls[extractClassName(newsItem.randomizedImages.leaning)]
+            },
+            {
+              value: "Ideology",
+              imageLink: classUrls[extractClassName(newsItem.randomizedImages.ideology)]
+            },
+            {
+              value: "Parties",
+              imageLink: classUrls[extractClassName(newsItem.randomizedImages.parties)]
+            }
+          ],
+          isRequired: true,
+        }
       ],
     },
     {
@@ -85,45 +121,6 @@ const getPagesForNewsItem = (
             })),
           ],
           correctAnswer: "correct",
-        },
-      ],
-    },
-    {
-      title: "Evaluate the system",
-      description:
-        "Evaluate the AI system based on the explanations it provided",
-      elements: [
-        {
-          type: "matrix",
-          name: `newsitem.${newsItem.id}.system-evaluation`,
-          title: "Competence",
-          hideNumber: true,
-          titleLocation: "hidden",
-          columns: agreementLikert7,
-          alternateRows: true,
-          isAllRowRequired: true,
-          rows: [
-            {
-              text: "The AI-System classified the news items correctly",
-              value: "classified-correctly",
-            },
-            {
-              text: "I understand what the AI-System does",
-              value: "understand-what-system-does",
-            },
-            {
-              text: "The explainability features presented are useful to assess the truthfulness of the news article",
-              value: "xai-features-useful",
-            },
-            {
-              text: "The indications given by the AI-System are useful to assess the truthfulness of the news article",
-              value: "indications-useful",
-            },
-            {
-              text: "The presented explanations are comprehensible and help me with assessing the news articles",
-              value: "explanations-comprehensible-and-help-assess",
-            },
-          ],
         },
       ],
     },

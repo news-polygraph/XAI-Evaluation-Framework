@@ -8,7 +8,7 @@ const welcomeToQualification = {
         <p style="text-align: center;">Welcome to the <b>Qualification Job</b>!</p>
         </br>
         <p>
-        Please fill out the following form and <b>read and rate 2 news items</b> according to their <b>truthfulness</b>. You need to answer the <b>control questions correctly</b> in order to get access to the main job.
+        Please fill out the following form and <b>read and rate 3 news items</b> according to their <b>truthfulness</b>. You need to accurately rate the truthfulness of the news items in order to get access to the main job.
         </p>
       </div>
   `,

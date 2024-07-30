@@ -26,7 +26,6 @@ export const qualificationQuestionnaire = (
       qualificationStartPage,
       personalCode,
       welcomeToQualification,
-      expectations,
       informationLiteracy,
       ...informationSeekingBehaviour,
       ...tutorial(xaiFeatures),

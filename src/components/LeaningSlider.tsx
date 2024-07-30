@@ -1,7 +1,7 @@
 import { createTheme, debounce, Slider, ThemeProvider } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
-const ThuthfulnessSlider = ({
+const LeaningSlider = ({
   initialScore,
   interactive = false,
   onChange,
@@ -90,19 +90,19 @@ const ThuthfulnessSlider = ({
         }}
       >
         <div className="part 1">
-          <label>Fake</label>
+          <label>Far Left</label>
         </div>
         <div className="part 2">
-          <label>Rather Fake</label>
+          <label>Rather Left</label>
         </div>
         <div className="part 3">
-          <label>Neutral</label>
+          <label>Center</label>
         </div>
         <div className="part 4">
-          <label>Rather True</label>
+          <label>Rather Right</label>
         </div>
         <div className="part 5">
-          <label>True</label>
+          <label>Far Right</label>
         </div>
         <div
           css={{
@@ -189,4 +189,4 @@ const ThuthfulnessSlider = ({
   );
 };
 
-export default ThuthfulnessSlider;
+export default LeaningSlider;

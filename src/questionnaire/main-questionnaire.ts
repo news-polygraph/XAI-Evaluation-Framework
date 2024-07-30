@@ -24,8 +24,6 @@ export const mainQuestionnaire = (
     showProgressBar: "top",
     pages: [
       mainStartPage,
-      ...tutorial(xaiFeatures),
-      youAreReady,
       ...experimentPages(newsItems, xaiFeatures, "main"),
       almostDone,
       ...aiSystemEvaluation(xaiFeatures),

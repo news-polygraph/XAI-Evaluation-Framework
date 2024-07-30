@@ -44,6 +44,7 @@ const XAIQuestionnaire = ({
 
   registerMyQuestion();
   const survey = new Model(questionnaire(newsItems, xaiFeature));
+  
 
   survey.onAfterRenderPage.add((sender, options) => {
     // hide "Previous" button on all pages except the "You are ready" page

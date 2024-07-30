@@ -7,4 +7,5 @@ export type TutorialTooltipStep =
   | "readability"
   | "text-highlights"
   | "sentiment-highlights"
-  | "natural-language-explanation";
+  | "natural-language-explanation"
+  | "visualizations";
