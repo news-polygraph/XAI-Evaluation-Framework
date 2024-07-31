@@ -4,7 +4,6 @@ import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import { useState, useEffect } from "react";
 import ThuthfulnessSlider from "./TruthfulnessSlider";
 import TutorialTooltip from "./TutorialTooltip";
-import images from "./Visualizations.module.css";
 
 const NewsItemComponent = ({
   newsItem,

@@ -1,1035 +1,178 @@
 /* Visualization.module.css */
 
+/* General */
+.visualization {
+    width: 481.455px;
+    height: 203.58px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 /* Item 1 */
-.ideology_1a_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_1_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_1/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_1_ { background-image: url('/imgs_by_items/item_1/ideology_1a.png'); }
+.ideology_1b_item_1_ { background-image: url('/imgs_by_items/item_1/ideology_1b.png'); }
+.ideology_2a_item_1_ { background-image: url('/imgs_by_items/item_1/ideology_2a.png'); }
+.ideology_2b_item_1_ { background-image: url('/imgs_by_items/item_1/ideology_2b.png'); }
+.leaning_1a_item_1_ { background-image: url('/imgs_by_items/item_1/leaning_1a.png'); }
+.leaning_1b_item_1_ { background-image: url('/imgs_by_items/item_1/leaning_1b.png'); }
+.leaning_2a_item_1_ { background-image: url('/imgs_by_items/item_1/leaning_2a.png'); }
+.leaning_2b_item_1_ { background-image: url('/imgs_by_items/item_1/leaning_2b.png'); }
+.parties_1a_item_1_ { background-image: url('/imgs_by_items/item_1/parties_1a.png'); }
+.parties_1b_item_1_ { background-image: url('/imgs_by_items/item_1/parties_1b.png'); }
+.parties_2a_item_1_ { background-image: url('/imgs_by_items/item_1/parties_2a.png'); }
+.parties_2b_item_1_ { background-image: url('/imgs_by_items/item_1/parties_2b.png'); }
 
 /* Item 2 */
-.ideology_1a_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_2_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_2/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_2_ { background-image: url('/imgs_by_items/item_2/ideology_1a.png'); }
+.ideology_1b_item_2_ { background-image: url('/imgs_by_items/item_2/ideology_1b.png'); }
+.ideology_2a_item_2_ { background-image: url('/imgs_by_items/item_2/ideology_2a.png'); }
+.ideology_2b_item_2_ { background-image: url('/imgs_by_items/item_2/ideology_2b.png'); }
+.leaning_1a_item_2_ { background-image: url('/imgs_by_items/item_2/leaning_1a.png'); }
+.leaning_1b_item_2_ { background-image: url('/imgs_by_items/item_2/leaning_1b.png'); }
+.leaning_2a_item_2_ { background-image: url('/imgs_by_items/item_2/leaning_2a.png'); }
+.leaning_2b_item_2_ { background-image: url('/imgs_by_items/item_2/leaning_2b.png'); }
+.parties_1a_item_2_ { background-image: url('/imgs_by_items/item_2/parties_1a.png'); }
+.parties_1b_item_2_ { background-image: url('/imgs_by_items/item_2/parties_1b.png'); }
+.parties_2a_item_2_ { background-image: url('/imgs_by_items/item_2/parties_2a.png'); }
+.parties_2b_item_2_ { background-image: url('/imgs_by_items/item_2/parties_2b.png'); }
 
 /* Item 3 */
-.ideology_1a_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_3_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_3/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_3_ { background-image: url('/imgs_by_items/item_3/ideology_1a.png'); }
+.ideology_1b_item_3_ { background-image: url('/imgs_by_items/item_3/ideology_1b.png'); }
+.ideology_2a_item_3_ { background-image: url('/imgs_by_items/item_3/ideology_2a.png'); }
+.ideology_2b_item_3_ { background-image: url('/imgs_by_items/item_3/ideology_2b.png'); }
+.leaning_1a_item_3_ { background-image: url('/imgs_by_items/item_3/leaning_1a.png'); }
+.leaning_1b_item_3_ { background-image: url('/imgs_by_items/item_3/leaning_1b.png'); }
+.leaning_2a_item_3_ { background-image: url('/imgs_by_items/item_3/leaning_2a.png'); }
+.leaning_2b_item_3_ { background-image: url('/imgs_by_items/item_3/leaning_2b.png'); }
+.parties_1a_item_3_ { background-image: url('/imgs_by_items/item_3/parties_1a.png'); }
+.parties_1b_item_3_ { background-image: url('/imgs_by_items/item_3/parties_1b.png'); }
+.parties_2a_item_3_ { background-image: url('/imgs_by_items/item_3/parties_2a.png'); }
+.parties_2b_item_3_ { background-image: url('/imgs_by_items/item_3/parties_2b.png'); }
 
 /* Item 4 */
-.ideology_1a_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_4_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_4/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_4_ { background-image: url('/imgs_by_items/item_4/ideology_1a.png'); }
+.ideology_1b_item_4_ { background-image: url('/imgs_by_items/item_4/ideology_1b.png'); }
+.ideology_2a_item_4_ { background-image: url('/imgs_by_items/item_4/ideology_2a.png'); }
+.ideology_2b_item_4_ { background-image: url('/imgs_by_items/item_4/ideology_2b.png'); }
+.leaning_1a_item_4_ { background-image: url('/imgs_by_items/item_4/leaning_1a.png'); }
+.leaning_1b_item_4_ { background-image: url('/imgs_by_items/item_4/leaning_1b.png'); }
+.leaning_2a_item_4_ { background-image: url('/imgs_by_items/item_4/leaning_2a.png'); }
+.leaning_2b_item_4_ { background-image: url('/imgs_by_items/item_4/leaning_2b.png'); }
+.parties_1a_item_4_ { background-image: url('/imgs_by_items/item_4/parties_1a.png'); }
+.parties_1b_item_4_ { background-image: url('/imgs_by_items/item_4/parties_1b.png'); }
+.parties_2a_item_4_ { background-image: url('/imgs_by_items/item_4/parties_2a.png'); }
+.parties_2b_item_4_ { background-image: url('/imgs_by_items/item_4/parties_2b.png'); }
 
 /* Item 5 */
-.ideology_1a_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_5_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_5/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_5_ { background-image: url('/imgs_by_items/item_5/ideology_1a.png'); }
+.ideology_1b_item_5_ { background-image: url('/imgs_by_items/item_5/ideology_1b.png'); }
+.ideology_2a_item_5_ { background-image: url('/imgs_by_items/item_5/ideology_2a.png'); }
+.ideology_2b_item_5_ { background-image: url('/imgs_by_items/item_5/ideology_2b.png'); }
+.leaning_1a_item_5_ { background-image: url('/imgs_by_items/item_5/leaning_1a.png'); }
+.leaning_1b_item_5_ { background-image: url('/imgs_by_items/item_5/leaning_1b.png'); }
+.leaning_2a_item_5_ { background-image: url('/imgs_by_items/item_5/leaning_2a.png'); }
+.leaning_2b_item_5_ { background-image: url('/imgs_by_items/item_5/leaning_2b.png'); }
+.parties_1a_item_5_ { background-image: url('/imgs_by_items/item_5/parties_1a.png'); }
+.parties_1b_item_5_ { background-image: url('/imgs_by_items/item_5/parties_1b.png'); }
+.parties_2a_item_5_ { background-image: url('/imgs_by_items/item_5/parties_2a.png'); }
+.parties_2b_item_5_ { background-image: url('/imgs_by_items/item_5/parties_2b.png'); }
 
 /* Item 6 */
-.ideology_1a_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_6_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_6/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_6_ { background-image: url('/imgs_by_items/item_6/ideology_1a.png'); }
+.ideology_1b_item_6_ { background-image: url('/imgs_by_items/item_6/ideology_1b.png'); }
+.ideology_2a_item_6_ { background-image: url('/imgs_by_items/item_6/ideology_2a.png'); }
+.ideology_2b_item_6_ { background-image: url('/imgs_by_items/item_6/ideology_2b.png'); }
+.leaning_1a_item_6_ { background-image: url('/imgs_by_items/item_6/leaning_1a.png'); }
+.leaning_1b_item_6_ { background-image: url('/imgs_by_items/item_6/leaning_1b.png'); }
+.leaning_2a_item_6_ { background-image: url('/imgs_by_items/item_6/leaning_2a.png'); }
+.leaning_2b_item_6_ { background-image: url('/imgs_by_items/item_6/leaning_2b.png'); }
+.parties_1a_item_6_ { background-image: url('/imgs_by_items/item_6/parties_1a.png'); }
+.parties_1b_item_6_ { background-image: url('/imgs_by_items/item_6/parties_1b.png'); }
+.parties_2a_item_6_ { background-image: url('/imgs_by_items/item_6/parties_2a.png'); }
+.parties_2b_item_6_ { background-image: url('/imgs_by_items/item_6/parties_2b.png'); }
 
 /* Item 7 */
-.ideology_1a_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_7_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_7/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_7_ { background-image: url('/imgs_by_items/item_7/ideology_1a.png'); }
+.ideology_1b_item_7_ { background-image: url('/imgs_by_items/item_7/ideology_1b.png'); }
+.ideology_2a_item_7_ { background-image: url('/imgs_by_items/item_7/ideology_2a.png'); }
+.ideology_2b_item_7_ { background-image: url('/imgs_by_items/item_7/ideology_2b.png'); }
+.leaning_1a_item_7_ { background-image: url('/imgs_by_items/item_7/leaning_1a.png'); }
+.leaning_1b_item_7_ { background-image: url('/imgs_by_items/item_7/leaning_1b.png'); }
+.leaning_2a_item_7_ { background-image: url('/imgs_by_items/item_7/leaning_2a.png'); }
+.leaning_2b_item_7_ { background-image: url('/imgs_by_items/item_7/leaning_2b.png'); }
+.parties_1a_item_7_ { background-image: url('/imgs_by_items/item_7/parties_1a.png'); }
+.parties_1b_item_7_ { background-image: url('/imgs_by_items/item_7/parties_1b.png'); }
+.parties_2a_item_7_ { background-image: url('/imgs_by_items/item_7/parties_2a.png'); }
+.parties_2b_item_7_ { background-image: url('/imgs_by_items/item_7/parties_2b.png'); }
 
 /* Item 8 */
-.ideology_1a_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_8_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_8/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_8_ { background-image: url('/imgs_by_items/item_8/ideology_1a.png'); }
+.ideology_1b_item_8_ { background-image: url('/imgs_by_items/item_8/ideology_1b.png'); }
+.ideology_2a_item_8_ { background-image: url('/imgs_by_items/item_8/ideology_2a.png'); }
+.ideology_2b_item_8_ { background-image: url('/imgs_by_items/item_8/ideology_2b.png'); }
+.leaning_1a_item_8_ { background-image: url('/imgs_by_items/item_8/leaning_1a.png'); }
+.leaning_1b_item_8_ { background-image: url('/imgs_by_items/item_8/leaning_1b.png'); }
+.leaning_2a_item_8_ { background-image: url('/imgs_by_items/item_8/leaning_2a.png'); }
+.leaning_2b_item_8_ { background-image: url('/imgs_by_items/item_8/leaning_2b.png'); }
+.parties_1a_item_8_ { background-image: url('/imgs_by_items/item_8/parties_1a.png'); }
+.parties_1b_item_8_ { background-image: url('/imgs_by_items/item_8/parties_1b.png'); }
+.parties_2a_item_8_ { background-image: url('/imgs_by_items/item_8/parties_2a.png'); }
+.parties_2b_item_8_ { background-image: url('/imgs_by_items/item_8/parties_2b.png'); }
 
 /* Item 9 */
-.ideology_1a_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_9_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_9/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_9_ { background-image: url('/imgs_by_items/item_9/ideology_1a.png'); }
+.ideology_1b_item_9_ { background-image: url('/imgs_by_items/item_9/ideology_1b.png'); }
+.ideology_2a_item_9_ { background-image: url('/imgs_by_items/item_9/ideology_2a.png'); }
+.ideology_2b_item_9_ { background-image: url('/imgs_by_items/item_9/ideology_2b.png'); }
+.leaning_1a_item_9_ { background-image: url('/imgs_by_items/item_9/leaning_1a.png'); }
+.leaning_1b_item_9_ { background-image: url('/imgs_by_items/item_9/leaning_1b.png'); }
+.leaning_2a_item_9_ { background-image: url('/imgs_by_items/item_9/leaning_2a.png'); }
+.leaning_2b_item_9_ { background-image: url('/imgs_by_items/item_9/leaning_2b.png'); }
+.parties_1a_item_9_ { background-image: url('/imgs_by_items/item_9/parties_1a.png'); }
+.parties_1b_item_9_ { background-image: url('/imgs_by_items/item_9/parties_1b.png'); }
+.parties_2a_item_9_ { background-image: url('/imgs_by_items/item_9/parties_2a.png'); }
+.parties_2b_item_9_ { background-image: url('/imgs_by_items/item_9/parties_2b.png'); }
 
 /* Item 10 */
-.ideology_1a_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_10_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_10/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_10_ { background-image: url('/imgs_by_items/item_10/ideology_1a.png'); }
+.ideology_1b_item_10_ { background-image: url('/imgs_by_items/item_10/ideology_1b.png'); }
+.ideology_2a_item_10_ { background-image: url('/imgs_by_items/item_10/ideology_2a.png'); }
+.ideology_2b_item_10_ { background-image: url('/imgs_by_items/item_10/ideology_2b.png'); }
+.leaning_1a_item_10_ { background-image: url('/imgs_by_items/item_10/leaning_1a.png'); }
+.leaning_1b_item_10_ { background-image: url('/imgs_by_items/item_10/leaning_1b.png'); }
+.leaning_2a_item_10_ { background-image: url('/imgs_by_items/item_10/leaning_2a.png'); }
+.leaning_2b_item_10_ { background-image: url('/imgs_by_items/item_10/leaning_2b.png'); }
+.parties_1a_item_10_ { background-image: url('/imgs_by_items/item_10/parties_1a.png'); }
+.parties_1b_item_10_ { background-image: url('/imgs_by_items/item_10/parties_1b.png'); }
+.parties_2a_item_10_ { background-image: url('/imgs_by_items/item_10/parties_2a.png'); }
+.parties_2b_item_10_ { background-image: url('/imgs_by_items/item_10/parties_2b.png'); }
 
 /* Item 11 */
-.ideology_1a_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_11_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_11/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.ideology_1a_item_11_ { background-image: url('/imgs_by_items/item_11/ideology_1a.png'); }
+.ideology_1b_item_11_ { background-image: url('/imgs_by_items/item_11/ideology_1b.png'); }
+.ideology_2a_item_11_ { background-image: url('/imgs_by_items/item_11/ideology_2a.png'); }
+.ideology_2b_item_11_ { background-image: url('/imgs_by_items/item_11/ideology_2b.png'); }
+.leaning_1a_item_11_ { background-image: url('/imgs_by_items/item_11/leaning_1a.png'); }
+.leaning_1b_item_11_ { background-image: url('/imgs_by_items/item_11/leaning_1b.png'); }
+.leaning_2a_item_11_ { background-image: url('/imgs_by_items/item_11/leaning_2a.png'); }
+.leaning_2b_item_11_ { background-image: url('/imgs_by_items/item_11/leaning_2b.png'); }
+.parties_1a_item_11_ { background-image: url('/imgs_by_items/item_11/parties_1a.png'); }
+.parties_1b_item_11_ { background-image: url('/imgs_by_items/item_11/parties_1b.png'); }
+.parties_2a_item_11_ { background-image: url('/imgs_by_items/item_11/parties_2a.png'); }
+.parties_2b_item_11_ { background-image: url('/imgs_by_items/item_11/parties_2b.png'); }
 
 /* Item 12 */
-.ideology_1a_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/ideology_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_1b_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/ideology_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2a_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/ideology_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.ideology_2b_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/ideology_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1a_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/leaning_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_1b_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/leaning_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2a_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/leaning_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.leaning_2b_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/leaning_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1a_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/parties_1a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_1b_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/parties_1b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2a_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/parties_2a.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.parties_2b_item_12_ {
-    width: 481.455px;
-    height: 203.58px;
-    background-image: url('/imgs_by_items/item_12/parties_2b.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
+.ideology_1a_item_12_ { background-image: url('/imgs_by_items/item_12/ideology_1a.png'); }
+.ideology_1b_item_12_ { background-image: url('/imgs_by_items/item_12/ideology_1b.png'); }
+.ideology_2a_item_12_ { background-image: url('/imgs_by_items/item_12/ideology_2a.png'); }
+.ideology_2b_item_12_ { background-image: url('/imgs_by_items/item_12/ideology_2b.png'); } 
+.leaning_1a_item_12_ { background-image: url('/imgs_by_items/item_12/leaning_1a.png'); }
+.leaning_1b_item_12_ { background-image: url('/imgs_by_items/item_12/leaning_1b.png'); }
+.leaning_2a_item_12_ { background-image: url('/imgs_by_items/item_12/leaning_2a.png'); }
+.leaning_2b_item_12_ { background-image: url('/imgs_by_items/item_12/leaning_2b.png'); }
+.parties_1a_item_12_ { background-image: url('/imgs_by_items/item_12/parties_1a.png'); }
+.parties_1b_item_12_ { background-image: url('/imgs_by_items/item_12/parties_1b.png'); }
+.parties_2a_item_12_ { background-image: url('/imgs_by_items/item_12/parties_2a.png'); }
+.parties_2b_item_12_ { background-image: url('/imgs_by_items/item_12/parties_2b.png'); }
 
