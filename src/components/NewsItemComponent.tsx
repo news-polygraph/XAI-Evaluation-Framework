@@ -15,7 +15,8 @@ const NewsItemComponent = ({
   tutorialTooltip = null,
   defaultRatingValue = undefined,
   showError = false,
-  randomizedImages
+  randomizedImages,
+  //correctAnswer
 }: {
   newsItem: NewsItem;
   xaiFeatures: XAIFeatureLevel;
@@ -25,7 +26,8 @@ const NewsItemComponent = ({
   tutorialTooltip: TutorialTooltipStep | null;
   defaultRatingValue: number | undefined;
   showError: boolean;
-  randomizedImages?: any
+  randomizedImages?: any;
+  //correctAnswer: string
 }) => {
   const [ratingValue, setRatingValue] = useState<number | undefined>(
     defaultRatingValue
@@ -209,9 +211,10 @@ const NewsItemComponent = ({
             <ThuthfulnessSlider
               initialScore={ratingValue}
               interactive
-              onChange={(score) => {
-                setRatingValue(score);
-                onRatingChange(score);
+              onChange={(transformedScore) => {
+                setRatingValue(transformedScore);
+                onRatingChange(transformedScore);
+                newsItem.value = transformedScore;
               }}
             />
           </div>

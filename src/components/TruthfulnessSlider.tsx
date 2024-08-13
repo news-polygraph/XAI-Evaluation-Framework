@@ -40,6 +40,12 @@ const ThuthfulnessSlider = ({
     };
   }, []);
 
+  const handleChange = (newScore: number) => {
+    const transformedScore = newScore > 50 ? 1 : 0;
+    setScore(newScore);
+    onChange && onChange(transformedScore);
+  };
+
   return (
     <>
       <div
@@ -162,24 +168,24 @@ const ThuthfulnessSlider = ({
                 debounce(() => {
                   const mousePosition = e.clientX - sliderLeft;
                   const score = Math.round((mousePosition / sliderWidth) * 100);
-                  setScore(score);
+                  handleChange(score);
                 }, 5)();
               }}
               onMouseLeave={() => {
                 if (!interactive) return;
 
                 setIsInitialState(false);
-                onChange && onChange(score);
+                handleChange(score);
               }}
               onMouseUp={() => {
                 if (!interactive) return;
 
                 setIsInitialState(false);
-                onChange && onChange(score);
+                handleChange(score);
               }}
               onChange={(e, value) => {
                 if (!interactive) return;
-                setScore(value as number);
+                handleChange(value as number);
               }}
             />
           </ThemeProvider>

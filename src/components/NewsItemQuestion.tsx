@@ -29,6 +29,13 @@ export class NewsItemQuestionModel extends Question {
   set text(newValue) {
     this.setPropertyValue("text", newValue);
   }
+
+  get correctAnswer() {
+    return this.getPropertyValue("correctAnswer", "");
+  }
+  set correctAnswer(newValue) {
+    this.setPropertyValue("correctAnswer", newValue);
+  }
 }
 
 export class NewsItemQuestion extends SurveyElementBase<
@@ -41,6 +48,7 @@ export class NewsItemQuestion extends SurveyElementBase<
       tutorialTooltip: string;
       value?: number;
       hasVisibleErrors: boolean;
+      correctAnswer: number;
     };
   },
   {
@@ -67,8 +75,8 @@ export class NewsItemQuestion extends SurveyElementBase<
         newsItem={this.question.newsitem}
         xaiFeatures={this.question.xaiFeatures}
         isInput={this.question.isInput}
-        onRatingChange={(value) => {
-          this.question.value = value;
+        onRatingChange={(transformedScore) => {
+          this.question.value = transformedScore;
         }}
         isTutorialMode={this.question.isTutorialMode}
         tutorialTooltip={this.question.tutorialTooltip as any}
@@ -88,6 +96,7 @@ Serializer.addClass(
     "isInput:boolean",
     "isTutorialMode:boolean",
     "tutorialTooltip:string",
+    "correctAnswer:number",
   ],
   () => new NewsItemQuestionModel(""),
   "question"

@@ -55,21 +55,65 @@ const getPagesForNewsItem = (
       ],
     },
     {
+      name: "rating-after-xai",
       title,
       description,
       elements: [
         {
           type: "newsitem",
           name: `newsitem.${newsItem.id}.rating-after-xai`,
+          title: "Testing",
           hideNumber: true,
           titleLocation: "hidden",
           newsitem: newsItem,
           xaiFeatures: "visualizations",
           isInput: true,
           isRequired: true,
+          value: newsItem.value,
+          correctAnswer: newsItem.correctAnswer,
         },
       ],
     },
+    // {
+    //   name: "correct-answer",
+    //   title,
+    //   description,
+    //   visible: false,
+    //   elements: [
+    //     {
+    //       type: "newsitem",
+    //       name: `newsitem.${newsItem.id}.rating-after-xai`,
+    //       title: "Testing",
+    //       hideNumber: true,
+    //       titleLocation: "hidden",
+    //       newsitem: newsItem,
+    //       xaiFeatures: "visualizations",
+    //       isInput: true,
+    //       isRequired: true,
+    //       value: newsItem.correctAnswer,
+    //     },
+    //   ],
+    // },
+    
+    // {
+    //   title,
+    //   description,
+    //   elements: [
+    //     {
+    //       type: "newsitem",
+    //       name: `newsitem.${newsItem.id}.truthfulness_score`,
+    //       hideNumber: true,
+    //       visible: false,
+    //       titleLocation: "hidden",
+    //       newsitem: newsItem,
+    //       xaiFeatures: "visualizations",
+    //       isInput: true,
+    //       isRequired: true,
+    //       value: newsItem.value === newsItem.correctAnswer ? "correct" : "incorrect",
+    //       correctAnswer: "correct",
+    //     },
+    //   ],
+    // },
     {
       title: "Evaluate the visualizations",
       description: "Choose which visualization was more helpful to you when evaluating the truthfulness of the news item.",
@@ -98,44 +142,45 @@ const getPagesForNewsItem = (
         }
       ],
     },
-    {
-      name: "control-question",
-      title,
-      description,
-      elements: [
-        {
-          // multiple choice control question
-          type: "radiogroup",
-          name: `newsitem.${newsItem.id}.control-question`,
-          title: newsItem.controlQuestion.question,
-          hideNumber: true,
-          choicesOrder: "random",
-          isRequired: true,
-          choices: [
-            {
-              value: "correct",
-              text: newsItem.controlQuestion.correctAnswer,
-            },
-            ...newsItem.controlQuestion.wrongAnswers.map((answer, i) => ({
-              value: `wrong-${i + 1}`,
-              text: answer,
-            })),
-          ],
-          correctAnswer: "correct",
-        },
-      ],
-    },
+    // {
+    //   name: "control-question",
+    //   title,
+    //   description,
+    //   elements: [
+    //     {
+    //       // multiple choice control question
+    //       type: "radiogroup",
+    //       name: `newsitem.${newsItem.id}.control-question`,
+    //       title: newsItem.controlQuestion.question,
+    //       hideNumber: true,
+    //       choicesOrder: "random",
+    //       isRequired: true,
+    //       choices: [
+    //         {
+    //           value: "correct",
+    //           text: newsItem.controlQuestion.correctAnswer,
+    //         },
+    //         ...newsItem.controlQuestion.wrongAnswers.map((answer, i) => ({
+    //           value: `wrong-${i + 1}`,
+    //           text: answer,
+    //         })),
+    //       ],
+    //       correctAnswer: "correct",
+    //     },
+    //   ],
+    // },
     part === "main"
       ? {
-          // show warning if control question was answered incorrectly
-          name: "control-question-warning",
-          visibleIf: `{newsitem.${newsItem.id}.control-question} != 'correct'`,
+          // show warning if control question was answered incorrectly 
+          name: "truthfulness-score-warning",
+          newsitem : newsItem,
+          visibleIf: `{newsitem.${newsItem.id}.rating-after-xai} != ${newsItem.correctAnswer}`,
           elements: [
             {
               type: "html",
               maxWidth: "900px",
               html: `<div>
-          <b>Attention</b>: you entered an incorrect answer to the control question! In order to receive the <b>bonus of 5 €</b> you need to answer at least <b>5 control questions correctly!</b> Please read the news items carefully.
+              You did not succesfully rate the article's truthfulness.
           </div>`,
             },
           ],
@@ -158,4 +203,6 @@ const experimentPages = (
   ];
 };
 
+
 export default experimentPages;
+

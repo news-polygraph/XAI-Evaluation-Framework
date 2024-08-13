@@ -143,7 +143,19 @@ const classUrls: { [key: string]: string } = {
   "parties_1a_item_12_": "/imgs_by_items/item_12/parties_1a.png",
   "parties_1b_item_12_": "/imgs_by_items/item_12/parties_1b.png",
   "parties_2a_item_12_": "/imgs_by_items/item_12/parties_2a.png",
-  "parties_2b_item_12_": "/imgs_by_items/item_12/parties_2b.png"
+  "parties_2b_item_12_": "/imgs_by_items/item_12/parties_2b.png",
+  "ideology_1a_item_9999_": "/imgs_by_items/item_12/ideology_1a.png",
+  "ideology_1b_item_9999_": "/imgs_by_items/item_12/ideology_1b.png",
+  "ideology_2a_item_9999_": "/imgs_by_items/item_12/ideology_2a.png",
+  "ideology_2b_item_9999_": "/imgs_by_items/item_12/ideology_2b.png",
+  "leaning_1a_item_9999_": "/imgs_by_items/item_12/leaning_1a.png",
+  "leaning_1b_item_9999_": "/imgs_by_items/item_12/leaning_1b.png",
+  "leaning_2a_item_9999_": "/imgs_by_items/item_12/leaning_2a.png",
+  "leaning_2b_item_9999_": "/imgs_by_items/item_12/leaning_2b.png",
+  "parties_1a_item_9999_": "/imgs_by_items/item_12/parties_1a.png",
+  "parties_1b_item_9999_": "/imgs_by_items/item_12/parties_1b.png",
+  "parties_2a_item_9999_": "/imgs_by_items/item_12/parties_2a.png",
+  "parties_2b_item_9999_": "/imgs_by_items/item_12/parties_2b.png"
 }
 
 export default classUrls;

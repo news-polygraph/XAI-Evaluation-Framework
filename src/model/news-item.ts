@@ -22,6 +22,8 @@ interface NewsItem {
     parties_2: string;
   };
   randomizedImages?: any;
+  correctAnswer: number;
+  value?: number;
 }
 
 export default NewsItem;
