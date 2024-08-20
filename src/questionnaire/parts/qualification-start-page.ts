@@ -20,7 +20,7 @@ const qualificationStartPage = {
           </p>
           </br>
           <p>
-          <b>2. Main job:</b> You will be asked to rate <b>6 news items</b> if they are true or fake (3 €). If you correctly rate each news item as true or fake, you will receive a <b>bonus of 3 € (overall 6 €)</b>. Please read the news items carefully (15-20min).
+          <b>2. Main job:</b> You will be asked to rate <b>18 news items</b> if they are true or fake (3 €). If you correctly rate 12 of the news items as true or fake, you will receive a <b>bonus of 3 € (overall 6 €)</b>. Please read the news items carefully (15-20min).
           </p>
           </br>
           <p>

@@ -21,7 +21,7 @@ export const mainQuestionnaire = (
   const questionnaire = {
     firstPageIsStarted: true,
     showPageNumbers: false,
-    showProgressBar: "off",
+    showProgressBar: "top",
     pages: [
       mainStartPage,
       ...experimentPages(newsItems, xaiFeatures, "main"),

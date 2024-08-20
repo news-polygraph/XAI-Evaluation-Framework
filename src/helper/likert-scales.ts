@@ -102,3 +102,37 @@ export const truthfulnessLikert7 = getLikertScale(7, [
   "Untruthful",
   "Very untruthful",
 ]);
+
+export const strengthLikert4 = getLikertScale(4, [
+  "Very strong",
+  "Strong",
+  "Less",
+  "Not at all",
+]);
+
+export const frequencyLikert4 = getLikertScale(4, [
+  "Frequently",
+  "Occasionally",
+  "Rarely",
+  "Never",
+]);
+
+export const importanceLikert4 = getLikertScale(4, [
+  "Very important",
+  "Important",
+  "Less important",
+  "Not important at all",
+]);
+
+export const satisfactionLikert4 = getLikertScale(4, [
+  "Very satisfied",
+  "Satisfied",
+  "Less satisfied",
+  "Not satisfied at all",
+]);
+
+export const agreementLikert3 = getLikertScale(3, [
+  "Tend to agree",
+  "Rather disagree",
+  "Don't know",
+]);

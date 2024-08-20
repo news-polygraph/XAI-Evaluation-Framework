@@ -14,7 +14,7 @@ const tutorialText = (xaiFeatures: XAIFeatureLevel) => {
           </p>
           </br>
           <p>
-            In the following, you will receive eight news articles which you should rate according to their truthfulness. The news articles are presented in the <b>News Dashboard</b>, consisting of several <b>AI-system components</b>. Which will be described later in more detail. Your tasks, rating the news article according to their truthfulness is divided into <b>three steps</b>: 
+            In the following, you will receive three news articles which you should rate according to their truthfulness. The news articles are presented in the <b>News Dashboard</b>. Your tasks, rating the news article according to their truthfulness is divided into <b>three steps</b>: 
           </p>
           </br>
           <p>
@@ -30,7 +30,7 @@ const tutorialText = (xaiFeatures: XAIFeatureLevel) => {
           </p>
           </br>
           <p>
-            Overall, there are two sources of news articles: (1) a trustworthy source publishing mostly true articles and (2) an untrustworthy source, publishing mostly misleading and false articles.
+            After these three steps, you will be asked to evaluate the visualizations, and choose which visualization helped you the most in your rating.
           </p>
           </br>
           <p>

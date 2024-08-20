@@ -2,6 +2,7 @@ import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import expectations from "./parts/expectations";
 import informationLiteracy from "./parts/information-literacy";
 import informationSeekingBehaviour from "./parts/information-seeking-behaviour";
+import politicalInformation from "./parts/political-information";
 import experimentPages from "./parts/experiment";
 import tutorial from "./parts/tutorial";
 import youAreReady from "./parts/you-are-ready";
@@ -21,11 +22,12 @@ export const qualificationQuestionnaire = (
   const questionnaire = {
     firstPageIsStarted: true,
     showPageNumbers: false,
-    showProgressBar: "off",
+    showProgressBar: "top",
     pages: [
       qualificationStartPage,
       personalCode,
       welcomeToQualification,
+      ...politicalInformation,
       informationLiteracy,
       ...informationSeekingBehaviour,
       ...tutorial(xaiFeatures),
