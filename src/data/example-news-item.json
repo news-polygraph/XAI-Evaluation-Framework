@@ -1,0 +1,26 @@
+{
+  "id": 9999,
+  "title": "Die Ampelregierung hat die Energiekosten mit ihrer Klima-Hysterie in die Höhe getrieben.",
+  "source": "Trustworthy Source",
+  "category": "Wirtschaft",
+  "publishingDate": "8\/14\/2022",
+  "label":"fake",
+  "xaiFeatures": {
+    "truthfulness": 30
+  },
+  "controlQuestion": {
+    "question": "What was the article about?",
+    "correctAnswer": "Young adult cannabis consumers suffer from a heart attack more likely",
+    "wrongAnswers": ["Young children consuming cannabis suffer from a heart attacks","Creazy cannabis consumers robbing shops more likely ","Cannabis is healthy for your merriage ","Cannabis can be consumed anytime in Alaska"]
+  },
+  "ratings": {
+    "ideology_1": "[Economic:10, Social:8.3]",
+    "ideology_2": "[Relevant:Kapi/Sozi, Prog/Kons:6, Auth/Libe:6, Kapi/Sozi:3]",
+    "leaning_1": 10,
+    "leaning_2": "Energiekosten steigen aufgrund globaler Marktentwicklungen, nicht nur durch Klima-Politik.",
+    "parties_1": "AfD",
+    "parties_2": "Dieser Artikel wurde von Alice Weidel, Mitglied der AfD, geteilt."
+  },
+  "correctAnswer": 0
+}
+

@@ -1,0 +1,21 @@
+/* Custom styles for the imagepicker */
+.custom-imagepicker .sd-imagepicker__check-decorator {
+  background-color: #19b394 !important; /* Blue/green color for the circle */
+}
+
+.custom-imagepicker .sd-imagepicker__check-icon {
+  fill: #ffffff !important; /* White color for the checkmark */
+}
+
+/* Ensure images are displayed vertically */
+.custom-imagepicker .sd-imagepicker {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  gap: calc(2*(var(--sjs-base-unit, var(--base-unit, 8px)))); /* Space between images */
+}
+
+/* Ensure items take full width and have spacing */
+.custom-imagepicker .sd-imagepicker__item {
+  width: 100%;
+  margin-bottom: calc(2*(var(--sjs-base-unit, var(--base-unit, 8px)))); /* Space between images */
+}
