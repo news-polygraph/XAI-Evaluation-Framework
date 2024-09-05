@@ -40,12 +40,6 @@ const ThuthfulnessSlider = ({
     };
   }, []);
 
-  const handleChange = (newScore: number) => {
-    const transformedScore = newScore > 50 ? 1 : 0;
-    setScore(newScore);
-    onChange && onChange(transformedScore);
-  };
-
   return (
     <>
       <div
@@ -96,19 +90,19 @@ const ThuthfulnessSlider = ({
         }}
       >
         <div className="part 1">
-          <label>Fake</label>
+          <label>Falsch</label>
         </div>
         <div className="part 2">
-          <label>Rather Fake</label>
+          <label>Eher falsch</label>
         </div>
         <div className="part 3">
           <label>Neutral</label>
         </div>
         <div className="part 4">
-          <label>Rather True</label>
+          <label>Eher wahr</label>
         </div>
         <div className="part 5">
-          <label>True</label>
+          <label>Wahr</label>
         </div>
         <div
           css={{
@@ -168,24 +162,24 @@ const ThuthfulnessSlider = ({
                 debounce(() => {
                   const mousePosition = e.clientX - sliderLeft;
                   const score = Math.round((mousePosition / sliderWidth) * 100);
-                  handleChange(score);
+                  setScore(score);
                 }, 5)();
               }}
               onMouseLeave={() => {
                 if (!interactive) return;
 
                 setIsInitialState(false);
-                handleChange(score);
+                onChange && onChange(score);
               }}
               onMouseUp={() => {
                 if (!interactive) return;
 
                 setIsInitialState(false);
-                handleChange(score);
+                onChange && onChange(score);
               }}
               onChange={(e, value) => {
                 if (!interactive) return;
-                handleChange(value as number);
+                setScore(value as number);
               }}
             />
           </ThemeProvider>

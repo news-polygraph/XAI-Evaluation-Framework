@@ -30,12 +30,12 @@ export class NewsItemQuestionModel extends Question {
     this.setPropertyValue("text", newValue);
   }
 
-  get correctAnswer() {
-    return this.getPropertyValue("correctAnswer", "");
-  }
-  set correctAnswer(newValue) {
-    this.setPropertyValue("correctAnswer", newValue);
-  }
+  // get correctAnswer() {
+  //   return this.getPropertyValue("correctAnswer", "");
+  // }
+  // set correctAnswer(newValue) {
+  //   this.setPropertyValue("correctAnswer", newValue);
+  // }
 }
 
 export class NewsItemQuestion extends SurveyElementBase<
@@ -48,7 +48,7 @@ export class NewsItemQuestion extends SurveyElementBase<
       tutorialTooltip: string;
       value?: number;
       hasVisibleErrors: boolean;
-      correctAnswer: number;
+      correctAnswer?: number;
     };
   },
   {
@@ -75,8 +75,8 @@ export class NewsItemQuestion extends SurveyElementBase<
         newsItem={this.question.newsitem}
         xaiFeatures={this.question.xaiFeatures}
         isInput={this.question.isInput}
-        onRatingChange={(transformedScore) => {
-          this.question.value = transformedScore;
+        onRatingChange={(score) => {
+          this.question.value = score;
         }}
         isTutorialMode={this.question.isTutorialMode}
         tutorialTooltip={this.question.tutorialTooltip as any}
@@ -96,7 +96,7 @@ Serializer.addClass(
     "isInput:boolean",
     "isTutorialMode:boolean",
     "tutorialTooltip:string",
-    "correctAnswer:number",
+    // "correctAnswer:number",
   ],
   () => new NewsItemQuestionModel(""),
   "question"

@@ -32,7 +32,7 @@ const NewsItemComponent = ({
   const [ratingValue, setRatingValue] = useState<number | undefined>(
     defaultRatingValue
   );
-  console.log(randomizedImages)
+  // console.log(randomizedImages)
 
   return (
     <section
@@ -78,9 +78,9 @@ const NewsItemComponent = ({
     >
       {tutorialTooltip === "overview" && (
         <TutorialTooltip>
-          <b>News Dashboard:</b> In the following we will walk you through the
-          different parts of the <b>News Dashboard</b> and introduce you to the
-          different steps of your task. Please click next.
+          <b>Nachrichten Dashboard:</b> In Folgenden werden wir Sie durch die
+          verschiedenen Teile des <b>Nachrichten Dashboard:</b> und führen Sie in die verschiedenen
+          verschiedenen Schritte Ihrer Aufgabe. Bitte klicken Sie auf "Next".
         </TutorialTooltip>
       )}
       <article
@@ -109,10 +109,10 @@ const NewsItemComponent = ({
       >
         {tutorialTooltip === "article" && (
           <TutorialTooltip>
-            <b>Step 1 - Read:</b> During step 1 (<b>Read</b>) you are
-            asked to read the news item carefully. You see here how the news
-            item is presented, with the title and the domain (here {" "}
-            {newsItem.category}). Please click next.
+            <b>Schritt 1 - Lesen:</b> Während Schritt 1 (<b>Lesen</b>) werden Sie
+            Sie werden gebeten, die Nachricht aufmerksam zu lesen. Sie sehen hier, wie die Nachricht
+            Nachricht mit dem Titel und der Domäne präsentiert wird (hier {" "}
+            {newsItem.category}). Bitte klicken Sie auf "Next".
           </TutorialTooltip>
         )}
         <div
@@ -139,22 +139,21 @@ const NewsItemComponent = ({
           >
             {tutorialTooltip === "your-rating" && (
               <TutorialTooltip>
-                <b>Step 2 - Rate:</b> During step 2 (<b>Rate</b>) you are
-                asked to perform your own truthfulness rating based on the news
-                item. To perform your rating you can change the slider below
-                between 0 and 100% of truthfulness. Please perform your rating and
-                click next.
+                <b>Schritt 2 - Bewerten:</b> Während Schritt 2 (<b>Bewerten</b>) Sie werden
+                Sie werden gebeten, den Wahrheitsgehalt der Nachricht selbst zu
+                Nachricht. Um Ihre Bewertung vorzunehmen, können Sie den Schieberegler unten
+                zwischen 0 und 100% des Wahrheitsgehalts verändern. Bitte nehmen Sie Ihre Bewertung vor und
+                klicken Sie auf "Next".
               </TutorialTooltip>
             )}
             {tutorialTooltip === "redo-your-rating" && (
               <TutorialTooltip>
-                <b>Step 4 - Repeat Rating:</b> You are asked to redo your
-                truthfulness rating again, by taking the{" "}
-                <b>additional information</b> on the right side into account.
-                Please notice, <b>there is no right and wrong</b>, feel free to
-                change your original rating in accordance to the new insights you
-                gained from the additional provided information. Please click
-                next.
+                <b>Schritt 3 - Wiederholung der Bewertung:</b> Sie werden aufgefordert, Ihre
+                Wahrheitsgehalt erneut zu bewerten, indem Sie die{" "}
+                <b>zusätzlichen Informationen</b> auf der rechten Seite zu berücksichtigen.
+                Es steht Ihnen frei, Ihre ursprüngliche Bewertung entsprechend den neuen
+                Erkenntnissen, die Sie aus den zusätzlich bereitgestellten Informationen gewonnen haben. Bitte klicken Sie
+                "next".``
               </TutorialTooltip>
             )}
             <h1
@@ -162,7 +161,7 @@ const NewsItemComponent = ({
                 fontSize: "19px !important", // Adjust the font size for "Your rating"
                 fontWeight: 600,
               }}
-            >Your rating</h1>
+            >Ihre Bewertung</h1>
             <div
               css={{
                 width: "100%",
@@ -183,14 +182,27 @@ const NewsItemComponent = ({
                 fontSize: "14px !important",
                 fontWeight: 800,
               }}
-              > Truthfulness</h2>
+              > Wahrheitsliebe</h2>
               <ThuthfulnessSlider
                 initialScore={ratingValue}
                 interactive
-                onChange={(transformedScore) => {
-                  setRatingValue(transformedScore);
-                  onRatingChange(transformedScore);
-                  newsItem.value = transformedScore;
+                onChange={(score) => {
+                  console.log("Score changed to: ", score);
+                  setRatingValue(score);
+                  onRatingChange(score);
+                  newsItem.value = score;
+                  console.log("NewsItem.xaiFeatures.truthfulness: ", newsItem.xaiFeatures.truthfulness);
+                  if (score > 50 && newsItem.xaiFeatures.truthfulness > 50) {
+                    newsItem.correctAnswer = 1;
+                    console.log("CorrectAnswer set to 1");
+                  } else if (score < 50 && newsItem.xaiFeatures.truthfulness < 50) {
+                    newsItem.correctAnswer = 1;
+                    console.log("CorrectAnswer set to 1");
+                  } else {
+                    newsItem.correctAnswer = 0;
+                    console.log("CorrectAnswer set to 0");
+                  }
+                  console.log("NewsItem.correctAnswer: ", newsItem.correctAnswer);
                 }}
               />
             </div>
@@ -213,7 +225,7 @@ const NewsItemComponent = ({
               background: "transparent",
             }}
           >
-            <h1>Political Viewpoint of News Item</h1>
+            <h1>Politischer Gesichtspunkt der Nachricht</h1>
             <div className="line"></div>
             <div
               css={{
@@ -222,14 +234,14 @@ const NewsItemComponent = ({
                 position: "relative",
               }}
             >
-              {tutorialTooltip === "visualizations" && (
+              {/* {tutorialTooltip === "visualizations" && (
                 <TutorialTooltip>
                   <b>Step 3 - Inform:</b> During step 3, you see three different 
                   visualizations representing the political viewpoint of the news item.
                   Please read the{" "} <b>Political Viewpoint</b> visualizations 
                   carefully and click next.
                 </TutorialTooltip>
-              )}
+              )} */}
             </div>
             <div className={randomizedImages?.leaning}></div>
             <div className="line"></div>
@@ -245,3 +257,4 @@ const NewsItemComponent = ({
 };
 
 export default NewsItemComponent;
+

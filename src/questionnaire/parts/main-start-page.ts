@@ -5,19 +5,19 @@ const mainStartPage = {
       type: "html",
       html: `
         <div>
-          <p style="text-align: center;"><b>Congratulations!</b></p>
+          <p style="text-align: center;"><b>Herzlichen Glückwunsch!</b></p>
           </br>
           <p>
-          You have accurately rated the news items' truthfulness and can now do the main job. 
-          In the following you are asked to repeat the ratings you have done in the qualification part for <b>18 news items</b>. 
+          Sie haben den Wahrheitsgehalt der Nachrichten richtig eingeschätzt und können nun die Hauptarbeit erledigen. 
+          Im Folgenden werden Sie gebeten, die Bewertungen zu wiederholen, die Sie im Qualifikationsteil für <b>15 Nachrichten vorgenommen haben</b>. 
           </p>
           </br>
           <p>
-          You will receive a <b>Bonus of 3 €</b> when you accurately rate <b>the truthfulness of 12 of the news items</b>. When accurately rating at least 12 of the news items, you will <b>receive overall 6 €</b>.
+          Sie erhalten einen Bonus von 3 €, wenn Sie den Wahrheitsgehalt von 10 der Nachrichten richtig bewerten (insgesamt 6 €).
           </p>
           </br>
           <p>
-          <b>Thank you for supporting our research and help to investigate on fake news!</b>
+          <b>Vielen Dank, dass Sie unsere Forschung unterstützen und uns helfen, Fake News aufzuklären!</b>
           </p>
           </br>
         </div>

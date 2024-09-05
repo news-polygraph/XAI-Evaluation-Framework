@@ -1,94 +1,25 @@
 import {
-    accessibilityLikert7,
-    frequencyLikert7,
-    importanceLikert7,
-    seriousnessLikert7,
-    truthfulnessLikert7,
     strengthLikert4,
     frequencyLikert4,
     importanceLikert4,
     satisfactionLikert4,
     agreementLikert3,
+    leftRightLikert10,
+    weitLikert3,
+    gutLikert3,
+    migrationLikert2,
+    besserLikert2,
   } from "@/helper/likert-scales";
   
   const politicalInformation = [
     {
-      title: "Survey Part 1: Your General Political Behavior",
+      title: "Umfrage Teil 1: Ihr allgemeines politisches Verhalten",
       description:
-        "In this part you should answer questions about how you interact with politics and political information. Please answer as truthfully as possible.",
+        "In diesem Teil sollten Sie Fragen dazu beantworten, wie Sie mit Politik und politischen Informationen umgehen. Bitte antworten Sie so wahrheitsgemäß wie möglich.",
       elements: [
-        // {
-        //   type: "boolean",
-        //   name: "journalist",
-        //   title: "Are a journalist by profession?",
-        //   valueTrue: "Yes",
-        //   valueFalse: "No",
-        //   renderAs: "radio",
-        //   hideNumber: true,
-        //   isRequired: true,
-        // },
-        // {
-        //   type: "matrix",
-        //   name: "information-seeking.sources",
-        //   title:
-        //     "How often do you use these sources to learn about different topics?",
-        //   hideNumber: true,
-        //   columns: frequencyLikert7,
-        //   alternateRows: true,
-        //   isAllRowRequired: true,
-        //   rows: [
-        //     { value: "newspaper", text: "Newspaper" },
-        //     { value: "online-newspaper", text: "Online newspaper" },
-        //     { value: "instagram", text: "Instagram" },
-        //     { value: "twitter", text: "Twitter" },
-        //     { value: "facebook", text: "Facebook" },
-        //     {
-        //       value: "interview",
-        //       text: "Personal Talk (Interview)",
-        //       visibleIf: "{journalist}='Yes'",
-        //     },
-        //     { value: "blogs-websites", text: "Blogs/Websites" },
-        //     {
-        //       value: "personal-social-networks",
-        //       text: "In personal social networks",
-        //     },
-        //   ],
-        // },
-        // {
-        //   type: "checkbox",
-        //   name: "information-seeking.most-used-sources",
-        //   title: "Choose the three sources from above you use most often!",
-        //   hideNumber: true,
-        //   isRequired: true,
-        //   maxSelectedChoices: 3,
-        //   validators: [
-        //     {
-        //       type: "answercount",
-        //       text: "Invalid response: please select three sources",
-        //       minCount: 3,
-        //     },
-        //   ],
-        //   choices: [
-        //     { value: "newspaper", text: "Newspaper" },
-        //     { value: "online-newspaper", text: "Online newspaper" },
-        //     { value: "instagram", text: "Instagram" },
-        //     { value: "twitter", text: "Twitter" },
-        //     { value: "facebook", text: "Facebook" },
-        //     {
-        //       value: "interview",
-        //       text: "Personal Talk (Interview)",
-        //       visibleIf: "{journalist}='Yes'",
-        //     },
-        //     { value: "blogs-websites", text: "Blogs/Websites" },
-        //     {
-        //       value: "personal-social-networks",
-        //       text: "In personal social networks",
-        //     },
-        //   ],
-        // },
         {
           title:
-            "How interested and well-informed are you about general political issues?",
+            "Wie interessiert und gut informiert sind Sie über allgemeine politische Themen?",
           type: "matrix",
           name: "political-issues",
           hideNumber: true,
@@ -98,17 +29,17 @@ import {
           rows: [
             {
               value: "top-source-seriousness",
-              text: "How interested are you in political issues in general?",
+              text: "Wie stark interessieren Sie sich allgemein für politische Themen?",
             },
             {
                 value: "top-source-seriousness",
-                text: "How well informed do you feel about political issues in general?",
+                text: "Und wie gut fühlen Sie sich allgemein über politische Themen informiert?",
             },
           ],
         },
         {
           title:
-            "Thinking about the last week, how often did you talk to someone about political issues on the following occasions?",
+            "Wenn Sie an die letzte Woche denken, wie häufig haben Sie sich bei den folgenden Gelegenheiten mit jemandem über politische Themen unterhalten?",
           type: "matrix",
           name: "political-communication",
           hideNumber: true,
@@ -116,64 +47,125 @@ import {
           alternateRows: true,
           isAllRowRequired: true,
           rows: [
-            { value: "work-school", text: "At work, school, or university" },
-            { value: "personal-life", text: "In personal conversations with friends, family" },
-            { value: "online", text: "When using social networks on the Internet" },
-            { value: "free-time", text: "In my free time/hobbies e.g. in the club" },
+            { value: "work-school", text: "Bei der Arbeit, in der Schule oder an der Uni" },
+            { value: "personal-life", text: "In persönlichen Gesprächen mit Freunden, in der Familie" },
+            { value: "online", text: "Bei der Nutzung sozialer Netzwerke im Internet" },
+            { value: "free-time", text: "In meiner Freizeit/bei Hobbies z. B. im Verein" },
           ],
         },
-        {
+          {
             title:
-              "If you want to form your own opinion on a political issue, how important are…?",
+              "In der Politik spricht man manchmal von 'links' und 'rechts'. Wo auf der Skala auf Liste 10 würden Sie sich selbst einstufen, wenn 0 für links steht und 10 für rechts?",
             type: "matrix",
-            name: "political-information-importance",
+            name: "political-scale",
             hideNumber: true,
-            columns: importanceLikert4,
+            columns: leftRightLikert10,
             alternateRows: true,
             isAllRowRequired: true,
             rows: [
-              { value: "journalists", text: "News and information from journalists" },
-              { value: "internet", text: "Information on the Internet from celebrities or even from “normal people” you don’t know personally" },
-              { value: "speeches", text: "Speeches and contributions by politicians" },
-              { value: "friends-family", text: "The opinions of family members, friends, and acquaintances" },
-              { value: "government", text: "Information from the Federal Government" },
+              {
+                  value: "Links-Rechts Skala",
+              },
             ],
           },
+          {
+            title: "Sind Sie Mitglied in einer politischen Partei? Wenn ja, welcher?",
+            type: "text",
+            name: "political-party-membership",
+            hideNumber: true,
+            isRequired: true,
+          },
+          {
+            type: "checkbox",
+            name: "political-parties",
+            title: "Wenn nächsten Sonntag Bundestagswahl wäre, welche Partei würdest du wählen?",
+            hideNumber: true,
+            isRequired: true,
+            maxSelectedChoices: 1,
+          //   validators: [
+          //     {
+          //       type: "answercount",
+          //       text: "Invalid response: please select three sources",
+          //       minCount: 3,
+          //     },
+          //   ],
+            choices: [
+              { value: "cdu", text: "CDU" },
+              { value: "csu", text: "CSU" },
+              { value: "spd", text: "SPD" },
+              { value: "grune", text: "Bündis 90/Die Grünen" },
+              { value: "fdp", text: "FDP" },
+              { value: "afd", text: "AfD" },
+              { value: "die linke", text: "Die Linke" },
+              { value: "other", text: "Andere" },
+            ],
+          },
+      ],
+    },
+    {
+      title: "Umfrage Teil 1: Spezifische politische Themen",
+      description:
+        "In diesem Teil sollen Sie Fragen zu Ihren Gedanken zu drei politischen Themen beantworten: Corona, Migration und Wirtschaft. Bitte antworten Sie so wahrheitsgemäß wie möglich.",
+      elements: [
         {
-          type: "checkbox",
-          name: "political-parties",
-          title: "Which of the following parties do you like the most?",
+          title:
+            "Corona",
+          type: "matrix",
+          name: "corona",
           hideNumber: true,
-          isRequired: true,
-          maxSelectedChoices: 1,
-        //   validators: [
-        //     {
-        //       type: "answercount",
-        //       text: "Invalid response: please select three sources",
-        //       minCount: 3,
-        //     },
-        //   ],
-          choices: [
-            { value: "cdu", text: "CDU" },
-            { value: "csu", text: "CSU" },
-            { value: "spd", text: "SPD" },
-            { value: "grune", text: "Bündis 90/Die Grünen" },
-            { value: "fdp", text: "FDP" },
-            { value: "afd", text: "AfD" },
-            { value: "die linke", text: "Die Linke" },
-            { value: "other", text: "Other" },
+          columns: weitLikert3,
+          alternateRows: true,
+          isAllRowRequired: true,
+          rows: [
+            { value: "Wie schätzen Sie die politischen Maßnahmen ein, die veranlasst wurden um das Corona-Virus einzudämmen: Wie waren diese getroffenen Maßnahmen Ihrer Meinung nach?" },
+          ],
+        },
+        {
+          title: "Migration",
+          type: "matrix",
+          name: "migration",
+          hideNumber: true,
+          columns: gutLikert3,
+          alternateRows: true,
+          isAllRowRequired: true,
+          rows: [
+            { value: "Geflüchtete", text: "Wie denken Sie darüber, dass Geflüchtete nach Deutschland kommen?" },
+          ],
+        },
+        {
+          title: "Migration",
+          type: "matrix",
+          name: "migration2",
+          hideNumber: true,
+          columns: migrationLikert2,
+          alternateRows: true,
+          isAllRowRequired: true,
+          rows: [
+            { value: "Abschiebungsstopp", text: "Sollten abgelehnte Asylbewerber aus Afghanistan weiterhin nach Afghanistan abgeschoben werden oder sollte es aufgrund der aktuellen Sicherheitslage in Afghanistan einen Abschiebungsstopp geben?" },
+          ],
+        },
+        {
+          title: "Wirtschaft",
+          type: "matrix",
+          name: "wirtschaft",
+          hideNumber: true,
+          columns: besserLikert2,
+          alternateRows: true,
+          isAllRowRequired: true,
+          rows: [
+            { value: "Wirtschaft", text: "Wenn Sie ihre finanzielle Situation, bzw. die Ihres Haushalts mit der vor zwei Jahren vergleichen: Geht es Ihnen, bzw. Ihrem Haushalt, gegenwärtig finanziell besser oder schlechter?" },
           ],
         },
       ],
     },
     {
-      title: "Survey Part 1: Dealing with Disinformation",
+      title: "Umfrage Teil 1: Der Umgang mit Desinformation",
       description:
-        "In this part you should answer questions about the dangers of disinformation and how you deal with it. Please answer as truthfully as possible.",
+        "In diesem Teil sollten Sie Fragen über die Gefahren von Desinformation und Ihren Umgang damit beantworten. Bitte antworten Sie so wahrheitsgemäß wie möglich.",
       elements: [
         {
             title:
-              "How often do you react as follows when you find information on the Internet or in social networks that interests you, but you are not sure whether it is true or not?",
+              "Wie häufig reagieren Sie wie folgt, wenn Sie im Internet oder in sozialen Netzwerken eine für Sie interessante Information finden, von der Sie jedoch nicht so genau wissen, ob sie stimmt oder nicht?",
             type: "matrix",
             name: "dealing-with-disinformation",
             hideNumber: true,
@@ -181,14 +173,14 @@ import {
             alternateRows: true,
             isAllRowRequired: true,
             rows: [
-              { value: "ignore-info", text: "I ignore the information." },
-              { value: "verify-source", text: "I am looking for other sources and media reports to verify the information." },
-              { value: "ask-others", text: "I ask others what they think about it." },
-              { value: "trustworthy-source", text: "I'm trying to find out whether the source of information can be trusted in principle." },
+              { value: "ignore-info", text: "Ich ignoriere die Information" },
+              { value: "verify-source", text: "Ich suche nach anderen Quellen und Medienberichten, um die Information zu überprüfen" },
+              { value: "ask-others", text: "Ich frage Andere, was sie davon halten" },
+              { value: "trustworthy-source", text: "Ich versuche herauszufinden, ob man der Informationsquelle grundsätzlich vertrauen kann." },
             ],
           },
         {
-          title: "Please indicate for each of the following statements whether you tend to agree or disagree with them.",
+          title: "Geben Sie bitte jeweils zu den folgenden Aussagen an, ob Sie diesen eher zustimmen oder eher nicht zustimmen.",
           type: "matrix",
           name: "dangers-disinformation",
           hideNumber: true,
@@ -196,90 +188,11 @@ import {
           alternateRows: true,
           isAllRowRequired: true,
           rows: [
-            { value: "information-abundance", text: "With the abundance of information, you no longer know what to believe." },
-            { value: "personal-fear", text: "I'm worried that I might fall for false or misleading news myself." },
-            { value: "others-fear", text: "I fear that others may be influenced by false or misleading news." },
+            { value: "information-abundance", text: "Man weiß bei der Fülle an Informationen gar nicht mehr, was man glauben soll." },
+            { value: "personal-fear", text: "Ich habe Sorge, dass ich selbst auf falsche oder irreführende Nachrichten reinfallen könnte." },
+            { value: "others-fear", text: "Ich befürchte, dass andere sich durch falsche oder irreführende Nachrichten beeinflussen lassen." },
           ],
         },
-        {
-            type: "checkbox",
-            name: "sources-of-information",
-            title: "From which sources would you like more information on how to avoid misleading or detect false information?",
-            hideNumber: true,
-            isRequired: true,
-            maxSelectedChoices: 5,
-            validators: [
-              {
-                type: "answercount",
-                text: "Invalid response: please select at least one source",
-                minCount: 1,
-              },
-            ],
-            choices: [
-              { value: "media", text: "From the media" },
-              { value: "government", text: "By the Federal Government" },
-              { value: "blog", text: "From bloggers who deal with it" },
-              { value: "social-networks", text: "From operators of social networks on the internet" },
-              { value: "school", text: "From schools and universities" },
-              { value: "none", text: "Do you not want any information about this?" },
-              { value: "other", text: "Other" },
-            ],
-          },
-          {
-            type: "checkbox",
-            name: "fake-news-sending",
-            title: "Who has ever sent you, forwarded you or posted misleading or false information in chat groups in which you are active?",
-            hideNumber: true,
-            isRequired: true,
-            maxSelectedChoices: 6,
-            validators: [
-              {
-                type: "answercount",
-                text: "Invalid response: please select at least one answer",
-                minCount: 1,
-              },
-            ],
-            choices: [
-              { value: "family", text: "Relatives/Family" },
-              { value: "friends", text: "Friends" },
-              { value: "acquaintance", text: "Acquaintance" },
-              { value: "social-networks", text: "From operators of social networks on the internet" },
-              { value: "celebrities", text: "Celebrities" },
-              { value: "strangers", text: "People you don’t know" },
-              { value: "none", text: "None of the above" },
-              { value: "other", text: "Not specified" },
-            ],
-          },
-        // {
-        //   title:
-        //     "How important is it for you to receive comprehensive information?",
-        //   type: "matrix",
-        //   name: "information-seeking",
-        //   hideNumber: true,
-        //   columns: importanceLikert7,
-        //   alternateRows: true,
-        //   isAllRowRequired: true,
-        //   rows: [
-        //     {
-        //       value: "comprehensive-information",
-        //       text: "Receiving comprehensive information",
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: "What is your purpose of information seeking?",
-        //   type: "matrix",
-        //   name: "information-seeking.purpose",
-        //   hideNumber: true,
-        //   columns: frequencyLikert7,
-        //   alternateRows: true,
-        //   isAllRowRequired: true,
-        //   rows: [
-        //     { value: "keep-up-to-date", text: "Keep up-to-date" },
-        //     { value: "general-awareness", text: "General awareness" },
-        //     { value: "preparing-research", text: "Preparing research" },
-        //   ],
-        // },
       ],
     },
   ];

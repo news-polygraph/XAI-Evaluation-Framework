@@ -87,7 +87,7 @@ const XAIQuestionnaire = ({
       }
     }
   });
-
+  console.log(newsItems[0].correctAnswer);
   survey.onComplete.add((result) => {
     // crowdee removes the id from the form, so in production we need to get it by the second selector
     const submitForm = (document.getElementById("submit-form") ??

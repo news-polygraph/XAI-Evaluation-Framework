@@ -28,7 +28,6 @@ export const qualificationQuestionnaire = (
       personalCode,
       welcomeToQualification,
       ...politicalInformation,
-      informationLiteracy,
       ...informationSeekingBehaviour,
       ...tutorial(xaiFeatures),
       youAreReady,

@@ -6,27 +6,27 @@ const personalCode = {
       html: `
         <div>
           <p>
-            Please follow the instructions below to create your <b>personal code</b>:
+          Bitte folgen Sie den nachstehenden Anweisungen, um Ihren <b>persönlichen Code</b> zu erstellen:
           </p>
           </br>
           <p>
-            (If details are not known, please insert an X).
+          (Wenn die Angaben nicht bekannt sind, bitte ein X einfügen).
           </p>
           </br>
           <p>
-            1. The first letter of your mother's first name:
+            1. Der erste Buchstabe des Vornamens Ihrer Mutter:
           </p>
           <p>
-            2. The first letter of your father's first name:
+            2. Der erste Buchstabe des Vornamens deines Vaters:
           </p>
           <p>
-            3. The first letter of your place of birth:
+            3. Der erste Buchstabe Ihres Geburtsortes:
           </p>
           <p>
-            4. The last digit of your year of birth:
+            4. Die letzte Ziffer Ihres Geburtsjahrs:
           </p>
           <p>
-            5. The last digit of your day of birth:
+            5. Die letzte Ziffer Ihres Geburtstages:
           </p>
           </br>
         </div>
@@ -36,7 +36,7 @@ const personalCode = {
       maxWidth: "900px",
       type: "text",
       name: "personal-code",
-      title: "Please enter your personal code:",
+      title: "Bitte geben Sie Ihren persönlichen Code ein:",
       hideNumber: true,
       placeHolder: "e.g. MLT93",
     },

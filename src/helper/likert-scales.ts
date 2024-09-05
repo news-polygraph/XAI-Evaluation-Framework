@@ -14,13 +14,13 @@ const getLikertScale = (scale: number, labels: string[]) => {
 };
 
 export const agreementLikert7 = getLikertScale(7, [
-  "Strongly agree",
-  "Agree",
-  "Somewhat agree",
+  "Stimme voll und ganz zu",
+  "Zustimmen",
+  "Eher zustimmen",
   "Neutral",
-  "Somewhat disagree",
-  "Disagree",
-  "Strongly disagree",
+  "Eher nicht einverstanden",
+  "Nicht einverstanden",
+  "Stimmt überhaupt nicht zu",
 ]);
 
 export const likelihoodLikert7 = getLikertScale(7, [
@@ -104,17 +104,17 @@ export const truthfulnessLikert7 = getLikertScale(7, [
 ]);
 
 export const strengthLikert4 = getLikertScale(4, [
-  "Very strong",
-  "Strong",
-  "Less",
-  "Not at all",
+  "Sehr stark",
+  "Stark",
+  "Weniger",
+  "Gar nicht",
 ]);
 
 export const frequencyLikert4 = getLikertScale(4, [
-  "Frequently",
-  "Occasionally",
-  "Rarely",
-  "Never",
+  "Häufig",
+  "Gelegentlich",
+  "Selten",
+  "Nie",
 ]);
 
 export const importanceLikert4 = getLikertScale(4, [
@@ -132,7 +132,71 @@ export const satisfactionLikert4 = getLikertScale(4, [
 ]);
 
 export const agreementLikert3 = getLikertScale(3, [
-  "Tend to agree",
-  "Rather disagree",
-  "Don't know",
+  "Stimme eher zu",
+  "Stimme eher nicht zu",
+  "Weiß nicht",
 ]);
+
+export const leftRightLikert10 = getLikertScale(11, [
+  "0 (Links)",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10 (Rechts)",
+]);
+
+export const weitLikert3 = getLikertScale(3, [
+  "Gehen zu weit",
+  "Angemessen",
+  "Gehen nicht weit genug",
+]);
+
+export const gutLikert3 = getLikertScale(3, [
+  "Finde ich nicht gut",
+  "Neutral",
+  "Finde ich gut",
+]);
+
+export const migrationLikert2 = getLikertScale(2, [
+  "Weiterhin nach Afghanistan abgeschoben werden",
+  "Sollte es aufgrund der aktuellen Sicherheitslage in Afghanistan einen Abschiebungsstopp geben",
+]);
+
+export const besserLikert2 = getLikertScale(2, [
+  "Besser",
+  "Schlechter",
+]);
+
+export const oftenLikert6 = getLikertScale(6, [
+  "Täglich",
+  "Mehrmals pro Woche",
+  "Mehrmals pro Monat",
+  "Mehrmals pro Jahr",
+  "Seltener",
+  "Gar nicht",
+]);
+
+export const oftenLikert3 = getLikertScale(3, [
+  "Täglich",
+  "Nicht täglich",
+  "(Fast) gar nicht",
+]);
+
+export const yesnoLikert2 = getLikertScale(2, [
+  "Ja",
+  "Nein",
+]);
+
+export const credibleLikert4 = getLikertScale(4, [
+  "Sehr glaubwürdig",
+  "Eher glaubwürdig",
+  "Eher nicht glaubwürdig",
+  "Gar nicht glaubwürdig",
+]);
+

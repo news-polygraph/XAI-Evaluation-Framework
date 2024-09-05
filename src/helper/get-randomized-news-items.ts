@@ -14,7 +14,7 @@ const getRandomizedNewsItems = (
       }) as NewsItem[];
 
       console.assert(
-        groupItems.length === 3,
+        groupItems.length === 3, 
         "There should be 3 items in the qualification part"
       );
 

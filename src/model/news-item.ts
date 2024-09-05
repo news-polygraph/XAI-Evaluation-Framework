@@ -22,11 +22,10 @@ interface NewsItem {
     parties_2: string;
   };
   randomizedImages?: any;
-  correctAnswer: number;
   value?: number;
-  score?: number;
+  score?: number;  
+  correctAnswer?: number;
 }
-
 export default NewsItem;
 
 // keep the exact number for the original users score in value and store the transformed score in score

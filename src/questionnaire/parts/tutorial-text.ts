@@ -10,31 +10,27 @@ const tutorialText = (xaiFeatures: XAIFeatureLevel) => {
         html: `
         <div>
           <p>
-            <b>Explanations for the Truthfulness Assessment Task of News</b>
+            <b>Erklärungen für die Aufgabe zur Bewertung der Wahrhaftigkeit von Nachrichten</b>
           </p>
           </br>
           <p>
-            In the following, you will receive three news articles which you should rate according to their truthfulness. The news articles are presented in the <b>News Dashboard</b>. Your tasks, rating the news article according to their truthfulness is divided into <b>three steps</b>: 
+          Im Folgenden erhalten Sie drei Nachrichtenartikel, die Sie nach ihrem Wahrheitsgehalt bewerten sollen. Die Nachrichtenartikel werden im News Dashboard präsentiert. Ihre Aufgabe, die Nachrichtenartikel nach ihrem Wahrheitsgehalt zu bewerten, ist in zwei Schritte unterteilt: 
           </p>
           </br>
           <p>
-            <b>Step 1 -  Read and Rate:</b> Read the news item and rate it
+            <b>Schritt 1 - Lesen und Bewerten:</b> Lesen Sie die Nachricht und bewerten Sie sie
           </p>
           </br>
           <p>
-            <b>Step 2 - Inform:</b> Additional information will show up, which you can take into account for your rating
+            <b>Schritt 2 - Wiederholung der Bewertung:</b> Es werden zusätzliche Informationen angezeigt, und Sie können Ihre Bewertung unter Berücksichtigung der zusätzlichen Informationen wiederholen.
           </p>
           </br>
           <p>
-            <b>Step 3 - Repeat Rating:</b> You are asked to repeat your truthfulness rating
+          Nach diesen beiden Schritten werden Sie aufgefordert, die Visualisierungen zu bewerten und auszuwählen, welche Visualisierung Ihnen bei Ihrer Bewertung am meisten geholfen hat.
           </p>
           </br>
           <p>
-            After these three steps, you will be asked to evaluate the visualizations, and choose which visualization helped you the most in your rating.
-          </p>
-          </br>
-          <p>
-            In the following an introduction to the task will be shown, with more detailed descriptions for each step. Please read it carefully, before the actual task starts.
+          Im Folgenden wird eine Einführung in die Aufgabe gegeben, mit detaillierteren Beschreibungen für jeden Schritt. Bitte lesen Sie diese sorgfältig durch, bevor Sie mit der eigentlichen Aufgabe beginnen.
           </p>
         `,
       },

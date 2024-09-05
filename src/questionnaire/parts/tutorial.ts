@@ -22,9 +22,9 @@ const getTutorialPageForStep = (
     isRequired?: boolean;
   }
 ) => {
-  const title = "Truthfulness Rating of News Items";
+  const title = "Bewertung des Wahrheitsgehalts von Nachrichten";
   const description =
-    "Please read the news item carefully and adjust the truthfulness rating based on the information provided.";
+    "Bitte lesen Sie die Nachricht sorgfältig durch und passen Sie die Bewertung des Wahrheitsgehalts anhand der bereitgestellten Informationen an.";
 
   return {
     title,
@@ -67,12 +67,12 @@ const getTutorialPagesForNewsItem = (
       step: "your-rating",
       isRequired: true,
     }),
-    xaiFeatures === "visualizations" &&
-      getTutorialPageForStep(newsItem, {
-        isInput: false,
-        xaiFeatures: xaiFeatures,
-        step: "visualizations",
-      }),
+    // xaiFeatures === "visualizations" &&
+    //   getTutorialPageForStep(newsItem, {
+    //     isInput: false,
+    //     xaiFeatures: xaiFeatures,
+    //     step: "visualizations",
+    //   }),
     xaiFeatures === "salient" &&
       getTutorialPageForStep(newsItem, {
         isInput: false,

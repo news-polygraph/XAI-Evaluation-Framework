@@ -3,7 +3,6 @@ import NewsItem from "@/model/news-item";
 import { SurveyPart } from "@/model/survey-part";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import classUrls from "@/components/urls";
-// import './styles.module.css'; // Adjust the path based on your project structure
 
 
 // Function to extract the classname from the provided format
@@ -19,10 +18,10 @@ const getPagesForNewsItem = (
   xaiFeatures: XAIFeatureLevel,
   part: SurveyPart
 ) => {
-  const title = "Truthfulness Rating of News Items";
+  const title = "Bewertung des Wahrheitsgehalts von Nachrichten";
   const description =
-    "Please read the news item carefully and adjust the truthfulness rating based on the information provided.";
-
+    "Bitte lesen Sie die Nachricht sorgfältig durch und passen Sie die Bewertung des Wahrheitsgehalts anhand der bereitgestellten Informationen an.";
+  console.log(newsItem)
   return [
     {
       title,
@@ -40,22 +39,22 @@ const getPagesForNewsItem = (
         },
       ],
     },
-    {
-      name: "article-with-xai",
-      title,
-      description,
-      elements: [
-        {
-          type: "newsitem",
-          name: `newsitem.${newsItem.id}.article-with-xai`,
-          hideNumber: true,
-          titleLocation: "hidden",
-          newsitem: newsItem,
-          xaiFeatures: "visualizations",
-          isInput: false,
-        },
-      ],
-    },
+    // {
+    //   name: "article-with-xai",
+    //   title,
+    //   description,
+    //   elements: [
+    //     {
+    //       type: "newsitem",
+    //       name: `newsitem.${newsItem.id}.article-with-xai`,
+    //       hideNumber: true,
+    //       titleLocation: "hidden",
+    //       newsitem: newsItem,
+    //       xaiFeatures: "visualizations",
+    //       isInput: false,
+    //     },
+    //   ],
+    // },
     {
       name: "rating-after-xai",
       title,
@@ -72,7 +71,7 @@ const getPagesForNewsItem = (
           isInput: true,
           isRequired: true,
           value: newsItem.value,
-          correctAnswer: newsItem.value === newsItem.correctAnswer ? 1 : 0,
+          correctAnswer: newsItem.correctAnswer,
         },
       ],
     },
@@ -117,33 +116,30 @@ const getPagesForNewsItem = (
     //   ],
     // },
     {
-      title: "Evaluate the visualizations",
-      description: "Choose which visualization was more helpful to you when evaluating the truthfulness of the news item.",
+      title: "Bewerten Sie die Visualisierungen",
+      description: "Wählen Sie aus, welche Visualisierung Ihnen bei der Beurteilung des Wahrheitsgehalts der Nachricht am hilfreichsten war.",
       elements: [
         {
           type: "imagepicker",
           name: `newsitem.${newsItem.id}.visualization-evaluation`,
-          title: "Visualization Choice",
+          title: "Auswahl der Visualisierung",
           hideNumber: true,
           newsitem: newsItem,
           choices: [
             {
-              value: "Leaning",
+              value: "Anlehnen",
               imageLink: classUrls[extractClassName(newsItem.randomizedImages.leaning)]
             },
             {
-              value: "Ideology",
+              value: "Ideologie",
               imageLink: classUrls[extractClassName(newsItem.randomizedImages.ideology)]
             },
             {
-              value: "Parties",
+              value: "Parteien",
               imageLink: classUrls[extractClassName(newsItem.randomizedImages.parties)]
             }
           ],
           isRequired: true,
-          // cssClasses: {
-          //   root: "custom-imagepicker" // Apply your custom class here
-          // }
         }
       ],
     },
@@ -179,13 +175,13 @@ const getPagesForNewsItem = (
           // show warning if control question was answered incorrectly 
           name: "truthfulness-score-warning",
           newsitem : newsItem,
-          visibleIf: `{newsitem.${newsItem.id}.rating-after-xai} != ${newsItem.correctAnswer}`,
+          visibleIf: `1 != ${newsItem.correctAnswer}`,
           elements: [
             {
               type: "html",
               maxWidth: "900px",
               html: `<div>
-              You did not succesfully rate the article's truthfulness.
+              You did not succesfully rate the article's truthfulness ${JSON.stringify(newsItem)}.
           </div>`,
             },
           ],

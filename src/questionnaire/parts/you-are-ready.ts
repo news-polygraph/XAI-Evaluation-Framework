@@ -5,19 +5,19 @@ const youAreReady = {
       maxWidth: "900px",
       type: "html",
       html: `
-    <b>You are ready now!</b>
+    <b>Sie sind jetzt bereit!</b>
     <p>
-    You have been introduced to the upcoming credibility assessment task. Please move on to the next part, read the news items carefully and perform your truthfulness rating before and after seeing the AI-generated explainability features. In case the task is not clear, please click on <b><i>Previous</i></b> to see the task description again.
+    Sie haben eine Einführung in die bevorstehende Aufgabe zur Bewertung der Glaubwürdigkeit erhalten. Bitte gehen Sie zum nächsten Teil über, lesen Sie die Nachrichten aufmerksam durch und bewerten Sie den Wahrheitsgehalt vor und nach dem Betrachten der Visualisierungen der politischen Standpunkte. Falls die Aufgabe nicht klar ist, klicken Sie bitte auf Zurück, um die Aufgabenbeschreibung noch einmal zu sehen.
     </p>
   `,
     },
     {
       title:
-        "I understand all components of the upcoming task and would like to start the credibility assessment of news items!",
+        "Ich verstehe alle Bestandteile der anstehenden Aufgabe und möchte mit der Glaubwürdigkeitsbewertung von Nachrichten beginnen.",
       type: "boolean",
       renderAs: "radio",
-      valueTrue: "Yes",
-      valueFalse: "No",
+      valueTrue: "Ja",
+      valueFalse: "Nein",
       isRequired: true,
       name: "understand-task",
       hideNumber: true,

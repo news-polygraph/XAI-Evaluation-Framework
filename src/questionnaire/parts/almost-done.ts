@@ -4,9 +4,9 @@ const almostDone = {
       maxWidth: "900px",
       type: "html",
       html: `
-    <b>Almost done!</b>
+    <b>Fast fertig!</b>
     <p>
-    You have finalized the truthfulness assessment of the news items. In the next part, we will ask you several questions, please answer them as truthfully as possible.
+    Sie haben die Bewertung des Wahrheitsgehalts der Nachrichten abgeschlossen. Im nächsten Teil werden wir Ihnen einige Fragen stellen, die Sie bitte so wahrheitsgemäß wie möglich beantworten.
     </p>
   `,
     },
