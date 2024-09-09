@@ -1,4 +1,8 @@
 // classUrls.ts
+
+// This file contains a dictionary mapping the class names of all of the item's images to their URLs.
+// The class names are of the form "ideology_1a_item_1_" and the URLs are of the form "/imgs_by_items/item_1/ideology_1a.png".
+
 const classUrls: { [key: string]: string } = {
   "ideology_1a_item_1_": "/imgs_by_items/item_1/ideology_1a.png",
   "ideology_1b_item_1_": "/imgs_by_items/item_1/ideology_1b.png",
@@ -13,6 +17,7 @@ const classUrls: { [key: string]: string } = {
   "parties_2a_item_1_": "/imgs_by_items/item_1/parties_2a.png",
   "parties_2b_item_1_": "/imgs_by_items/item_1/parties_2b.png",
 
+  //Qualification item
   "ideology_1a_item_2_": "/imgs_by_items/item_2/ideology_1a.png",
   "ideology_1b_item_2_": "/imgs_by_items/item_2/ideology_1b.png",
   "ideology_2a_item_2_": "/imgs_by_items/item_2/ideology_2a.png",
@@ -52,6 +57,7 @@ const classUrls: { [key: string]: string } = {
   "parties_2a_item_4_": "/imgs_by_items/item_4/parties_2a.png",
   "parties_2b_item_4_": "/imgs_by_items/item_4/parties_2b.png",
 
+  //Qualification item
   "ideology_1a_item_5_": "/imgs_by_items/item_5/ideology_1a.png",
   "ideology_1b_item_5_": "/imgs_by_items/item_5/ideology_1b.png",
   "ideology_2a_item_5_": "/imgs_by_items/item_5/ideology_2a.png",
@@ -104,6 +110,7 @@ const classUrls: { [key: string]: string } = {
   "parties_2a_item_8_": "/imgs_by_items/item_8/parties_2a.png",
   "parties_2b_item_8_": "/imgs_by_items/item_8/parties_2b.png",
 
+  //Qualification item
   "ideology_1a_item_9_": "/imgs_by_items/item_9/ideology_1a.png",
   "ideology_1b_item_9_": "/imgs_by_items/item_9/ideology_1b.png",
   "ideology_2a_item_9_": "/imgs_by_items/item_9/ideology_2a.png",
@@ -234,6 +241,21 @@ const classUrls: { [key: string]: string } = {
   "parties_2a_item_18_": "/imgs_by_items/item_18/parties_2a.png",
   "parties_2b_item_18_": "/imgs_by_items/item_18/parties_2b.png",
 
+// Example item
+  "ideology_1a_item_9999_": "/imgs_by_items/item_19/ideology_1a.png",
+  "ideology_1b_item_9999_": "/imgs_by_items/item_19/ideology_1b.png",
+  "ideology_2a_item_9999_": "/imgs_by_items/item_19/ideology_2a.png",
+  "ideology_2b_item_9999_": "/imgs_by_items/item_19/ideology_2b.png",
+  "leaning_1a_item_9999_": "/imgs_by_items/item_19/leaning_1a.png",
+  "leaning_1b_item_9999_": "/imgs_by_items/item_19/leaning_1b.png",
+  "leaning_2a_item_9999_": "/imgs_by_items/item_19/leaning_2a.png",
+  "leaning_2b_item_9999_": "/imgs_by_items/item_19/leaning_2b.png",
+  "parties_1a_item_9999_": "/imgs_by_items/item_19/parties_1a.png",
+  "parties_1b_item_9999_": "/imgs_by_items/item_19/parties_1b.png",
+  "parties_2a_item_9999_": "/imgs_by_items/item_19/parties_2a.png",
+  "parties_2b_item_9999_": "/imgs_by_items/item_19/parties_2b.png",
+
+  //Unused item
   "ideology_1a_item_19_": "/imgs_by_items/item_19/ideology_1a.png",
   "ideology_1b_item_19_": "/imgs_by_items/item_19/ideology_1b.png",
   "ideology_2a_item_19_": "/imgs_by_items/item_19/ideology_2a.png",
@@ -247,6 +269,7 @@ const classUrls: { [key: string]: string } = {
   "parties_2a_item_19_": "/imgs_by_items/item_19/parties_2a.png",
   "parties_2b_item_19_": "/imgs_by_items/item_19/parties_2b.png",
 
+  //Unused item
   "ideology_1a_item_20_": "/imgs_by_items/item_20/ideology_1a.png",
   "ideology_1b_item_20_": "/imgs_by_items/item_20/ideology_1b.png",
   "ideology_2a_item_20_": "/imgs_by_items/item_20/ideology_2a.png",
@@ -260,6 +283,7 @@ const classUrls: { [key: string]: string } = {
   "parties_2a_item_20_": "/imgs_by_items/item_20/parties_2a.png",
   "parties_2b_item_20_": "/imgs_by_items/item_20/parties_2b.png",
 
+  //Unused item
   "ideology_1a_item_21_": "/imgs_by_items/item_21/ideology_1a.png",
   "ideology_1b_item_21_": "/imgs_by_items/item_21/ideology_1b.png",
   "ideology_2a_item_21_": "/imgs_by_items/item_21/ideology_2a.png",
@@ -271,21 +295,10 @@ const classUrls: { [key: string]: string } = {
   "parties_1a_item_21_": "/imgs_by_items/item_21/parties_1a.png",
   "parties_1b_item_21_": "/imgs_by_items/item_21/parties_1b.png",
   "parties_2a_item_21_": "/imgs_by_items/item_21/parties_2a.png",
-  "parties_2b_item_21_": "/imgs_by_items/item_21/parties_2b.png",
+  "parties_2b_item_21_": "/imgs_by_items/item_21/parties_2b.png"
 
-  "ideology_1a_item_9999_": "/imgs_by_items/item_19/ideology_1a.png",
-  "ideology_1b_item_9999_": "/imgs_by_items/item_19/ideology_1b.png",
-  "ideology_2a_item_9999_": "/imgs_by_items/item_19/ideology_2a.png",
-  "ideology_2b_item_9999_": "/imgs_by_items/item_19/ideology_2b.png",
-  "leaning_1a_item_9999_": "/imgs_by_items/item_19/leaning_1a.png",
-  "leaning_1b_item_9999_": "/imgs_by_items/item_19/leaning_1b.png",
-  "leaning_2a_item_9999_": "/imgs_by_items/item_19/leaning_2a.png",
-  "leaning_2b_item_9999_": "/imgs_by_items/item_19/leaning_2b.png",
-  "parties_1a_item_9999_": "/imgs_by_items/item_19/parties_1a.png",
-  "parties_1b_item_9999_": "/imgs_by_items/item_19/parties_1b.png",
-  "parties_2a_item_9999_": "/imgs_by_items/item_19/parties_2a.png",
-  "parties_2b_item_9999_": "/imgs_by_items/item_19/parties_2b.png"
 }
+  
 
 export default classUrls;
 

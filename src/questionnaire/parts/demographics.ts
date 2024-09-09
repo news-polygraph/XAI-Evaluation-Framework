@@ -1,3 +1,17 @@
+/**
+ * This is the demographics part of the survey.
+ *
+ * It asks the user for some basic information about themselves, such as their age, gender, and education level.
+ *
+ * The questions are:
+ * - How old are you?
+ * - What is your gender?
+ * - What is your highest level of education?
+ * - What is your employment status?
+ * - What is your annual household income?
+ *
+ * The user is required to answer all of these questions, and the answers will be stored anonymously.
+ */
 const demographics = {
   title: "Letzte Fragen zu Ihrer Persönlichkeit",
   description:
@@ -99,3 +113,5 @@ const demographics = {
 };
 
 export default demographics;
+
+

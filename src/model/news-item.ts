@@ -1,3 +1,5 @@
+// This file contains the NewsItem interface, which is used to represent news items with additional information about their truthfulness, ratings, and randomized images.
+// The interface is used by the NewsItemComponent and NewsItemQuestion components to display the news items and their associated information.
 interface NewsItem {
   id: number;
   title: string;
@@ -7,11 +9,6 @@ interface NewsItem {
   label: "fake" | "true";
   xaiFeatures: {
     truthfulness: number;
-  };
-  controlQuestion: {
-    question: string;
-    correctAnswer: string;
-    wrongAnswers: string[];
   };
   ratings: {
     ideology_1: string;
@@ -27,5 +24,3 @@ interface NewsItem {
   correctAnswer?: number;
 }
 export default NewsItem;
-
-// keep the exact number for the original users score in value and store the transformed score in score

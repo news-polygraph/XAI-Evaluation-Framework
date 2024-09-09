@@ -1,3 +1,8 @@
+/**
+ * This file contains the implementation of the information seeking behaviour part of the questionnaire.
+ * The questions ask how often the user uses different media and information sources to get informed about political topics, and how credible the user finds different sources of information.
+ */
+
 import {
   accessibilityLikert7,
   frequencyLikert7,
@@ -93,3 +98,5 @@ const informationSeekingBehaviour = [
   },
 ];
 export default informationSeekingBehaviour;
+
+

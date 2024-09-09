@@ -6,8 +6,10 @@ import tutorialText from "./tutorial-text";
 import getRandomClassNames from "@/helper/get-randomized-classnames";
 
 let exampleItem: NewsItem = {...exampleNewsItem as NewsItem, randomizedImages: getRandomClassNames(exampleNewsItem as NewsItem)};
-//let exampleNewsItem: NewsItem = {...exampleNewsItem, randomizedImages: getRandomClassNames()}
 
+/**
+ * Generates a single page for the tutorial for a given news item, step and XAI feature level.
+ */
 const getTutorialPageForStep = (
   newsItem: NewsItem,
   {
@@ -46,6 +48,14 @@ const getTutorialPageForStep = (
   };
 };
 
+/**
+ * Generates an array of survey pages for the tutorial of a given news item and XAI feature level.
+ * The tutorial is composed of the following steps:
+ * - Overview
+ * - Article
+ * - Your rating
+ * - Visualizations (only for Visualizations XAI feature level)
+ */
 const getTutorialPagesForNewsItem = (
   newsItem: NewsItem,
   xaiFeatures: XAIFeatureLevel
@@ -106,6 +116,10 @@ const getTutorialPagesForNewsItem = (
   ];
 };
 
+/**
+ * Generates the pages for the experiment.
+ * The experiment is composed of the tutorial pages (overview, article, your rating, visualizations, redo your rating) and the main experiment pages.
+ */
 const experimentPages = (xaiFeatures: XAIFeatureLevel) => {
   const tutorialTextPage = tutorialText(xaiFeatures);
 

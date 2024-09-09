@@ -1,3 +1,14 @@
+  /**
+   * This is the political information questionnaire.
+   * It consists of several parts:
+   * 1. General political behavior
+   * 2. Political communication
+   * 3. Political scale (left-right, authoritarian-liberal, progressive-conservative, capitalist-socialist)
+   * 4. Party membership and voting intention
+   * 5. Specific political topics (corona, migration, economy)
+   * 6. Dealing with disinformation
+   */
+
 import {
     strengthLikert4,
     frequencyLikert4,
@@ -9,6 +20,9 @@ import {
     gutLikert3,
     migrationLikert2,
     besserLikert2,
+    autLibLikert10,
+    progKonsLikert10,
+    kapiSoziLikert10,
   } from "@/helper/likert-scales";
   
   const politicalInformation = [
@@ -57,7 +71,7 @@ import {
             title:
               "In der Politik spricht man manchmal von 'links' und 'rechts'. Wo auf der Skala auf Liste 10 würden Sie sich selbst einstufen, wenn 0 für links steht und 10 für rechts?",
             type: "matrix",
-            name: "political-scale",
+            name: "political-scale.links-rechts",
             hideNumber: true,
             columns: leftRightLikert10,
             alternateRows: true,
@@ -65,6 +79,51 @@ import {
             rows: [
               {
                   value: "Links-Rechts Skala",
+              },
+            ],
+          },
+          {
+            title:
+              "In der Politik spricht man manchmal von „Autoritarismus“ und „Liberalismus“. Wo auf der Skala der Liste 10 würden Sie sich einordnen, wenn 0 für Autoritarismus und 10 für Liberalismus steht?",
+            type: "matrix",
+            name: "political-scale.aut-lib",
+            hideNumber: true,
+            columns: autLibLikert10,
+            alternateRows: true,
+            isAllRowRequired: true,
+            rows: [
+              {
+                  value: "Autoritarismus-Liberalismus Skala",
+              },
+            ],
+          },
+          {
+            title:
+              "In der Politik spricht man manchmal von „Progressivismus“ und „Konservatismus“. Wo auf der Skala der Liste 10 würden Sie sich selbst einordnen, wenn 0 für Progressivismus und 10 für Konservatismus steht?",
+            type: "matrix",
+            name: "political-scale.prog-kons",
+            hideNumber: true,
+            columns: progKonsLikert10,
+            alternateRows: true,
+            isAllRowRequired: true,
+            rows: [
+              {
+                  value: "Progressivismus-Konservatismus Skala",
+              },
+            ],
+          },
+          {
+            title:
+              "In der Politik spricht man manchmal von „Kapitalismus“ und „Sozialismus“. Wo auf der Skala der Liste 10 würden Sie sich einordnen, wenn 0 für Kapitalismus und 10 für Sozialismus steht?",
+            type: "matrix",
+            name: "political-scale.kapi-sozi",
+            hideNumber: true,
+            columns: kapiSoziLikert10,
+            alternateRows: true,
+            isAllRowRequired: true,
+            rows: [
+              {
+                  value: "Kapitalismus-Sozialismus Skala",
               },
             ],
           },
@@ -199,3 +258,4 @@ import {
   
   export default politicalInformation;
   
+

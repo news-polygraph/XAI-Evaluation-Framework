@@ -13,6 +13,9 @@ const extractClassName = (value: string): string => {
 };
 
 
+/**
+ * Generates the pages for a single news item in the experiment.
+ */
 const getPagesForNewsItem = (
   newsItem: NewsItem,
   xaiFeatures: XAIFeatureLevel,
@@ -21,9 +24,13 @@ const getPagesForNewsItem = (
   const title = "Bewertung des Wahrheitsgehalts von Nachrichten";
   const description =
     "Bitte lesen Sie die Nachricht sorgfältig durch und passen Sie die Bewertung des Wahrheitsgehalts anhand der bereitgestellten Informationen an.";
-  console.log(newsItem)
+  // console.log(newsItem)
   return [
     {
+      /**
+       * The first page shows the news item without THE visualizations.
+       * The user should rate the truthfulness of the news item.
+       */
       title,
       description,
       elements: [
@@ -39,23 +46,12 @@ const getPagesForNewsItem = (
         },
       ],
     },
-    // {
-    //   name: "article-with-xai",
-    //   title,
-    //   description,
-    //   elements: [
-    //     {
-    //       type: "newsitem",
-    //       name: `newsitem.${newsItem.id}.article-with-xai`,
-    //       hideNumber: true,
-    //       titleLocation: "hidden",
-    //       newsitem: newsItem,
-    //       xaiFeatures: "visualizations",
-    //       isInput: false,
-    //     },
-    //   ],
-    // },
+    
     {
+      /**
+       * The second page shows the news item with the visualizations.
+       * The user should rate the truthfulness of the news item again.
+       */
       name: "rating-after-xai",
       title,
       description,
@@ -75,47 +71,10 @@ const getPagesForNewsItem = (
         },
       ],
     },
-    // {
-    //   name: "correct-answer",
-    //   title,
-    //   description,
-    //   visible: false,
-    //   elements: [
-    //     {
-    //       type: "newsitem",
-    //       name: `newsitem.${newsItem.id}.rating-after-xai`,
-    //       title: "Testing",
-    //       hideNumber: true,
-    //       titleLocation: "hidden",
-    //       newsitem: newsItem,
-    //       xaiFeatures: "visualizations",
-    //       isInput: true,
-    //       isRequired: true,
-    //       value: newsItem.correctAnswer,
-    //     },
-    //   ],
-    // },
-    
-    // {
-    //   title,
-    //   description,
-    //   elements: [
-    //     {
-    //       type: "newsitem",
-    //       name: `newsitem.${newsItem.id}.truthfulness_score`,
-    //       hideNumber: true,
-    //       visible: false,
-    //       titleLocation: "hidden",
-    //       newsitem: newsItem,
-    //       xaiFeatures: "visualizations",
-    //       isInput: true,
-    //       isRequired: true,
-    //       value: newsItem.value === newsItem.correctAnswer ? "correct" : "incorrect",
-    //       correctAnswer: "correct",
-    //     },
-    //   ],
-    // },
     {
+      /**
+       * The third page asks the user to choose which visualization was the most helpful.
+       */
       title: "Bewerten Sie die Visualisierungen",
       description: "Wählen Sie aus, welche Visualisierung Ihnen bei der Beurteilung des Wahrheitsgehalts der Nachricht am hilfreichsten war.",
       elements: [
@@ -143,45 +102,21 @@ const getPagesForNewsItem = (
         }
       ],
     },
-    // {
-    //   name: "control-question",
-    //   title,
-    //   description,
-    //   elements: [
-    //     {
-    //       // multiple choice control question
-    //       type: "radiogroup",
-    //       name: `newsitem.${newsItem.id}.control-question`,
-    //       title: newsItem.controlQuestion.question,
-    //       hideNumber: true,
-    //       choicesOrder: "random",
-    //       isRequired: true,
-    //       choices: [
-    //         {
-    //           value: "correct",
-    //           text: newsItem.controlQuestion.correctAnswer,
-    //         },
-    //         ...newsItem.controlQuestion.wrongAnswers.map((answer, i) => ({
-    //           value: `wrong-${i + 1}`,
-    //           text: answer,
-    //         })),
-    //       ],
-    //       correctAnswer: "correct",
-    //     },
-    //   ],
-    // },
     part === "main" || part === "qualification"
       ? {
-          // show warning if control question was answered incorrectly 
+          /**
+           * If the user did not answer the control question correctly, show a warning.
+           * NOT WORKING YET
+           */
           name: "truthfulness-score-warning",
           newsitem : newsItem,
-          visibleIf: `1 != ${newsItem.correctAnswer}`,
+          visibleIf: `1 != correctAnswer`, // correctAnswer needs to be set to newsItemQuestion.correctAnswer 
           elements: [
             {
               type: "html",
               maxWidth: "900px",
               html: `<div>
-              You did not succesfully rate the article's truthfulness ${JSON.stringify(newsItem)}.
+              You did not succesfully rate the article's truthfulness.
           </div>`,
             },
           ],
@@ -207,4 +142,5 @@ const experimentPages = (
 
 
 export default experimentPages;
+
 

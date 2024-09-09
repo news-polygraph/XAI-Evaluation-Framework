@@ -1,38 +1,69 @@
+/**
+ * The NewsItemComponent displays a single news item.
+ *
+ * The component takes the following props:
+ * - newsItem: The news item to be displayed.
+ * - xaiFeatures: The XAI features to be enabled or disabled
+ * - isInput: A boolean indicating whether the component should display an input form or not.
+ * - onRatingChange: A callback function that is called when the user changes their rating.
+ * - onCorrectAnswerUpdate: A callback function that is called when the user's correct answer (1 or 0) is updated.
+ * - isTutorialMode: A boolean indicating whether the component is in tutorial mode or not.
+ * - tutorialTooltip: The tutorial tooltip text to be displayed.
+ * - defaultRatingValue: The default rating value to be displayed.
+ * - showError: A boolean indicating whether the component should display an error message or not.
+ * - randomizedImages: An object containing the randomized images for the different XAI features.
+ */
+
 import NewsItem from "@/model/news-item";
 import { TutorialTooltipStep } from "@/model/tutorial-tooltip-step";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import { useState, useEffect } from "react";
 import ThuthfulnessSlider from "./TruthfulnessSlider";
 import TutorialTooltip from "./TutorialTooltip";
-// import images from "./Visualizations.module.css";
 
 const NewsItemComponent = ({
   newsItem,
   xaiFeatures,
   isInput = false,
   onRatingChange = () => {},
+  onCorrectAnswerUpdate = () => {}, // Added the callback prop
   isTutorialMode = false,
   tutorialTooltip = null,
   defaultRatingValue = undefined,
   showError = false,
   randomizedImages,
-  //correctAnswer
 }: {
   newsItem: NewsItem;
   xaiFeatures: XAIFeatureLevel;
   isInput: boolean;
   onRatingChange: (value: number) => void;
+  onCorrectAnswerUpdate: (correctAnswer: number) => void; // Accept correctAnswer callback
   isTutorialMode: boolean;
   tutorialTooltip: TutorialTooltipStep | null;
   defaultRatingValue: number | undefined;
   showError: boolean;
   randomizedImages?: any;
-  //correctAnswer: string
 }) => {
   const [ratingValue, setRatingValue] = useState<number | undefined>(
     defaultRatingValue
   );
   // console.log(randomizedImages)
+
+  const handleSliderChange = (score: number) => {
+    setRatingValue(score);
+    onRatingChange(score);
+
+    // Calculate correctAnswer based on the user's truthfulness score and the item's true truthfulness (newsitem.xaiFeatures.truthfulness)
+    const newCorrectAnswer =
+      score > 50 && newsItem.xaiFeatures.truthfulness > 50
+        ? 1
+        : score < 50 && newsItem.xaiFeatures.truthfulness < 50
+        ? 1
+        : 0;
+
+    // Call the parent callback with the new correctAnswer
+    onCorrectAnswerUpdate(newCorrectAnswer);
+  };
 
   return (
     <section
@@ -76,6 +107,12 @@ const NewsItemComponent = ({
         },
       }}
     >
+      {/* 
+        A tutorial tooltip that only appears when the tutorial is at the "overview" step.
+        It's a brief introduction to the NewsItemComponent and the role it plays in the
+        larger experiment. It's only shown when the user is in the tutorial mode and on the
+        first step of the tutorial. There are 3 other tutorial tooltips that appear afterwards.
+      */}
       {tutorialTooltip === "overview" && (
         <TutorialTooltip>
           <b>Nachrichten Dashboard:</b> In Folgenden werden wir Sie durch die
@@ -182,28 +219,18 @@ const NewsItemComponent = ({
                 fontSize: "14px !important",
                 fontWeight: 800,
               }}
-              > Wahrheitsliebe</h2>
+              > Wahrheit</h2>
+              {/*
+                This is a slider component that is used to display the user's rating of the news item's
+                truthfulness. The user can interact with the slider to change their rating. The
+                `initialScore` prop is set to the current value of the `ratingValue` state variable,
+                which is the user's current rating. The `onChange` prop is set to the `handleSliderChange`
+                function, which will be called whenever the user changes their rating.
+              */}
               <ThuthfulnessSlider
                 initialScore={ratingValue}
                 interactive
-                onChange={(score) => {
-                  console.log("Score changed to: ", score);
-                  setRatingValue(score);
-                  onRatingChange(score);
-                  newsItem.value = score;
-                  console.log("NewsItem.xaiFeatures.truthfulness: ", newsItem.xaiFeatures.truthfulness);
-                  if (score > 50 && newsItem.xaiFeatures.truthfulness > 50) {
-                    newsItem.correctAnswer = 1;
-                    console.log("CorrectAnswer set to 1");
-                  } else if (score < 50 && newsItem.xaiFeatures.truthfulness < 50) {
-                    newsItem.correctAnswer = 1;
-                    console.log("CorrectAnswer set to 1");
-                  } else {
-                    newsItem.correctAnswer = 0;
-                    console.log("CorrectAnswer set to 0");
-                  }
-                  console.log("NewsItem.correctAnswer: ", newsItem.correctAnswer);
-                }}
+                onChange={handleSliderChange}
               />
             </div>
           </div>
@@ -243,11 +270,22 @@ const NewsItemComponent = ({
                 </TutorialTooltip>
               )} */}
             </div>
-            <div className={randomizedImages?.leaning}></div>
+            {/* 
+              The divs below are used to display the visualizations for the
+              political leaning, ideology, and parties of the news item.
+
+              The classNames are randomly selected from the styles object
+              and are used to style the divs. The styles object is defined
+              in the getRandomClassNames function in the get-randomized-classnames.ts
+              file.
+
+              The "line" class is used to add a line between the divs.
+            */}
+            <div className={randomizedImages?.leaning} /* Political Leaning */></div>
             <div className="line"></div>
-            <div className={randomizedImages?.ideology}></div>
+            <div className={randomizedImages?.ideology} /* Ideology */></div>
             <div className="line"></div>
-            <div className={randomizedImages?.parties}></div>
+            <div className={randomizedImages?.parties} /* Parties */></div>
             <div className="line"></div>
           </section>
         )}
@@ -257,4 +295,6 @@ const NewsItemComponent = ({
 };
 
 export default NewsItemComponent;
+
+
 

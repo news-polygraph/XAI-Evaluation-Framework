@@ -8,11 +8,6 @@
   "xaiFeatures": {
     "truthfulness": 92
   },
-  "controlQuestion": {
-    "question": "What was the article about?",
-    "correctAnswer": "Young adult cannabis consumers suffer from a heart attack more likely",
-    "wrongAnswers": ["Young children consuming cannabis suffer from a heart attacks","Creazy cannabis consumers robbing shops more likely ","Cannabis is healthy for your merriage ","Cannabis can be consumed anytime in Alaska"]
-  },
   "ratings": {
     "ideology_1": "[Economic:1.7, Social:5.9]",
     "ideology_2": "[Relevant:Prog/Kons, Prog/Kons:2, Auth/Libe:5, Kapi/Sozi:5]",

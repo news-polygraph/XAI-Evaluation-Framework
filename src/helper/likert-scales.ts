@@ -151,6 +151,48 @@ export const leftRightLikert10 = getLikertScale(11, [
   "10 (Rechts)",
 ]);
 
+export const autLibLikert10 = getLikertScale(11, [
+  "0 (Autoritarismus)",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10 (Liberalismus)",
+]);
+
+export const progKonsLikert10 = getLikertScale(11, [
+  "0 (Progressivismus)",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10 (Konservatismus)",
+]);
+
+export const kapiSoziLikert10 = getLikertScale(11, [
+  "0 (Kapitalismus)",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10 (Sozialismus)",
+]);
+
 export const weitLikert3 = getLikertScale(3, [
   "Gehen zu weit",
   "Angemessen",
@@ -200,3 +242,12 @@ export const credibleLikert4 = getLikertScale(4, [
   "Gar nicht glaubwürdig",
 ]);
 
+export const helpfulnessLikert7 = getLikertScale(7, [
+  "Sehr hilfreich",
+  "Hilfreich",
+  "Etwas hilfreich",
+  "Neutral",
+  "Eher nicht hilfreich",
+  "Nicht hilfreich",
+  "Sehr wenig hilfreich",
+]);

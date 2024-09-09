@@ -9,6 +9,12 @@ import NewsItem from "@/model/news-item";
 import { SurveyPart } from "@/model/survey-part";
 import { mainQuestionnaire } from "@/questionnaire/main-questionnaire";
 import { mergedQuestionnaire } from "@/questionnaire/merged-questionnaire";
+import { NewsItemQuestionModel } from "./NewsItemQuestion";
+
+/**
+ * A Next.js page that renders a survey using the SurveyJS library based on the given part and features.
+ * The page also handles the submission of the survey to the Crowdee platform.
+ */
 
 const XAIQuestionnaire = ({
   newsItems,
@@ -81,18 +87,16 @@ const XAIQuestionnaire = ({
 
   survey.onValueChanged.add((sender, options) => {
     if (options.name === "understand-task") {
-      if (options.value === "No") {
+      if (options.value === "Nein") {
         sender.setValue("understand-task", undefined);
         sender.currentPage = sender.getPageByName("tutorial-text");
       }
     }
   });
-  console.log(newsItems[0].correctAnswer);
   survey.onComplete.add((result) => {
     // crowdee removes the id from the form, so in production we need to get it by the second selector
     const submitForm = (document.getElementById("submit-form") ??
       document.querySelector("body > form")) as HTMLFormElement;
-    // iterate thru all the news items and sum up the scores, store that in a variable, and then assign that sum to the POINTS variable
     const formData: { [key: string]: any } = {
       "x-crowdee-task": (
         submitForm.querySelector(
@@ -112,13 +116,37 @@ const XAIQuestionnaire = ({
       "METADATA.FEATURE": xaiFeature,
       "METADATA.GROUP": groupNumber,
       "METADATA.PART": part,
-      POINTS: result.getCorrectAnswerCount(),
+      // POINTS: result.getCorrectAnswerCount(),
     };
 
-    for (const key in result.data) { // maybe just storing eveything for each news item, 
+    let totalCorrectAnswers = 0;
+
+    // Iterate over all questions and check if they are NewsItemQuestions
+    result.getAllQuestions().forEach((question) => {
+      if (question.getType() === "newsitem" && question.name.includes("rating-after-xai")) {
+        const newsItemQuestion = question as NewsItemQuestionModel;
+
+        // Access the correctAnswer from the question model
+        const correctAnswer = newsItemQuestion.correctAnswer;
+
+        // The key in formData is question_<name of the question>_correctAnswer, and the value is the correctAnswer
+        formData[`question_${newsItemQuestion.name}_correctAnswer`] = correctAnswer;
+
+        // This is the sum of correct Answers among all of the questions
+        totalCorrectAnswers += correctAnswer;
+      }
+    });
+
+    console.log("TOTAL CORRECT ANSWERS: " + totalCorrectAnswers);
+
+
+    //Add the total number of correct answers to the formData to calculate the points in the Crowdee platform
+    formData.POINTS = totalCorrectAnswers;
+
+    for (const key in result.data) {  
       if (typeof result.data[key] === "object") {
         for (const subKey in result.data[key]) {
-          formData[`${key}.${subKey}`] = result.data[key][subKey]; // key is each news item, subKey could be the score of each enws item
+          formData[`${key}.${subKey}`] = result.data[key][subKey];
         }
       } else {
         formData[key] = result.data[key];
@@ -150,7 +178,7 @@ const XAIQuestionnaire = ({
   return (
     <>
       <Head>
-        <title>XAI Experiment</title>
+        <title>Political Viewpoint Visualization Experiment</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -189,7 +217,7 @@ const XAIQuestionnaire = ({
           }}
         >
           <div>
-            This experiment is conducted by the <a href="">***</a>
+            {/* This experiment is conducted by the <a href="">***</a> */}
           </div>
         </div>
       </main>

@@ -1,5 +1,17 @@
 /* Visualization.module.css */
 
+/* This file contains the CSS styles for the visualizations used in the survey
+ * questions. The styles are used to make the sizes of each image uniform.
+ *
+ * The styles are organized by the group of visualizations that they belong to.
+ * For example, the styles for the "ideology" visualizations are grouped under
+ * the ".ideology" class, and the styles for the "parties" visualizations are
+ * grouped under the ".parties" class.
+ *
+ * The styles are written in CSS syntax and are applied to the HTML elements
+ * that are used to render the visualizations.
+ */
+
 /* Item 1 */
 .ideology_1a_item_1_ {
     width: 481.455px;

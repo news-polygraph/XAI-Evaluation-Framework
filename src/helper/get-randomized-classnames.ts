@@ -9,6 +9,9 @@ type Paths = {
 
 const getRandomElement = <T>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 
+/**
+ * Returns a random class name for each category (ideology, parties, leaning) for a given news item.
+ */
 const getRandomClassNames = (item: NewsItem): Paths => {
   const classNames: Paths = {
     leaning: '',
@@ -16,11 +19,8 @@ const getRandomClassNames = (item: NewsItem): Paths => {
     ideology: ''
   };
 
-  // Get all class names from styles object
-  // const allClassNames = Object.keys(styles);
-
+  // Get all class names that match the item's id
   const idString = `item_${item.id}_`;
-
   const idClassNames = Object.keys(styles).filter(className => className.includes(idString));
 
   // Filter and map to populate classNames with random class names

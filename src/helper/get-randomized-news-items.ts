@@ -3,6 +3,11 @@ import NewsItem from "@/model/news-item";
 import { SurveyPart } from "@/model/survey-part";
 import getRandomClassNames from "./get-randomized-classnames";
 
+/**
+ * Returns a list of randomized news items for a given group and survey part.
+ * The function also sets the randomizedImages property of each news item.
+ */
+
 const getRandomizedNewsItems = (
   group: number,
   part: SurveyPart
@@ -21,7 +26,9 @@ const getRandomizedNewsItems = (
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
 
+      // Assign the randomized images to each item
       groupItems.forEach((item) => {
+        // The randomized images are stored in the item's randomizedImages property
         item.randomizedImages = getRandomClassNames(item);
       })
 
@@ -32,21 +39,13 @@ const getRandomizedNewsItems = (
       const groupItems = data.filter((item) => {
         return item.group === group && !item.isQualification;
       }) as NewsItem[];
-      // const falsePositive = data.filter((item) => item.isFalsePositive)[0];
-      // const trueNegative = data.filter((item) => item.isTrueNegative)[0];
-      
+
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
       
-      // add false positive as 3rd item
-      // groupItems.splice(2, 0, falsePositive as NewsItem);
-      
-      // add true negative as 6th item
-      // groupItems.splice(5, 0, trueNegative as NewsItem);
-      
       console.assert(
-        groupItems.length === 18,
-        "There should be 6 items in the main part"
+        groupItems.length === 15,
+        "There should be 15 items in the main part"
         );
         
         groupItems.forEach((item) => {
@@ -63,17 +62,9 @@ const getRandomizedNewsItems = (
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
 
-      // const falsePositive = data.filter((item) => item.isFalsePositive)[0];
-      // const trueNegative = data.filter((item) => item.isTrueNegative)[0];
 
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
-
-      // add false positive as 4th item
-      // groupItems.splice(3, 0, falsePositive as NewsItem);
-
-      // add true negative as 8th item
-      // groupItems.splice(7, 0, trueNegative as NewsItem);
 
       console.assert(
         groupItems.length === 8,
