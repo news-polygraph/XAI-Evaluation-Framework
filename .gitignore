@@ -3,7 +3,6 @@
 .DS_Store
 /node_modules
 /out
-/public
 package-lock.json
 next.config.js
 next-env.d.ts

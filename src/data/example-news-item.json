@@ -6,11 +6,11 @@
   "publishingDate": "10\/28\/2022",
   "label":"true",
   "xaiFeatures": {
-    "truthfulness": 92
+    "truthfulness": 70
   },
   "ratings": {
-    "ideology_1": "[Economic:1.7, Social:5.9]",
-    "ideology_2": "[Relevant:Prog/Kons, Prog/Kons:2, Auth/Libe:5, Kapi/Sozi:5]",
+    "ideology_1": "[Economic:1.7, Social:5]",
+    "ideology_2": "[Relevant:Prog/Kons, Prog/Kons:2, Libe/Auth:4, Kapi/Sozi:4]",
     "leaning_1": 1.7,
     "leaning_2": "Eine einseitige Fokussierung auf Zuwanderung als Allheilmittel greift zu kurz und führt zu Spannungen in der Gesellschaft.",
     "parties_1": "SPD",

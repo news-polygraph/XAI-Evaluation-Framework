@@ -36,7 +36,6 @@ List of TODOs before survey can be deployed
         - Change the titles "Liberalismus" and "Autoritarismus" to their adjective form ("Liberal" and "Autoritär")
         - Delete the "Item" label in the point on the graph (or find a short German word for "Item" to replace it with) 
     - ideology_1b: 
-        - Translate axis titles to German
         - Change the titles "Liberalismus" and "Autoritarismus" to their adjective form ("Liberal" and "Autoritär")
     - ideology_2a and ideology_2b: 
         - Change all titles to their adjective form ("Progressiv" and "Konservativ", "Autoritär" and "Liberal", "Kapitalistisch" and "Sozialistisch")
