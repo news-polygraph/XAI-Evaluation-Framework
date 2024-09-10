@@ -1,4 +1,5 @@
 const bonusInfo = {
+  //Not updated for visualization survey yet.
   elements: [
     {
       visibleIf: `{correctAnswers} >= 5`,
@@ -7,11 +8,11 @@ const bonusInfo = {
       html: `
       <div>
       <p>
-      Congratulations, you have answered <b>{correctAnswers} out of 6 control questions correctly</b> and you will receive a <b>bonus of 5€ within the next days</b>.
+      Herzlichen Glückwunsch, Sie haben mindestens <b>10/15 Nachrichten</b> richtig bewertet und erhalten in den nächsten Tagen <b>einen Bonus von 3€</b>.
       </p>
       </br>
       <p>
-      Please click <i>Complete</i>.
+      Bitte klicken Sie auf <i>Vollständig</i>.
       </p>
       </div>
   `,
@@ -23,11 +24,11 @@ const bonusInfo = {
       html: `
       <div>
       <p>
-      Unfortunately, you have not paid enough attention to the control questions and you will <b>not receive a bonus</b>.
+      Leider haben Sie mindestens <b>10/15 Nachrichten</b> nicht richtig bewertet und erhalten <b>keinen Bonus</b>.
       </p>
       </br>
       <p>
-      Please click <i>Complete</i>.
+      Bitte klicken Sie auf <i>Vollständig</i>.
       </p>
       </div>
   `,

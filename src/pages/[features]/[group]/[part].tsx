@@ -29,7 +29,7 @@ const Home = ({
 export default Home;
 
 export const getStaticPaths = async () => {
-  const features = ["basic", "salient", "explanations"];
+  const features = ["basic", "salient", "explanations", "visualizations"];
   const groups = [2].map((group) => `group-${group}`);
   const parts = ["qualification", "main"];
 

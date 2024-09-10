@@ -9,6 +9,12 @@ import NewsItem from "@/model/news-item";
 import { SurveyPart } from "@/model/survey-part";
 import { mainQuestionnaire } from "@/questionnaire/main-questionnaire";
 import { mergedQuestionnaire } from "@/questionnaire/merged-questionnaire";
+import { NewsItemQuestionModel } from "./NewsItemQuestion";
+
+/**
+ * A Next.js page that renders a survey using the SurveyJS library based on the given part and features.
+ * The page also handles the submission of the survey to the Crowdee platform.
+ */
 
 const XAIQuestionnaire = ({
   newsItems,
@@ -44,6 +50,7 @@ const XAIQuestionnaire = ({
 
   registerMyQuestion();
   const survey = new Model(questionnaire(newsItems, xaiFeature));
+  
 
   survey.onAfterRenderPage.add((sender, options) => {
     // hide "Previous" button on all pages except the "You are ready" page
@@ -64,34 +71,32 @@ const XAIQuestionnaire = ({
       sender.currentPage = sender.getPageByName("tutorial-text");
     }
     // complete questionnaire if user answers incorrectly in the qualification survey
-    else if (
-      part === "qualification" &&
-      options.oldCurrentPage.name === "control-question"
-    ) {
-      const hasIncorrectAnswer = sender
-        .getQuizQuestions()
-        .some((question) => !question.isEmpty() && !question.isAnswerCorrect());
+    // else if (
+    //   part === "qualification" &&
+    //   options.oldCurrentPage.name === "control-question"
+    // ) {
+    //   const hasIncorrectAnswer = sender
+    //     .getQuizQuestions()
+    //     .some((question) => !question.isEmpty() && !question.isAnswerCorrect());
 
-      if (hasIncorrectAnswer) {
-        survey.doComplete();
-      }
-    }
+    //   if (hasIncorrectAnswer) {
+    //     survey.doComplete();
+    //   }
+    // }
   });
 
   survey.onValueChanged.add((sender, options) => {
     if (options.name === "understand-task") {
-      if (options.value === "No") {
+      if (options.value === "Nein") {
         sender.setValue("understand-task", undefined);
         sender.currentPage = sender.getPageByName("tutorial-text");
       }
     }
   });
-
   survey.onComplete.add((result) => {
     // crowdee removes the id from the form, so in production we need to get it by the second selector
     const submitForm = (document.getElementById("submit-form") ??
       document.querySelector("body > form")) as HTMLFormElement;
-
     const formData: { [key: string]: any } = {
       "x-crowdee-task": (
         submitForm.querySelector(
@@ -111,10 +116,34 @@ const XAIQuestionnaire = ({
       "METADATA.FEATURE": xaiFeature,
       "METADATA.GROUP": groupNumber,
       "METADATA.PART": part,
-      POINTS: result.getCorrectAnswerCount(),
+      // POINTS: result.getCorrectAnswerCount(),
     };
 
-    for (const key in result.data) {
+    let totalCorrectAnswers = 0;
+
+    // Iterate over all questions and check if they are NewsItemQuestions
+    result.getAllQuestions().forEach((question) => {
+      if (question.getType() === "newsitem" && question.name.includes("rating-after-xai")) {
+        const newsItemQuestion = question as NewsItemQuestionModel;
+
+        // Access the correctAnswer from the question model
+        const correctAnswer = newsItemQuestion.correctAnswer;
+
+        // The key in formData is question_<name of the question>_correctAnswer, and the value is the correctAnswer
+        formData[`question_${newsItemQuestion.name}_correctAnswer`] = correctAnswer;
+
+        // This is the sum of correct Answers among all of the questions
+        totalCorrectAnswers += correctAnswer;
+      }
+    });
+
+    console.log("TOTAL CORRECT ANSWERS: " + totalCorrectAnswers);
+
+
+    //Add the total number of correct answers to the formData to calculate the points in the Crowdee platform
+    formData.POINTS = totalCorrectAnswers;
+
+    for (const key in result.data) {  
       if (typeof result.data[key] === "object") {
         for (const subKey in result.data[key]) {
           formData[`${key}.${subKey}`] = result.data[key][subKey];
@@ -149,7 +178,7 @@ const XAIQuestionnaire = ({
   return (
     <>
       <Head>
-        <title>XAI Experiment</title>
+        <title>Political Viewpoint Visualization Experiment</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -188,7 +217,7 @@ const XAIQuestionnaire = ({
           }}
         >
           <div>
-            This experiment is conducted by the <a href="">***</a>
+            {/* This experiment is conducted by the <a href="">***</a> */}
           </div>
         </div>
       </main>

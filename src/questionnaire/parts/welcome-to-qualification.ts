@@ -5,10 +5,10 @@ const welcomeToQualification = {
       type: "html",
       html: `
       <div>
-        <p style="text-align: center;">Welcome to the <b>Qualification Job</b>!</p>
+        <p style="text-align: center;">Willkommen bei der <b>Qualifikationsstelle</b>!</p>
         </br>
         <p>
-        Please fill out the following form and <b>read and rate 2 news items</b> according to their <b>truthfulness</b>. You need to answer the <b>control questions correctly</b> in order to get access to the main job.
+        Bitte füllen Sie das folgende Formular aus. Lesen Sie dann bitte 3 Nachrichten und bewerten Sie sie nach ihrem Wahrheitsgehalt. Sie müssen den Wahrheitsgehalt von 2 der Nachrichten richtig bewerten, um Zugang zur Hauptaufgabe zu erhalten.
         </p>
       </div>
   `,

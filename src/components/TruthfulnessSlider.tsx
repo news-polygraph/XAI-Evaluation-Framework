@@ -1,31 +1,31 @@
+/**
+ * A truthfulness slider component that the user can interact with to rate the truthfulness of a news item.
+ */
+
 import { createTheme, debounce, Slider, ThemeProvider } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 const ThuthfulnessSlider = ({
-  initialScore,
+  initialScore, // The initial score of the slider (default is 50))
   interactive = false,
-  onChange,
+  onChange, // A callback function that is called whenever the score changes.
 }: {
   initialScore?: number;
   interactive?: boolean;
   onChange?: (score: number) => void;
 }) => {
-  const [score, setScore] = useState<number>(initialScore || 50);
-  const [isInitialState, setIsInitialState] = useState(!initialScore);
-
+  const [score, setScore] = useState<number>(initialScore || 50); // The current score of the slider, updated whenever the user changes the score.
+  const [isInitialState, setIsInitialState] = useState(!initialScore); // Determines whether to show the thumb or not.
   const [sliderWidth, setSliderWidth] = useState(0);
   const [sliderLeft, setSliderLeft] = useState(0);
-
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  // set the slider width and left position on mount
   useEffect(() => {
     const slider = sliderRef.current?.querySelector(".MuiSlider-rail");
     setSliderWidth(slider!.clientWidth);
     setSliderLeft(slider!.getBoundingClientRect().left);
   }, []);
 
-  // set the slider width and left position on resize
   useEffect(() => {
     const handleResize = () => {
       const slider = sliderRef.current?.querySelector(".MuiSlider-rail");
@@ -90,19 +90,19 @@ const ThuthfulnessSlider = ({
         }}
       >
         <div className="part 1">
-          <label>Fake</label>
+          <label>Falsch</label>
         </div>
         <div className="part 2">
-          <label>Rather fake</label>
+          <label>Eher falsch</label>
         </div>
         <div className="part 3">
           <label>Neutral</label>
         </div>
         <div className="part 4">
-          <label>Rather true</label>
+          <label>Eher wahr</label>
         </div>
         <div className="part 5">
-          <label>True</label>
+          <label>Wahr</label>
         </div>
         <div
           css={{
@@ -145,7 +145,6 @@ const ThuthfulnessSlider = ({
                   top: "-8px",
                   backgroundColor: interactive ? "#19B394" : "#757575",
                 },
-                // hide the thumb if score is not set and the slide is not hovered
                 "& .MuiSlider-thumb": {
                   display: isInitialState ? "none" : "flex",
                 },
@@ -154,7 +153,9 @@ const ThuthfulnessSlider = ({
                   display: "flex",
                 },
               }}
+              // If the slider is not interactive, don't allow the user to change the score.
               disabled={!interactive}
+              // When the user hovers over the slider, set the isInitialState state to false.
               onMouseMove={(e) => {
                 if (!interactive || !isInitialState) return;
 
@@ -165,18 +166,21 @@ const ThuthfulnessSlider = ({
                   setScore(score);
                 }, 5)();
               }}
+              // When the user leaves the slider, call the onChange callback with the current score.
               onMouseLeave={() => {
                 if (!interactive) return;
 
                 setIsInitialState(false);
                 onChange && onChange(score);
               }}
+              // When the user clicks on the slider, call the onChange callback with the current score.
               onMouseUp={() => {
                 if (!interactive) return;
 
                 setIsInitialState(false);
                 onChange && onChange(score);
               }}
+              // When the user changes the score, call the onChange callback with the new score.
               onChange={(e, value) => {
                 if (!interactive) return;
                 setScore(value as number);
@@ -190,3 +194,6 @@ const ThuthfulnessSlider = ({
 };
 
 export default ThuthfulnessSlider;
+
+
+

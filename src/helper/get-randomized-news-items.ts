@@ -1,6 +1,12 @@
 import data from "@/data/news-items.json";
 import NewsItem from "@/model/news-item";
 import { SurveyPart } from "@/model/survey-part";
+import getRandomClassNames from "./get-randomized-classnames";
+
+/**
+ * Returns a list of randomized news items for a given group and survey part.
+ * The function also sets the randomizedImages property of each news item.
+ */
 
 const getRandomizedNewsItems = (
   group: number,
@@ -13,36 +19,39 @@ const getRandomizedNewsItems = (
       }) as NewsItem[];
 
       console.assert(
-        groupItems.length === 2,
-        "There should be 2 items in the qualification part"
+        groupItems.length === 3, 
+        "There should be 3 items in the qualification part"
       );
 
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
+
+      // Assign the randomized images to each item
+      groupItems.forEach((item) => {
+        // The randomized images are stored in the item's randomizedImages property
+        item.randomizedImages = getRandomClassNames(item);
+      })
 
       return groupItems;
     }
     case "main": {
+      //const classNames = getRandomClassNames();
       const groupItems = data.filter((item) => {
         return item.group === group && !item.isQualification;
       }) as NewsItem[];
-      const falsePositive = data.filter((item) => item.isFalsePositive)[0];
-      const trueNegative = data.filter((item) => item.isTrueNegative)[0];
 
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
-
-      // add false positive as 3rd item
-      groupItems.splice(2, 0, falsePositive as NewsItem);
-
-      // add true negative as 6th item
-      groupItems.splice(5, 0, trueNegative as NewsItem);
-
+      
       console.assert(
-        groupItems.length === 6,
-        "There should be 6 items in the main part"
-      );
-
+        groupItems.length === 15,
+        "There should be 15 items in the main part"
+        );
+        
+        groupItems.forEach((item) => {
+          item.randomizedImages = getRandomClassNames(item);
+        })
+        
       return groupItems;
     }
     case "merged": {
@@ -53,23 +62,19 @@ const getRandomizedNewsItems = (
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
 
-      const falsePositive = data.filter((item) => item.isFalsePositive)[0];
-      const trueNegative = data.filter((item) => item.isTrueNegative)[0];
 
       // randomize the order of the items
       groupItems.sort(() => Math.random() - 0.5);
-
-      // add false positive as 4th item
-      groupItems.splice(3, 0, falsePositive as NewsItem);
-
-      // add true negative as 8th item
-      groupItems.splice(7, 0, trueNegative as NewsItem);
 
       console.assert(
         groupItems.length === 8,
         "There should be 8 items in the main part"
       );
 
+      groupItems.forEach((item) => {
+        item.randomizedImages = getRandomClassNames(item);
+      })
+      
       return groupItems;
     }
   }

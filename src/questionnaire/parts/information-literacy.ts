@@ -1,5 +1,5 @@
 import { likelihoodLikert7 } from "@/helper/likert-scales";
-
+// NOT NEEDED FOR VISUALIZATIONS
 const informationLiteracy = {
   title: "Survey Part 1: General Background of Reading and Searching for News",
   description:

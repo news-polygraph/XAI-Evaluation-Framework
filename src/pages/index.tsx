@@ -56,6 +56,11 @@ const Home = () => {
               (group: 1/2, feature: salient/explanations)
             </Link>
           </li>
+          <li>
+            Visualizations:{" "}
+            <Link href="/visualizations/group-2/qualification">Qualification</Link> -{" "}
+            <Link href="/visualizations/group-2/main">Main</Link>
+          </li>
         </ul>
         <h2
           css={{

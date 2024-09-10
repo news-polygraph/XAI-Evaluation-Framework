@@ -1,1 +1,1 @@
-export type XAIFeatureLevel = "none" | "basic" | "salient" | "explanations";
+export type XAIFeatureLevel = "none" | "basic" | "salient" | "explanations" | "visualizations";

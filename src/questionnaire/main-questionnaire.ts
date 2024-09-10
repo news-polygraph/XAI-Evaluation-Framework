@@ -10,11 +10,21 @@ import NewsItem from "@/model/news-item";
 import newsDashboardEvaluation from "./parts/news-dashboard-evaluation";
 import bonusInfo from "./parts/bonus-info";
 
+/**
+ * Returns the questionnaire for the main part of the experiment.
+ * The questionnaire is generated based on the given news items and XAI feature level.
+ * The questionnaire consists of the following parts:
+ * 1. Main start page
+ * 2. Experiment pages (news items with XAI features)
+ * 3. Almost done page
+ * 4. AI system evaluation
+ * 5. Demographics
+ * 6. Bonus info
+ */
 export const mainQuestionnaire = (
   newsItems: NewsItem[],
   xaiFeatures: XAIFeatureLevel
 ) => {
-  // check if experimentOnly is set to true in query parameters
   const urlParams = new URLSearchParams(window.location.search);
   const experimentOnly = urlParams.get("experimentOnly") === "true";
 
@@ -24,12 +34,9 @@ export const mainQuestionnaire = (
     showProgressBar: "top",
     pages: [
       mainStartPage,
-      ...tutorial(xaiFeatures),
-      youAreReady,
       ...experimentPages(newsItems, xaiFeatures, "main"),
       almostDone,
       ...aiSystemEvaluation(xaiFeatures),
-      newsDashboardEvaluation,
       demographics,
       bonusInfo,
     ],

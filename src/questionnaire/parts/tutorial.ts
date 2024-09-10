@@ -1,9 +1,15 @@
-import exampleNewsItem from "@/data/example-news-item.json";
 import NewsItem from "@/model/news-item";
+import exampleNewsItem from "@/data/example-news-item.json";
 import { TutorialTooltipStep } from "@/model/tutorial-tooltip-step";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import tutorialText from "./tutorial-text";
+import getRandomClassNames from "@/helper/get-randomized-classnames";
 
+let exampleItem: NewsItem = {...exampleNewsItem as NewsItem, randomizedImages: getRandomClassNames(exampleNewsItem as NewsItem)};
+
+/**
+ * Generates a single page for the tutorial for a given news item, step and XAI feature level.
+ */
 const getTutorialPageForStep = (
   newsItem: NewsItem,
   {
@@ -18,9 +24,9 @@ const getTutorialPageForStep = (
     isRequired?: boolean;
   }
 ) => {
-  const title = "Truthfulness Rating of News Items";
+  const title = "Bewertung des Wahrheitsgehalts von Nachrichten";
   const description =
-    "Please read the news item carefully and adjust the truthfulness rating based on the information provided.";
+    "Bitte lesen Sie die Nachricht sorgfältig durch und passen Sie die Bewertung des Wahrheitsgehalts anhand der bereitgestellten Informationen an.";
 
   return {
     title,
@@ -42,6 +48,14 @@ const getTutorialPageForStep = (
   };
 };
 
+/**
+ * Generates an array of survey pages for the tutorial of a given news item and XAI feature level.
+ * The tutorial is composed of the following steps:
+ * - Overview
+ * - Article
+ * - Your rating
+ * - Visualizations (only for Visualizations XAI feature level)
+ */
 const getTutorialPagesForNewsItem = (
   newsItem: NewsItem,
   xaiFeatures: XAIFeatureLevel
@@ -63,11 +77,12 @@ const getTutorialPagesForNewsItem = (
       step: "your-rating",
       isRequired: true,
     }),
-    getTutorialPageForStep(newsItem, {
-      isInput: false,
-      xaiFeatures: xaiFeatures,
-      step: "ai-rating",
-    }),
+    // xaiFeatures === "visualizations" &&
+    //   getTutorialPageForStep(newsItem, {
+    //     isInput: false,
+    //     xaiFeatures: xaiFeatures,
+    //     step: "visualizations",
+    //   }),
     xaiFeatures === "salient" &&
       getTutorialPageForStep(newsItem, {
         isInput: false,
@@ -101,12 +116,16 @@ const getTutorialPagesForNewsItem = (
   ];
 };
 
+/**
+ * Generates the pages for the experiment.
+ * The experiment is composed of the tutorial pages (overview, article, your rating, visualizations, redo your rating) and the main experiment pages.
+ */
 const experimentPages = (xaiFeatures: XAIFeatureLevel) => {
   const tutorialTextPage = tutorialText(xaiFeatures);
 
   return [
     tutorialTextPage,
-    ...getTutorialPagesForNewsItem(exampleNewsItem as any, xaiFeatures),
+    ...getTutorialPagesForNewsItem(exampleItem as any, xaiFeatures),
   ];
 };
 

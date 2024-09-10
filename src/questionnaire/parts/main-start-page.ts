@@ -5,24 +5,21 @@ const mainStartPage = {
       type: "html",
       html: `
         <div>
-          <p style="text-align: center;"><b>Congratulations!</b></p>
+          <p style="text-align: center;"><b>Herzlichen Glückwunsch!</b></p>
           </br>
           <p>
-          You have answered the control questions correctly and can now do the main job. 
-          In the following you are asked to repeat the ratings you have done in the qualification part for <b>6 news items</b>. 
+          Sie haben den Wahrheitsgehalt der Nachrichten richtig eingeschätzt und können nun die Hauptarbeit erledigen. 
+          Im Folgenden werden Sie gebeten, die Bewertungen zu wiederholen, die Sie im Qualifikationsteil für <b>15 Nachrichten vorgenommen haben</b>. 
           </p>
           </br>
           <p>
-          Please pay <b>attention</b> to the <b>control questions</b>, you will receive a <b>Bonus of 5 €</b> when you answer <b>5 control questions correctly</b>. When answering the 5 control questions correctly, you will <b>receive overall 6 €</b>.
+          Sie erhalten einen Bonus von 3 €, wenn Sie den Wahrheitsgehalt von 10 der Nachrichten richtig bewerten (insgesamt 6 €).
           </p>
           </br>
           <p>
-          <b>Thank you for supporting our research and help to investigate on fake news!</b>
+          <b>Vielen Dank, dass Sie unsere Forschung unterstützen und uns helfen, Fake News aufzuklären!</b>
           </p>
           </br>
-          <p>
-          The explanations of the task show up again, if you remember the task well, feel free to skip the explanations by clicking <i>Next</i>.
-          </p>
         </div>
     `,
     },
