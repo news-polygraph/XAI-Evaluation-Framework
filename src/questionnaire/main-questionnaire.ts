@@ -6,13 +6,15 @@ import demographics from "./parts/demographics";
 import almostDone from "./parts/almost-done";
 import tutorial from "./parts/tutorial";
 import youAreReady from "./parts/you-are-ready";
-import NewsItem from "@/model/news-item";
+import DatasetItem from "@/model/dataset-item";
 import newsDashboardEvaluation from "./parts/news-dashboard-evaluation";
 import bonusInfo from "./parts/bonus-info";
+import { ExperimentType } from "@/model/experiment-type";
 
 export const mainQuestionnaire = (
-  newsItems: NewsItem[],
-  xaiFeatures: XAIFeatureLevel
+  datasetItems: DatasetItem[],
+  xaiFeatures: XAIFeatureLevel,
+  experimentType: ExperimentType
 ) => {
   // check if experimentOnly is set to true in query parameters
   const urlParams = new URLSearchParams(window.location.search);
@@ -26,7 +28,7 @@ export const mainQuestionnaire = (
       mainStartPage,
       ...tutorial(xaiFeatures),
       youAreReady,
-      ...experimentPages(newsItems, xaiFeatures, "main"),
+      ...experimentPages(datasetItems, xaiFeatures, "main", experimentType),
       almostDone,
       ...aiSystemEvaluation(xaiFeatures),
       newsDashboardEvaluation,
@@ -44,7 +46,7 @@ export const mainQuestionnaire = (
 
   if (experimentOnly) {
     questionnaire.firstPageIsStarted = false;
-    questionnaire.pages = [...experimentPages(newsItems, xaiFeatures, "main")];
+    questionnaire.pages = [...experimentPages(datasetItems, xaiFeatures, "main", experimentType)];
   }
 
   return questionnaire;

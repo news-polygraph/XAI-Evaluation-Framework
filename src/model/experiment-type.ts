@@ -1,0 +1,1 @@
+export type ExperimentType = "OneStep" | "TwoStep";

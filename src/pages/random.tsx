@@ -1,5 +1,5 @@
 import XAIQuestionnaire from "@/components/XAIQuestionnaire";
-import getRandomizedNewsItems from "@/helper/get-randomized-news-items";
+import getRandomizedDatasetItem from "@/helper/get-randomized-data-items";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
 
 const Home = () => {
@@ -24,11 +24,11 @@ const Home = () => {
     localStorage.setItem("xai-experiment.feature", feature);
   }
 
-  const newsItems = getRandomizedNewsItems(groupNumber, "merged");
+  const datasetItems = getRandomizedDatasetItem(groupNumber, "merged");
 
   return (
     <XAIQuestionnaire
-      newsItems={newsItems}
+      datasetItems={datasetItems}
       xaiFeature={feature}
       groupNumber={groupNumber}
       part="merged"

@@ -1,11 +1,11 @@
-import exampleNewsItem from "@/data/example-news-item.json";
-import NewsItem from "@/model/news-item";
+import exampleDatasetItem from "@/data/example-item.json";
+import DatasetItem from "@/model/dataset-item";
 import { TutorialTooltipStep } from "@/model/tutorial-tooltip-step";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import tutorialText from "./tutorial-text";
 
 const getTutorialPageForStep = (
-  newsItem: NewsItem,
+  datasetItem: DatasetItem,
   {
     isInput,
     xaiFeatures,
@@ -19,19 +19,22 @@ const getTutorialPageForStep = (
   }
 ) => {
   const title = "Truthfulness Rating of News Items";
-  const description =
-    "Please read the news item carefully and adjust the truthfulness rating based on the information provided.";
+  const description = datasetItem.ratingType === 'boolean'
+  ? "Please read the news item carefully and determine if the item is True or False based on the information provided."
+  : datasetItem.ratingType === 'multiple-choice'
+  ? "Please read the news item carefully and select the correct option based on the information provided."
+  : "Please read the news item carefully and adjust the truthfulness rating based on the information provided.";
 
   return {
     title,
     description,
     elements: [
       {
-        type: "newsitem",
+        type: "datasetitem",
         hideNumber: true,
         name: `tutorial.${step}`,
         titleLocation: "hidden",
-        newsitem: newsItem,
+        datasetitem: datasetItem,
         xaiFeatures: xaiFeatures,
         isInput: isInput,
         isTutorial: true,
@@ -42,57 +45,63 @@ const getTutorialPageForStep = (
   };
 };
 
-const getTutorialPagesForNewsItem = (
-  newsItem: NewsItem,
+const getTutorialPagesForDatasetItem = (
+  datasetItem: DatasetItem,
   xaiFeatures: XAIFeatureLevel
 ) => {
   return [
-    getTutorialPageForStep(newsItem, {
+    getTutorialPageForStep(datasetItem, {
       isInput: true,
       xaiFeatures: xaiFeatures,
       step: "overview",
     }),
-    getTutorialPageForStep(newsItem, {
+    getTutorialPageForStep(datasetItem, {
       isInput: false,
       xaiFeatures: "none",
       step: "article",
     }),
-    getTutorialPageForStep(newsItem, {
+    getTutorialPageForStep(datasetItem, {
       isInput: true,
       xaiFeatures: "none",
       step: "your-rating",
       isRequired: true,
     }),
-    getTutorialPageForStep(newsItem, {
+    getTutorialPageForStep(datasetItem, {
       isInput: false,
       xaiFeatures: xaiFeatures,
       step: "ai-rating",
     }),
     xaiFeatures === "salient" &&
-      getTutorialPageForStep(newsItem, {
+      getTutorialPageForStep(datasetItem, {
         isInput: false,
         xaiFeatures: xaiFeatures,
         step: "readability",
       }),
     xaiFeatures === "salient" &&
-      getTutorialPageForStep(newsItem, {
+      getTutorialPageForStep(datasetItem, {
         isInput: false,
         xaiFeatures: xaiFeatures,
         step: "text-highlights",
       }),
     xaiFeatures === "salient" &&
-      getTutorialPageForStep(newsItem, {
+      getTutorialPageForStep(datasetItem, {
         isInput: false,
         xaiFeatures: xaiFeatures,
         step: "sentiment-highlights",
       }),
     xaiFeatures === "explanations" &&
-      getTutorialPageForStep(newsItem, {
+      getTutorialPageForStep(datasetItem, {
         isInput: false,
         xaiFeatures: xaiFeatures,
         step: "natural-language-explanation",
       }),
-    getTutorialPageForStep(newsItem, {
+    xaiFeatures === 'counterfactual' && 
+      getTutorialPageForStep(datasetItem,{
+        isInput: false,
+        xaiFeatures: xaiFeatures,
+        step: 'counterfactual-explanation',
+      }),
+    getTutorialPageForStep(datasetItem, {
       isInput: true,
       xaiFeatures: xaiFeatures,
       step: "redo-your-rating",
@@ -106,7 +115,7 @@ const experimentPages = (xaiFeatures: XAIFeatureLevel) => {
 
   return [
     tutorialTextPage,
-    ...getTutorialPagesForNewsItem(exampleNewsItem as any, xaiFeatures),
+    ...getTutorialPagesForDatasetItem(exampleDatasetItem as any, xaiFeatures),
   ];
 };
 

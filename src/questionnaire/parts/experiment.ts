@@ -1,60 +1,73 @@
 import { agreementLikert7 } from "@/helper/likert-scales";
-import NewsItem from "@/model/news-item";
+import DatasetItem from "@/model/dataset-item";
 import { SurveyPart } from "@/model/survey-part";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
+import { ExperimentType } from "@/model/experiment-type";
 
-const getPagesForNewsItem = (
-  newsItem: NewsItem,
+const getPagesForDatasetItem = (
+  datasetItem: DatasetItem,
   xaiFeatures: XAIFeatureLevel,
-  part: SurveyPart
+  part: SurveyPart,
+  experimentType: ExperimentType
 ) => {
-  const title = "Truthfulness Rating of News Items";
-  const description =
-    "Please read the news item carefully and adjust the truthfulness rating based on the information provided.";
+  const title = "Survey Question";
+  const description = datasetItem.ratingType === 'boolean'
+  ? "Please read the news item carefully and determine if the item is True or False based on the information provided."
+  : datasetItem.ratingType === 'multiple-choice'
+  ? "Please read the news item carefully and select the correct option based on the information provided."
+  : "Please read the news item carefully and adjust the truthfulness rating based on the information provided.";
 
   return [
+    ...(experimentType === "TwoStep"
+      ? [
+          {
+            title,
+            description,
+            elements: [
+              {
+                type: "datasetitem",
+                name: `datasetitem.${datasetItem.id}.rating-before-xai`,
+                hideNumber: true,
+                titleLocation: "hidden",
+                datasetitem: datasetItem,
+                xaiFeatures: "none",
+                isInput: true,
+                isRequired: true,
+              },
+            ],
+          },
+        ]
+      : []),
+      ...(experimentType === "TwoStep"
+      ? [
+          {
+            name: "article-with-xai",
+            title,
+            description,
+            elements: [
+              {
+                type: "datasetitem",
+                name: `datasetitem.${datasetItem.id}.article-with-xai`,
+                hideNumber: true,
+                titleLocation: "hidden",
+                datasetitem: datasetItem,
+                xaiFeatures: xaiFeatures,
+                isInput: false,
+              },
+            ],
+          },
+        ]
+      : []),
     {
       title,
       description,
       elements: [
         {
-          type: "newsitem",
-          name: `newsitem.${newsItem.id}.rating-before-xai`,
+          type: "datasetitem",
+          name: `datasetitem.${datasetItem.id}.rating-after-xai`,
           hideNumber: true,
           titleLocation: "hidden",
-          newsitem: newsItem,
-          xaiFeatures: "none",
-          isInput: true,
-          isRequired: true,
-        },
-      ],
-    },
-    {
-      name: "article-with-xai",
-      title,
-      description,
-      elements: [
-        {
-          type: "newsitem",
-          name: `newsitem.${newsItem.id}.article-with-xai`,
-          hideNumber: true,
-          titleLocation: "hidden",
-          newsitem: newsItem,
-          xaiFeatures: xaiFeatures,
-          isInput: false,
-        },
-      ],
-    },
-    {
-      title,
-      description,
-      elements: [
-        {
-          type: "newsitem",
-          name: `newsitem.${newsItem.id}.rating-after-xai`,
-          hideNumber: true,
-          titleLocation: "hidden",
-          newsitem: newsItem,
+          datasetitem: datasetItem,
           xaiFeatures: xaiFeatures,
           isInput: true,
           isRequired: true,
@@ -69,17 +82,17 @@ const getPagesForNewsItem = (
         {
           // multiple choice control question
           type: "radiogroup",
-          name: `newsitem.${newsItem.id}.control-question`,
-          title: newsItem.controlQuestion.question,
+          name: `datasetitem.${datasetItem.id}.control-question`,
+          title: datasetItem.controlQuestion.question,
           hideNumber: true,
           choicesOrder: "random",
           isRequired: true,
           choices: [
             {
               value: "correct",
-              text: newsItem.controlQuestion.correctAnswer,
+              text: datasetItem.controlQuestion.correctAnswer,
             },
-            ...newsItem.controlQuestion.wrongAnswers.map((answer, i) => ({
+            ...datasetItem.controlQuestion.wrongAnswers.map((answer, i) => ({
               value: `wrong-${i + 1}`,
               text: answer,
             })),
@@ -95,7 +108,7 @@ const getPagesForNewsItem = (
       elements: [
         {
           type: "matrix",
-          name: `newsitem.${newsItem.id}.system-evaluation`,
+          name: `datasetitem.${datasetItem.id}.system-evaluation`,
           title: "Competence",
           hideNumber: true,
           titleLocation: "hidden",
@@ -131,7 +144,7 @@ const getPagesForNewsItem = (
       ? {
           // show warning if control question was answered incorrectly
           name: "control-question-warning",
-          visibleIf: `{newsitem.${newsItem.id}.control-question} != 'correct'`,
+          visibleIf: `{datasetitem.${datasetItem.id}.control-question} != 'correct'`,
           elements: [
             {
               type: "html",
@@ -149,13 +162,14 @@ const getPagesForNewsItem = (
 };
 
 const experimentPages = (
-  newsItems: NewsItem[],
+  datasetItems: DatasetItem[],
   xaiFeatures: XAIFeatureLevel,
-  part: SurveyPart
+  part: SurveyPart,
+  experimentType: ExperimentType
 ) => {
   return [
-    ...newsItems.flatMap((newsItem) =>
-      getPagesForNewsItem(newsItem as any, xaiFeatures, part)
+    ...datasetItems.flatMap((datasetItem) =>
+      getPagesForDatasetItem(datasetItem as any, xaiFeatures, part, experimentType)
     ),
   ];
 };

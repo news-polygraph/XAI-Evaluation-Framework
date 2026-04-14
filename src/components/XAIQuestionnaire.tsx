@@ -3,29 +3,31 @@ import "survey-core/defaultV2.min.css";
 import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import { qualificationQuestionnaire } from "@/questionnaire/qualification-questionnaire";
-import { registerMyQuestion } from "./NewsItemQuestion";
+import { registerMyQuestion } from "./DatasetItemQuestion";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
-import NewsItem from "@/model/news-item";
+import DatasetItem from "@/model/dataset-item";
 import { SurveyPart } from "@/model/survey-part";
 import { mainQuestionnaire } from "@/questionnaire/main-questionnaire";
 import { mergedQuestionnaire } from "@/questionnaire/merged-questionnaire";
+import { ExperimentType } from "@/model/experiment-type";
 
 const XAIQuestionnaire = ({
-  newsItems,
+  datasetItems,
   xaiFeature,
-  groupNumber,
   part,
+  experimentType, 
 }: {
-  newsItems: NewsItem[];
+  datasetItems: DatasetItem[];
   xaiFeature: XAIFeatureLevel;
-  groupNumber: number;
   part: SurveyPart;
+  experimentType: ExperimentType; 
 }) => {
-  console.log(`PART: ${part}; GROUP: ${groupNumber}; FEATURE: ${xaiFeature};`);
+  console.log(`PART: ${part}; FEATURE: ${xaiFeature};`);
 
   let questionnaire: (
-    newsItems: NewsItem[],
-    xaiFeature: XAIFeatureLevel
+    datasetItems: DatasetItem[],
+    xaiFeature: XAIFeatureLevel,
+    experimentType: ExperimentType
   ) => any;
 
   switch (part) {
@@ -43,7 +45,7 @@ const XAIQuestionnaire = ({
   }
 
   registerMyQuestion();
-  const survey = new Model(questionnaire(newsItems, xaiFeature));
+  const survey = new Model(questionnaire(datasetItems, xaiFeature, experimentType));
 
   survey.onAfterRenderPage.add((sender, options) => {
     // hide "Previous" button on all pages except the "You are ready" page
@@ -109,7 +111,8 @@ const XAIQuestionnaire = ({
         ) as HTMLInputElement
       )?.value,
       "METADATA.FEATURE": xaiFeature,
-      "METADATA.GROUP": groupNumber,
+      // "METADATA.GROUP": groupNumber,
+      "METADATA.EXPERIMENT_TYPE": experimentType,
       "METADATA.PART": part,
       POINTS: result.getCorrectAnswerCount(),
     };

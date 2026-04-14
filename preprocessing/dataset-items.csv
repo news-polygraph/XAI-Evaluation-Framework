@@ -1,0 +1,872 @@
+Unnamed: 0,question,answer,passage,label,sentence1,H_yb,H_yx,correct_yx,predicted_label,PVI,f1_null,f1_std,flesch_kincaid,PVI__numeric,quantile_bin,dataset,id,claim,evi,split,input_text_for_judge,original_index,wood_component__deepseek,wood_component__gemini,wood_component__openai,wood_coordinative__deepseek,wood_coordinative__gemini,wood_coordinative__openai,wood_dynamic__deepseek,wood_dynamic__gemini,wood_dynamic__openai,wood_total__deepseek,wood_total__gemini,wood_total__openai,wood_total_mean,wood_total_median,wood_total_majority_rounded,wood_total__deepseek_z,wood_total__gemini_z,wood_total__openai_z,wood_total_norm_mean,wood_disagreement_std,wood_bin,borda_rank_variance
+699.0,is the cell membrane and plasma membrane same,True,"The cell membrane (also known as the plasma membrane or cytoplasmic membrane, and historically referred to as the plasmalemma) is a biological membrane that separates the interior of all cells from the outside environment (the extracellular space). It consists of a lipid bilayer with embedded proteins. The basic function of the cell membrane is to protect the cell from its surroundings. The cell membrane controls the movement of substances in and out of cells and organelles. In this way, it is selectively permeable to ions and organic molecules. In addition, cell membranes are involved in a variety of cellular processes such as cell adhesion, ion conductivity and cell signalling and serve as the attachment surface for several extracellular structures, including the cell wall, the carbohydrate layer called the glycocalyx, and the intracellular network of protein fibers called the cytoskeleton. In the field of synthetic biology, cell membranes can be artificially reassembled.",1,"Passage: The cell membrane (also known as the plasma membrane or cytoplasmic membrane, and historically referred to as the plasmalemma) is a biological membrane that separates the interior of all cells from the outside environment (the extracellular space). It consists of a lipid bilayer with embedded proteins. The basic function of the cell membrane is to protect the cell from its surroundings. The cell membrane controls the movement of substances in and out of cells and organelles. In this way, it is selectively permeable to ions and organic molecules. In addition, cell membranes are involved in a variety of cellular processes such as cell adhesion, ion conductivity and cell signalling and serve as the attachment surface for several extracellular structures, including the cell wall, the carbohydrate layer called the glycocalyx, and the intracellular network of protein fibers called the cytoskeleton. In the field of synthetic biology, cell membranes can be artificially reassembled. Question: is the cell membrane and plasma membrane same",0.7054844163074191,0.66241103399144,True,1,0.0430733823159791,0.6217125382262997,0.6400611620795107,13.458742236024849,0.0430733823159791,3,boolq,,,,,"Question: is the cell membrane and plasma membrane same
+
+Passage: The cell membrane (also known as the plasma membrane or cytoplasmic membrane, and historically referred to as the plasmalemma) is a biological membrane that separates the interior of all cells from the outside environment (the extracellular space). It consists of a lipid bilayer with embedded proteins. The basic function of the cell membrane is to protect the cell from its surroundings. The cell membrane controls the movement of substances in and out of cells and organelles. In this way, it is selectively permeable to ions and organic molecules. In addition, cell membranes are involved in a variety of cellular processes such as cell adhesion, ion conductivity and cell signalling and serve as the attachment surface for several extracellular structures, including the cell wall, the carbohydrate layer called the glycocalyx, and the intracellular network of protein fibers called the cytoskeleton. In the field of synthetic biology, cell membranes can be artificially reassembled.",31,3,2,5,4,1,4,2,1,3,9,4,12,8.333333333333334,9.0,4,-2.024989416951492,-1.4109603176358765,-1.013940952620068,-1.483296895735812,0.5093909939379954,1,0.0
+439.0,is there such a thing as a fainting goat,True,"The myotonic goat, otherwise known as the fainting goat, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span.",1,"Passage: The myotonic goat, otherwise known as the fainting goat, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span. Question: is there such a thing as a fainting goat",0.7054844163074191,0.46188449842784,True,1,0.243599917879579,0.6217125382262997,0.6400611620795107,13.498,0.243599917879579,5,boolq,,,,,"Question: is there such a thing as a fainting goat
+
+Passage: The myotonic goat, otherwise known as the fainting goat, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span.",39,3,1,5,4,1,6,2,1,4,9,3,15,9.0,9.0,3,-2.024989416951492,-1.5722129253656911,-0.2487024978124694,-1.2819682800432175,0.9230277733523928,1,0.0
+2619.0,is english an official language of new zealand,True,"English is New Zealand's official language. It is the primary language used for court proceedings, and statutes and other official pronouncements. English is spoken by 96.1 percent of the population.",1,"Passage: English is New Zealand's official language. It is the primary language used for court proceedings, and statutes and other official pronouncements. English is spoken by 96.1 percent of the population. Question: is english an official language of new zealand",0.7054844163074191,0.7656710834521543,True,1,-0.0601866671447351,0.6217125382262997,0.6400611620795107,8.553487179487181,-0.0601866671447351,2,boolq,,,,,"Question: is english an official language of new zealand
+
+Passage: English is New Zealand's official language. It is the primary language used for court proceedings, and statutes and other official pronouncements. English is spoken by 96.1 percent of the population.",23,3,1,2,4,1,3,2,1,2,9,3,7,6.333333333333333,7.0,3,-2.024989416951492,-1.5722129253656911,-2.2893383772993987,-1.962180239872194,0.3626650975718715,1,0.0
+2383.0,do elizabeth and jack sparrow end up together,False,"Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias ``Elizabeth Turner'', but this later becomes her married name when she weds the character Will Turner (played by Orlando Bloom).",0,"Passage: Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias ``Elizabeth Turner'', but this later becomes her married name when she weds the character Will Turner (played by Orlando Bloom). Question: do elizabeth and jack sparrow end up together",1.370476618503373,1.6420726019038618,False,1,-0.2715959834004888,0.6217125382262997,0.6400611620795107,9.766155339805827,-0.2715959834004888,1,boolq,,,,,"Question: do elizabeth and jack sparrow end up together
+
+Passage: Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias ``Elizabeth Turner'', but this later becomes her married name when she weds the character Will Turner (played by Orlando Bloom).",4,4,2,3,6,2,4,3,1,2,13,5,9,9.0,9.0,5,-1.0785484041601423,-1.249707709906062,-1.7791794074276663,-1.3691451738312903,0.3652669318821264,1,0.0
+1025.0,has a woman ever won cma entertainer of the year,True,"The Country Music Association Awards is a major awards show in country music, with the highest honor being the award for Entertainer of the Year. Garth Brooks has won the most awards with six. In 1972, Loretta Lynn became the first female artist to be honored with this award. Barbara Mandrell became the first artist to win twice.",1,"Passage: The Country Music Association Awards is a major awards show in country music, with the highest honor being the award for Entertainer of the Year. Garth Brooks has won the most awards with six. In 1972, Loretta Lynn became the first female artist to be honored with this award. Barbara Mandrell became the first artist to win twice. Question: has a woman ever won cma entertainer of the year",0.7054844163074191,0.567236895610625,True,1,0.1382475206967941,0.6217125382262997,0.6400611620795107,7.952550724637682,0.1382475206967941,4,boolq,,,,,"Question: has a woman ever won cma entertainer of the year
+
+Passage: The Country Music Association Awards is a major awards show in country music, with the highest honor being the award for Entertainer of the Year. Garth Brooks has won the most awards with six. In 1972, Loretta Lynn became the first female artist to be honored with this award. Barbara Mandrell became the first artist to win twice.",36,4,3,3,6,2,4,3,1,2,13,6,9,9.333333333333334,9.0,6,-1.0785484041601423,-1.0884551021762476,-1.7791794074276663,-1.3153943045880188,0.4016802234095953,2,0.0
+2073.0,is los cabos the same as cabo san lucas,False,"Cabo San Lucas (Spanish pronunciation: (ˈkaβo san ˈlukas), Cape Saint Luke), commonly called Cabo in English, is a resort city at the southern tip of the Baja California Peninsula, in the Mexican state of Baja California Sur. As of 2015, the population of the city was 81,111 inhabitants. Cabo San Lucas together with San José del Cabo is known as Los Cabos. Together they form a metropolitan area of 305,983 inhabitants.",0,"Passage: Cabo San Lucas (Spanish pronunciation: (ˈkaβo san ˈlukas), Cape Saint Luke), commonly called Cabo in English, is a resort city at the southern tip of the Baja California Peninsula, in the Mexican state of Baja California Sur. As of 2015, the population of the city was 81,111 inhabitants. Cabo San Lucas together with San José del Cabo is known as Los Cabos. Together they form a metropolitan area of 305,983 inhabitants. Question: is los cabos the same as cabo san lucas",1.370476618503373,1.445086013339253,False,1,-0.0746093948358797,0.6217125382262997,0.6400611620795107,10.55,-0.0746093948358797,2,boolq,,,,,"Question: is los cabos the same as cabo san lucas
+
+Passage: Cabo San Lucas (Spanish pronunciation: (ˈkaβo san ˈlukas), Cape Saint Luke), commonly called Cabo in English, is a resort city at the southern tip of the Baja California Peninsula, in the Mexican state of Baja California Sur. As of 2015, the population of the city was 81,111 inhabitants. Cabo San Lucas together with San José del Cabo is known as Los Cabos. Together they form a metropolitan area of 305,983 inhabitants.",18,3,3,3,5,5,4,2,1,2,10,9,9,9.333333333333334,9.0,9,-1.7883791637536546,-0.6046972789868043,-1.7791794074276663,-1.3907519500560417,0.6807588547433222,2,0.0
+518.0,has there ever been a shooting at a hospital,True,"The 2010 Lörrach hospital shooting rampage occurred on 19 September 2010 in the small town of Lörrach, Germany near the Swiss border. Sabine Radmacher, a 41-year-old woman, killed her five-year-old son and the boy's father, her ex-partner. She then crossed the street to St. Elisabethen Hospital, where she shot and stabbed one male nurse, killing him, and also injuring eighteen others, including a police officer. Soon after, the woman was fatally shot by special police units.",1,"Passage: The 2010 Lörrach hospital shooting rampage occurred on 19 September 2010 in the small town of Lörrach, Germany near the Swiss border. Sabine Radmacher, a 41-year-old woman, killed her five-year-old son and the boy's father, her ex-partner. She then crossed the street to St. Elisabethen Hospital, where she shot and stabbed one male nurse, killing him, and also injuring eighteen others, including a police officer. Soon after, the woman was fatally shot by special police units. Question: has there ever been a shooting at a hospital",0.7054844163074191,0.5617624682405317,True,1,0.1437219480668874,0.6217125382262997,0.6400611620795107,8.596666666666668,0.1437219480668874,4,boolq,,,,,"Question: has there ever been a shooting at a hospital
+
+Passage: The 2010 Lörrach hospital shooting rampage occurred on 19 September 2010 in the small town of Lörrach, Germany near the Swiss border. Sabine Radmacher, a 41-year-old woman, killed her five-year-old son and the boy's father, her ex-partner. She then crossed the street to St. Elisabethen Hospital, where she shot and stabbed one male nurse, killing him, and also injuring eighteen others, including a police officer. Soon after, the woman was fatally shot by special police units.",37,4,2,3,6,1,5,3,1,4,13,4,12,9.666666666666666,12.0,4,-1.0785484041601423,-1.4109603176358765,-1.013940952620068,-1.1678165581386957,0.2130321490654473,2,0.0
+241.0,do both male and female bighorn sheep have horns,True,"Bighorn sheep are named for the large, curved horns borne by the rams (males). Ewes (females) also have horns, but they are shorter with less curvature. They range in color from light brown to grayish or dark, chocolate brown, with a white rump and lining on the backs of all four legs. Males typically weigh 58--143 kg (128--315 lb), are 90--105 cm (35--41 in) tall at the shoulder, and 1.6--1.85 m (63--73 in) long from the nose to the tail. Females are typically 34--91 kg (75--201 lb), 75--90 cm (30--35 in) tall, and 1.28--1.58 m (50--62 in) long. Male bighorn sheep have large horn cores, enlarged cornual and frontal sinuses, and internal bony septa. These adaptations serve to protect the brain by absorbing the impact of clashes. Bighorn sheep have preorbital glands on the anterior corner of each eye, inguinal glands in the groin, and pedal glands on each foot. Secretions from these glands may support dominance behaviors.",1,"Passage: Bighorn sheep are named for the large, curved horns borne by the rams (males). Ewes (females) also have horns, but they are shorter with less curvature. They range in color from light brown to grayish or dark, chocolate brown, with a white rump and lining on the backs of all four legs. Males typically weigh 58--143 kg (128--315 lb), are 90--105 cm (35--41 in) tall at the shoulder, and 1.6--1.85 m (63--73 in) long from the nose to the tail. Females are typically 34--91 kg (75--201 lb), 75--90 cm (30--35 in) tall, and 1.28--1.58 m (50--62 in) long. Male bighorn sheep have large horn cores, enlarged cornual and frontal sinuses, and internal bony septa. These adaptations serve to protect the brain by absorbing the impact of clashes. Bighorn sheep have preorbital glands on the anterior corner of each eye, inguinal glands in the groin, and pedal glands on each foot. Secretions from these glands may support dominance behaviors. Question: do both male and female bighorn sheep have horns",0.7054844163074191,0.7789296497961867,True,1,-0.0734452334887676,0.6217125382262997,0.6400611620795107,5.356778889899907,-0.0734452334887676,2,boolq,,,,,"Question: do both male and female bighorn sheep have horns
+
+Passage: Bighorn sheep are named for the large, curved horns borne by the rams (males). Ewes (females) also have horns, but they are shorter with less curvature. They range in color from light brown to grayish or dark, chocolate brown, with a white rump and lining on the backs of all four legs. Males typically weigh 58--143 kg (128--315 lb), are 90--105 cm (35--41 in) tall at the shoulder, and 1.6--1.85 m (63--73 in) long from the nose to the tail. Females are typically 34--91 kg (75--201 lb), 75--90 cm (30--35 in) tall, and 1.28--1.58 m (50--62 in) long. Male bighorn sheep have large horn cores, enlarged cornual and frontal sinuses, and internal bony septa. These adaptations serve to protect the brain by absorbing the impact of clashes. Bighorn sheep have preorbital glands on the anterior corner of each eye, inguinal glands in the groin, and pedal glands on each foot. Secretions from these glands may support dominance behaviors.",20,4,2,5,6,2,6,3,1,3,13,5,14,10.666666666666666,13.0,5,-1.0785484041601423,-1.249707709906062,-0.5037819827483356,-0.94401269893818,0.3907380063336861,3,0.0
+1516.0,can i use hydraulic fluid for brake fluid,True,"Brake fluid is a type of hydraulic fluid used in hydraulic brake and hydraulic clutch applications in automobiles, motorcycles, light trucks, and some bicycles. It is used to transfer force into pressure, and to amplify braking force. It works because liquids are not appreciably compressible.",1,"Passage: Brake fluid is a type of hydraulic fluid used in hydraulic brake and hydraulic clutch applications in automobiles, motorcycles, light trucks, and some bicycles. It is used to transfer force into pressure, and to amplify braking force. It works because liquids are not appreciably compressible. Question: can i use hydraulic fluid for brake fluid",0.7054844163074191,0.5741412774757554,True,1,0.1313431388316637,0.6217125382262997,0.6400611620795107,9.587727272727276,0.1313431388316637,4,boolq,,,,,"Question: can i use hydraulic fluid for brake fluid
+
+Passage: Brake fluid is a type of hydraulic fluid used in hydraulic brake and hydraulic clutch applications in automobiles, motorcycles, light trucks, and some bicycles. It is used to transfer force into pressure, and to amplify braking force. It works because liquids are not appreciably compressible.",34,3,3,4,6,5,5,2,4,3,11,12,12,11.666666666666666,12.0,12,-1.5517689105558172,-0.1209394557973608,-1.013940952620068,-0.8955497729910821,0.7227244189257427,4,0.0
+808.0,did they find both halves of the titanic,True,"The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in two main pieces about a third of a mile (600 m) apart. The bow is still largely recognizable with many preserved interiors, despite its deterioration and the damage it sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms.",1,"Passage: The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in two main pieces about a third of a mile (600 m) apart. The bow is still largely recognizable with many preserved interiors, despite its deterioration and the damage it sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms. Question: did they find both halves of the titanic",0.7054844163074191,0.7668322250004639,True,1,-0.0613478086930447,0.6217125382262997,0.6400611620795107,7.176666666666669,-0.0613478086930447,2,boolq,,,,,"Question: did they find both halves of the titanic
+
+Passage: The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in two main pieces about a third of a mile (600 m) apart. The bow is still largely recognizable with many preserved interiors, despite its deterioration and the damage it sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms.",22,4,2,3,6,3,4,3,2,2,13,7,9,9.666666666666666,9.0,7,-1.0785484041601423,-0.9272024944464332,-1.7791794074276663,-1.2616434353447474,0.4545426359502775,2,0.16000000000000003
+294.0,,,,1,The Trump campaign only asked that Biden to release his list of potential Supreme Court nominees after Justice Ruth Bader Ginsburg passed away. When did the Trump Campaign request for a supreme court nominees list from Biden He asked for the list on the 22nd of June Did trump make another such request? He made another request on the 24th of August When did Justice Ruth Bader Ginsburg die It’s been noted that she passed away on Rosh Hashanah which is on the 19th of September,0.8334012291045118,0.4978651587820422,True,1,0.3355360703224695,0.61,0.618,12.655287356321844,0.3355360703224695,4,fever,294.0,The Trump campaign only asked that Biden to release his list of potential Supreme Court nominees after Justice Ruth Bader Ginsburg passed away.,When did the Trump Campaign request for a supreme court nominees list from Biden He asked for the list on the 22nd of June Did trump make another such request? He made another request on the 24th of August When did Justice Ruth Bader Ginsburg die It’s been noted that she passed away on Rosh Hashanah which is on the 19th of September,gold,The Trump campaign only asked that Biden to release his list of potential Supreme Court nominees after Justice Ruth Bader Ginsburg passed away. When did the Trump Campaign request for a supreme court nominees list from Biden He asked for the list on the 22nd of June Did trump make another such request? He made another request on the 24th of August When did Justice Ruth Bader Ginsburg die It’s been noted that she passed away on Rosh Hashanah which is on the 19th of September,62,7,4,5,8,6,6,6,1,4,21,11,15,15.666666666666666,15.0,11,0.814333621422557,-0.2821920635271753,-0.2487024978124694,0.0944796866943041,0.6236366355986078,3,0.0
+171.0,,,,1,All students in India who had to switch to an online mode of education due to the coronavirus pandemic are being provided free Android smartphones by the government. What's the link provided in the claim to obtain the free phone provided by the Indian government  to students during the coronavirus pandemic? https://registration–form-free–smartphone.blogspot.com/ What page does the link refer to? A blog. Did the Indian Government provide free smartphones to students during the pandemic The Indian Government didn't provide free android phones to students during the pandemic. The link was created under a blog and there is no official statement from the government as regards that and it is highly unusual for the federal government to make such provisions under a blog,0.8334012291045118,0.6287831625207464,True,1,0.2046180665837653,0.61,0.618,9.303917322834646,0.2046180665837653,3,fever,171.0,All students in India who had to switch to an online mode of education due to the coronavirus pandemic are being provided free Android smartphones by the government.,What's the link provided in the claim to obtain the free phone provided by the Indian government  to students during the coronavirus pandemic? https://registration–form-free–smartphone.blogspot.com/ What page does the link refer to? A blog. Did the Indian Government provide free smartphones to students during the pandemic The Indian Government didn't provide free android phones to students during the pandemic. The link was created under a blog and there is no official statement from the government as regards that and it is highly unusual for the federal government to make such provisions under a blog,gold,All students in India who had to switch to an online mode of education due to the coronavirus pandemic are being provided free Android smartphones by the government. What's the link provided in the claim to obtain the free phone provided by the Indian government  to students during the coronavirus pandemic? https://registration–form-free–smartphone.blogspot.com/ What page does the link refer to? A blog. Did the Indian Government provide free smartphones to students during the pandemic The Indian Government didn't provide free android phones to students during the pandemic. The link was created under a blog and there is no official statement from the government as regards that and it is highly unusual for the federal government to make such provisions under a blog,53,7,5,5,8,4,6,6,1,7,21,10,18,16.333333333333332,18.0,10,0.814333621422557,-0.4434446712569898,0.5165359569951291,0.2958083023868987,0.6572990807201898,3,0.0
+248.0,,,,1,"Sadiq Khan faked getting the flu jab as the plastic cap was still on the needle. Why was Sadiq Khan being offered the flu jab? Flu kills an average of 8,000 people every year, and it can be particularly serious in older adults, very young children, and people with underlying health conditions.
+More people than ever are now eligible for the flu vaccine and 25 million people in England will be offered it for free by the NHS At what point do you need to take the cap off of the needle before use? 1. Holding the syringe barrel in one hand (avoid holding the syringe plunger), unscrew the syringe cap by twisting it anticlockwise.
+
+2. To attach the needle to the syringe, twist the needle clockwise into the syringe until you feel it lock (see picture).
+
+3. Remove the needle protector, which on occasion can be a little stiff.
+
+4. Administer the vaccine.",0.8334012291045118,0.4792098948871336,True,1,0.3541913342173781,0.61,0.618,6.79666666666667,0.3541913342173781,4,fever,248.0,Sadiq Khan faked getting the flu jab as the plastic cap was still on the needle.,"Why was Sadiq Khan being offered the flu jab? Flu kills an average of 8,000 people every year, and it can be particularly serious in older adults, very young children, and people with underlying health conditions.
+More people than ever are now eligible for the flu vaccine and 25 million people in England will be offered it for free by the NHS At what point do you need to take the cap off of the needle before use? 1. Holding the syringe barrel in one hand (avoid holding the syringe plunger), unscrew the syringe cap by twisting it anticlockwise.
+
+2. To attach the needle to the syringe, twist the needle clockwise into the syringe until you feel it lock (see picture).
+
+3. Remove the needle protector, which on occasion can be a little stiff.
+
+4. Administer the vaccine.",gold,"Sadiq Khan faked getting the flu jab as the plastic cap was still on the needle. Why was Sadiq Khan being offered the flu jab? Flu kills an average of 8,000 people every year, and it can be particularly serious in older adults, very young children, and people with underlying health conditions.
+More people than ever are now eligible for the flu vaccine and 25 million people in England will be offered it for free by the NHS At what point do you need to take the cap off of the needle before use? 1. Holding the syringe barrel in one hand (avoid holding the syringe plunger), unscrew the syringe cap by twisting it anticlockwise.
+
+2. To attach the needle to the syringe, twist the needle clockwise into the syringe until you feel it lock (see picture).
+
+3. Remove the needle protector, which on occasion can be a little stiff.
+
+4. Administer the vaccine.",65,7,4,6,8,5,5,6,2,4,21,11,15,15.666666666666666,15.0,11,0.814333621422557,-0.2821920635271753,-0.2487024978124694,0.0944796866943041,0.6236366355986078,3,0.0
+112.0,,,,1,"The Median White Household Wealth In The US Is 81 Times that of The Black Median Household Wealth What is the average net worth of a typical white family in the USA compared to that of a typical black family? At $171,000, the net worth of a typical white family is nearly ten times greater than that of a Black family ($17,150) in 2016. What is the average net worth of a typical white family in the USA compared to that of a typical black family? White average wealth ($929,800), which is more influenced by very rich families and does not characterize the typical experience, is 6.7 times greater than Black average wealth ($138,100). Where does the claim get it's facts from? An article from the DCFPI.",0.8334012291045118,0.701737695977102,True,1,0.1316635331274097,0.61,0.618,8.329285714285714,0.1316635331274097,3,fever,112.0,The Median White Household Wealth In The US Is 81 Times that of The Black Median Household Wealth,"What is the average net worth of a typical white family in the USA compared to that of a typical black family? At $171,000, the net worth of a typical white family is nearly ten times greater than that of a Black family ($17,150) in 2016. What is the average net worth of a typical white family in the USA compared to that of a typical black family? White average wealth ($929,800), which is more influenced by very rich families and does not characterize the typical experience, is 6.7 times greater than Black average wealth ($138,100). Where does the claim get it's facts from? An article from the DCFPI.",gold,"The Median White Household Wealth In The US Is 81 Times that of The Black Median Household Wealth What is the average net worth of a typical white family in the USA compared to that of a typical black family? At $171,000, the net worth of a typical white family is nearly ten times greater than that of a Black family ($17,150) in 2016. What is the average net worth of a typical white family in the USA compared to that of a typical black family? White average wealth ($929,800), which is more influenced by very rich families and does not characterize the typical experience, is 6.7 times greater than Black average wealth ($138,100). Where does the claim get it's facts from? An article from the DCFPI.",49,6,5,5,7,3,6,8,2,4,21,10,15,15.333333333333334,15.0,10,0.814333621422557,-0.4434446712569898,-0.2487024978124694,0.0407288174510326,0.677000312463251,3,0.0
+323.0,,,,0,"Donald Trump is in federal court trying to do away with the Affordable Care Act, 100 million people with preexisting conditions like your mom would not have to pay more for their insurance under now.” What is the Affordable care act The Affordable Care Act (ACA) provides individuals and families greater access to affordable health insurance options including medical, dental, vision, and other types of health insurance that may not otherwise be available. Under the ACA:
+
+You may be able to purchase health care coverage through a state or federal marketplace that offers a choice of plans. 
+Insurers can't refuse coverage based on gender or a pre-existing condition. 
+There are no lifetime or annual limits on coverage. 
+Young adults can stay on their family’s insurance plan until age 26. 
+Seniors who hit the Medicare Prescription Drug Plan coverage gap or ""donut hole"" can get a discount on medications. What was Trump's stance on the Affordable Care Act The Trump administration yesterday asked the Supreme Court to repeal the Affordable Care Act (ACA, also known as Obamacare) stating ""the entire ACA act must fall,"" hours after Republican state attorneys general, the coalition challenging the law, filed its briefs in the case. Overturning the ACA was a key campaign rallying point for President Trump in 2016 and Republican lawmakers have largely opposed the law since its inception in 2010.",1.8421605952069344,2.08602399433778,False,1,-0.2438633991308452,0.61,0.618,13.471777777777778,-0.2438633991308452,2,fever,323.0,"Donald Trump is in federal court trying to do away with the Affordable Care Act, 100 million people with preexisting conditions like your mom would not have to pay more for their insurance under now.”","What is the Affordable care act The Affordable Care Act (ACA) provides individuals and families greater access to affordable health insurance options including medical, dental, vision, and other types of health insurance that may not otherwise be available. Under the ACA:
+
+You may be able to purchase health care coverage through a state or federal marketplace that offers a choice of plans. 
+Insurers can't refuse coverage based on gender or a pre-existing condition. 
+There are no lifetime or annual limits on coverage. 
+Young adults can stay on their family’s insurance plan until age 26. 
+Seniors who hit the Medicare Prescription Drug Plan coverage gap or ""donut hole"" can get a discount on medications. What was Trump's stance on the Affordable Care Act The Trump administration yesterday asked the Supreme Court to repeal the Affordable Care Act (ACA, also known as Obamacare) stating ""the entire ACA act must fall,"" hours after Republican state attorneys general, the coalition challenging the law, filed its briefs in the case. Overturning the ACA was a key campaign rallying point for President Trump in 2016 and Republican lawmakers have largely opposed the law since its inception in 2010.",gold,"Donald Trump is in federal court trying to do away with the Affordable Care Act, 100 million people with preexisting conditions like your mom would not have to pay more for their insurance under now.” What is the Affordable care act The Affordable Care Act (ACA) provides individuals and families greater access to affordable health insurance options including medical, dental, vision, and other types of health insurance that may not otherwise be available. Under the ACA:
+
+You may be able to purchase health care coverage through a state or federal marketplace that offers a choice of plans. 
+Insurers can't refuse coverage based on gender or a pre-existing condition. 
+There are no lifetime or annual limits on coverage. 
+Young adults can stay on their family’s insurance plan until age 26. 
+Seniors who hit the Medicare Prescription Drug Plan coverage gap or ""donut hole"" can get a discount on medications. What was Trump's stance on the Affordable Care Act The Trump administration yesterday asked the Supreme Court to repeal the Affordable Care Act (ACA, also known as Obamacare) stating ""the entire ACA act must fall,"" hours after Republican state attorneys general, the coalition challenging the law, filed its briefs in the case. Overturning the ACA was a key campaign rallying point for President Trump in 2016 and Republican lawmakers have largely opposed the law since its inception in 2010.",42,7,4,7,8,5,6,6,5,5,21,14,18,17.666666666666668,18.0,14,0.814333621422557,0.201565759662268,0.5165359569951291,0.5108117793599848,0.3064240326064001,4,0.0
+270.0,,,,1,"House Speaker Nancy Pelosi said of US employers, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.” Did House Speaker Nancy Pelosi say, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.”? The quote seems to be misinterpreted from a statement Pelosi made in 2013 in a CNN interview titled ""State of Union"" where she said, “Overwhelmingly for the American people, this is a liberation,” she answered, in part. “This is life, healthy life, liberty, the freedom to pursue your happiness which could be, follow your passion for good rather than follow your palate and be constrained by your policy.” after being asked if she was worried that the Affordable Care Act would result in employers reducing employee hours to keep the costs of providing health care to employees down.",0.8334012291045118,0.5185592373924848,True,1,0.314841991712027,0.61,0.618,9.62307046979866,0.314841991712027,4,fever,270.0,"House Speaker Nancy Pelosi said of US employers, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.”","Did House Speaker Nancy Pelosi say, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.”? The quote seems to be misinterpreted from a statement Pelosi made in 2013 in a CNN interview titled ""State of Union"" where she said, “Overwhelmingly for the American people, this is a liberation,” she answered, in part. “This is life, healthy life, liberty, the freedom to pursue your happiness which could be, follow your passion for good rather than follow your palate and be constrained by your policy.” after being asked if she was worried that the Affordable Care Act would result in employers reducing employee hours to keep the costs of providing health care to employees down.",gold,"House Speaker Nancy Pelosi said of US employers, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.” Did House Speaker Nancy Pelosi say, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.”? The quote seems to be misinterpreted from a statement Pelosi made in 2013 in a CNN interview titled ""State of Union"" where she said, “Overwhelmingly for the American people, this is a liberation,” she answered, in part. “This is life, healthy life, liberty, the freedom to pursue your happiness which could be, follow your passion for good rather than follow your palate and be constrained by your policy.” after being asked if she was worried that the Affordable Care Act would result in employers reducing employee hours to keep the costs of providing health care to employees down.",59,6,5,5,8,7,7,7,2,6,21,14,18,17.666666666666668,18.0,14,0.814333621422557,0.201565759662268,0.5165359569951291,0.5108117793599848,0.3064240326064001,4,0.0
+422.0,,,,1,"Viral message claims that all Haldiram’s food products were banned in USA What does is  Haldiram’s ? Haldiram's Foods is an International packaged producer, based in Mumbai Who regulates food products in the U.S? UNITED STATES FOOD AND DRUG ADMINISTRATION (FDA OR USFDA) Has the usfda ever banned any Haldiram’s products from  the U.S? but the USFDA did seize a consignment and issued a warning letter in 2017 Are products form Haldiram foods available to buy in the U.S? Haldiram's entered the US e-commerce market via Amazon",0.8334012291045118,0.6227084346967162,True,1,0.2106927944077955,0.61,0.618,7.762608695652176,0.2106927944077955,3,fever,422.0,Viral message claims that all Haldiram’s food products were banned in USA,"What does is  Haldiram’s ? Haldiram's Foods is an International packaged producer, based in Mumbai Who regulates food products in the U.S? UNITED STATES FOOD AND DRUG ADMINISTRATION (FDA OR USFDA) Has the usfda ever banned any Haldiram’s products from  the U.S? but the USFDA did seize a consignment and issued a warning letter in 2017 Are products form Haldiram foods available to buy in the U.S? Haldiram's entered the US e-commerce market via Amazon",gold,"Viral message claims that all Haldiram’s food products were banned in USA What does is  Haldiram’s ? Haldiram's Foods is an International packaged producer, based in Mumbai Who regulates food products in the U.S? UNITED STATES FOOD AND DRUG ADMINISTRATION (FDA OR USFDA) Has the usfda ever banned any Haldiram’s products from  the U.S? but the USFDA did seize a consignment and issued a warning letter in 2017 Are products form Haldiram foods available to buy in the U.S? Haldiram's entered the US e-commerce market via Amazon",54,6,4,5,7,5,6,5,2,4,18,11,15,14.666666666666666,15.0,11,0.1045028618290448,-0.2821920635271753,-0.2487024978124694,-0.1421305665035333,0.2142461755347119,2,0.16
+79.0,,,,1,Anthony Weiner’s laptop contained proof Hillary Clinton & her associates are involved in child trafficking & paedophilia Was Anthony Weiner's laptop examined by the FBI? It was examined by the FBI in regards to a sexting incident. Was Hillary Clinton charged with any crime discovered in the contents of Anthony Weiner's laptop The probe is considered over with regard to Clinton.,0.8334012291045118,0.6874823258596993,True,1,0.1459189032448125,0.61,0.618,13.643333333333334,0.1459189032448125,3,fever,79.0,Anthony Weiner’s laptop contained proof Hillary Clinton & her associates are involved in child trafficking & paedophilia,Was Anthony Weiner's laptop examined by the FBI? It was examined by the FBI in regards to a sexting incident. Was Hillary Clinton charged with any crime discovered in the contents of Anthony Weiner's laptop The probe is considered over with regard to Clinton.,gold,Anthony Weiner’s laptop contained proof Hillary Clinton & her associates are involved in child trafficking & paedophilia Was Anthony Weiner's laptop examined by the FBI? It was examined by the FBI in regards to a sexting incident. Was Hillary Clinton charged with any crime discovered in the contents of Anthony Weiner's laptop The probe is considered over with regard to Clinton.,51,6,6,6,8,6,5,7,5,7,21,17,18,18.666666666666668,18.0,17,0.814333621422557,0.6853235828517115,0.5165359569951291,0.6720643870897992,0.1493409419375587,5,0.16000000000000006
+252.0,,,,1,"New Zealand opposition leader Judith Collins is opposed to new environmental legislation because of her connection to Oravida, a local water and dairy company that exports produce to China. What is Judith Collins' connection to Oravida? Her husband, David Wong-Tung, was a company director of Oravida. When did David Wong-Tong stop being a director of Orvida? Wong-Tung stood down from the board of Oravida NZ in 2017. When was the claim made? 28/09/2020",0.8334012291045118,0.4438629352667907,True,1,0.389538293837721,0.61,0.618,8.83795366795367,0.389538293837721,5,fever,252.0,"New Zealand opposition leader Judith Collins is opposed to new environmental legislation because of her connection to Oravida, a local water and dairy company that exports produce to China.","What is Judith Collins' connection to Oravida? Her husband, David Wong-Tung, was a company director of Oravida. When did David Wong-Tong stop being a director of Orvida? Wong-Tung stood down from the board of Oravida NZ in 2017. When was the claim made? 28/09/2020",gold,"New Zealand opposition leader Judith Collins is opposed to new environmental legislation because of her connection to Oravida, a local water and dairy company that exports produce to China. What is Judith Collins' connection to Oravida? Her husband, David Wong-Tung, was a company director of Oravida. When did David Wong-Tong stop being a director of Orvida? Wong-Tung stood down from the board of Oravida NZ in 2017. When was the claim made? 28/09/2020",67,6,5,5,7,7,6,4,6,4,17,18,15,16.666666666666668,17.0,15,-0.1321073913687926,0.8465761905815259,-0.2487024978124694,0.1552554338000879,0.601532955272858,4,0.2222222222222222
+89.0,,,,1,"Most deaths in the 1918 influenza pandemic originated from bacterial pneumonia caused by face masks and that Dr Anthony Fauci, the US government’s top expert in the fight against Covid-19, knew about it. Is wearing a mask an increasing factor or a direct cause of secondary bacterial pneumonia? there is no evidence to support this and it has not been mentioned in any studies. Did the National Institute of Allergy and Infectious Diseases undertake a study linking masks to bacterial pneumonia? NIAID told AFP in a statement: “The 2008 study does not mention masks and had nothing to do with masks” Instead, the study “analyzed data from fatal 1918 infections and showed that the majority of cases were associated with secondary bacterial pneumonias,”",0.8334012291045118,0.3672754258269017,True,1,0.46612580327761,0.61,0.618,13.89029752066116,0.46612580327761,5,fever,89.0,"Most deaths in the 1918 influenza pandemic originated from bacterial pneumonia caused by face masks and that Dr Anthony Fauci, the US government’s top expert in the fight against Covid-19, knew about it.","Is wearing a mask an increasing factor or a direct cause of secondary bacterial pneumonia? there is no evidence to support this and it has not been mentioned in any studies. Did the National Institute of Allergy and Infectious Diseases undertake a study linking masks to bacterial pneumonia? NIAID told AFP in a statement: “The 2008 study does not mention masks and had nothing to do with masks” Instead, the study “analyzed data from fatal 1918 infections and showed that the majority of cases were associated with secondary bacterial pneumonias,”",gold,"Most deaths in the 1918 influenza pandemic originated from bacterial pneumonia caused by face masks and that Dr Anthony Fauci, the US government’s top expert in the fight against Covid-19, knew about it. Is wearing a mask an increasing factor or a direct cause of secondary bacterial pneumonia? there is no evidence to support this and it has not been mentioned in any studies. Did the National Institute of Allergy and Infectious Diseases undertake a study linking masks to bacterial pneumonia? NIAID told AFP in a statement: “The 2008 study does not mention masks and had nothing to do with masks” Instead, the study “analyzed data from fatal 1918 infections and showed that the majority of cases were associated with secondary bacterial pneumonias,”",72,7,6,7,8,5,6,6,2,5,21,13,18,17.333333333333332,18.0,13,0.814333621422557,0.0403131519324536,0.5165359569951291,0.4570609101167133,0.3904226974681574,4,0.22222222222222224
+,,,,4,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Alice`, `Carol`, `Peter`, `Bob`, `Arnold`, `Eric`
+ - They all have a unique favorite flower: `carnations`, `iris`, `tulips`, `daffodils`, `lilies`, `roses`
+ - Each person prefers a unique type of vacation: `camping`, `mountain`, `city`, `beach`, `cultural`, `cruise`
+ - Each person lives in a unique style of house: `colonial`, `modern`, `mediterranean`, `craftsman`, `ranch`, `victorian`
+ - People have unique heights: `short`, `very short`, `average`, `tall`, `super tall`, `very tall`
+ - People have unique hair colors: `red`, `black`, `gray`, `brown`, `auburn`, `blonde`
+
+## Clues:
+1. The person who loves the boquet of lilies is not in the fifth house.
+2. The person who is very short is the person who has auburn hair.
+3. Arnold is the person who enjoys camping trips.
+4. The person who has auburn hair is Eric.
+5. The person who goes on cultural tours is somewhere to the left of the person who is super tall.
+6. There are two houses between the person who has gray hair and the person who is short.
+7. The person who is tall is somewhere to the left of the person who has brown hair.
+8. The person in a Craftsman-style house is Bob.
+9. The person who is very short is somewhere to the left of the person who has blonde hair.
+10. The person who is very tall is Bob.
+11. There are two houses between the person who loves the rose bouquet and Peter.
+12. The person in a modern-style house is not in the fourth house.
+13. The person who prefers city breaks is the person who is short.
+14. The person living in a colonial-style house is somewhere to the left of the person who loves the vase of tulips.
+15. The person who loves a carnations arrangement is the person who has brown hair.
+16. The person who has red hair is the person who loves the boquet of lilies.
+17. The person who enjoys mountain retreats is the person residing in a Victorian house.
+18. The person who loves a bouquet of daffodils is the person in a modern-style house.
+19. Arnold is the person who has an average height.
+20. The person in a Mediterranean-style villa is not in the first house.
+21. The person who is tall is not in the fifth house.
+22. The person who loves the vase of tulips is not in the fourth house.
+23. Carol is directly left of Bob.
+24. The person who is very tall is the person who goes on cultural tours.
+25. The person in a Mediterranean-style villa is the person who has red hair.
+26. The person who is super tall is the person who has black hair.
+27. Eric is the person who loves the rose bouquet.
+28. The person who enjoys mountain retreats is directly left of the person who likes going on cruises.
+
+
+QUESTION: What is HouseStyle of the person who lives in House 5?
+
+OPTIONS:
+A) victorian
+B) mediterranean
+C) modern
+D) craftsman
+E) ranch
+F) colonial",3.280166793740749,2.216279040635781,False,3,1.063887753104968,,,,1.063887753104968,4,zebralogic,,,,,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Alice`, `Carol`, `Peter`, `Bob`, `Arnold`, `Eric`
+ - They all have a unique favorite flower: `carnations`, `iris`, `tulips`, `daffodils`, `lilies`, `roses`
+ - Each person prefers a unique type of vacation: `camping`, `mountain`, `city`, `beach`, `cultural`, `cruise`
+ - Each person lives in a unique style of house: `colonial`, `modern`, `mediterranean`, `craftsman`, `ranch`, `victorian`
+ - People have unique heights: `short`, `very short`, `average`, `tall`, `super tall`, `very tall`
+ - People have unique hair colors: `red`, `black`, `gray`, `brown`, `auburn`, `blonde`
+
+## Clues:
+1. The person who loves the boquet of lilies is not in the fifth house.
+2. The person who is very short is the person who has auburn hair.
+3. Arnold is the person who enjoys camping trips.
+4. The person who has auburn hair is Eric.
+5. The person who goes on cultural tours is somewhere to the left of the person who is super tall.
+6. There are two houses between the person who has gray hair and the person who is short.
+7. The person who is tall is somewhere to the left of the person who has brown hair.
+8. The person in a Craftsman-style house is Bob.
+9. The person who is very short is somewhere to the left of the person who has blonde hair.
+10. The person who is very tall is Bob.
+11. There are two houses between the person who loves the rose bouquet and Peter.
+12. The person in a modern-style house is not in the fourth house.
+13. The person who prefers city breaks is the person who is short.
+14. The person living in a colonial-style house is somewhere to the left of the person who loves the vase of tulips.
+15. The person who loves a carnations arrangement is the person who has brown hair.
+16. The person who has red hair is the person who loves the boquet of lilies.
+17. The person who enjoys mountain retreats is the person residing in a Victorian house.
+18. The person who loves a bouquet of daffodils is the person in a modern-style house.
+19. Arnold is the person who has an average height.
+20. The person in a Mediterranean-style villa is not in the first house.
+21. The person who is tall is not in the fifth house.
+22. The person who loves the vase of tulips is not in the fourth house.
+23. Carol is directly left of Bob.
+24. The person who is very tall is the person who goes on cultural tours.
+25. The person in a Mediterranean-style villa is the person who has red hair.
+26. The person who is super tall is the person who has black hair.
+27. Eric is the person who loves the rose bouquet.
+28. The person who enjoys mountain retreats is directly left of the person who likes going on cruises.
+
+
+QUESTION: What is HouseStyle of the person who lives in House 5?
+
+OPTIONS:
+A) victorian
+B) mediterranean
+C) modern
+D) craftsman
+E) ranch
+F) colonial",91,9,9,6,10,10,8,3,1,7,22,20,21,21.0,21.0,20,1.0509438746203943,1.169081406041155,1.2817744118027277,1.167266564154759,0.1154259696180871,5,0.0
+,,,,2,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Peter`, `Eric`, `Alice`, `Bob`
+ - Each person has a unique hobby: `painting`, `cooking`, `knitting`, `gardening`, `photography`
+ - People have unique heights: `very tall`, `tall`, `very short`, `average`, `short`
+ - Everyone has something unique for lunch: `stew`, `grilled cheese`, `stir fry`, `spaghetti`, `pizza`
+
+## Clues:
+1. Bob is the photography enthusiast.
+2. The person who loves eating grilled cheese is the person who is tall.
+3. Peter is not in the second house.
+4. The person who is tall is directly left of the person who loves stir fry.
+5. The person who loves cooking is the person who has an average height.
+6. Alice is directly left of the person who is a pizza lover.
+7. The person who loves the spaghetti eater is not in the second house.
+8. Eric is not in the fifth house.
+9. The person who is short is Peter.
+10. The person who has an average height and the person who enjoys gardening are next to each other.
+11. The person who paints as a hobby is directly left of the person who loves eating grilled cheese.
+12. The person who is very short is in the fifth house.
+13. The person who is tall is in the third house.
+14. Alice is somewhere to the right of the photography enthusiast.
+
+
+QUESTION: What is Food of the person who lives in House 2?
+
+OPTIONS:
+A) spaghetti
+B) grilled cheese
+C) stew
+D) stir fry
+E) pizza",3.5781051927814165,1.9943324517690395,True,2,1.5837727410123772,,,,1.5837727410123772,5,zebralogic,,,,,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Peter`, `Eric`, `Alice`, `Bob`
+ - Each person has a unique hobby: `painting`, `cooking`, `knitting`, `gardening`, `photography`
+ - People have unique heights: `very tall`, `tall`, `very short`, `average`, `short`
+ - Everyone has something unique for lunch: `stew`, `grilled cheese`, `stir fry`, `spaghetti`, `pizza`
+
+## Clues:
+1. Bob is the photography enthusiast.
+2. The person who loves eating grilled cheese is the person who is tall.
+3. Peter is not in the second house.
+4. The person who is tall is directly left of the person who loves stir fry.
+5. The person who loves cooking is the person who has an average height.
+6. Alice is directly left of the person who is a pizza lover.
+7. The person who loves the spaghetti eater is not in the second house.
+8. Eric is not in the fifth house.
+9. The person who is short is Peter.
+10. The person who has an average height and the person who enjoys gardening are next to each other.
+11. The person who paints as a hobby is directly left of the person who loves eating grilled cheese.
+12. The person who is very short is in the fifth house.
+13. The person who is tall is in the third house.
+14. Alice is somewhere to the right of the photography enthusiast.
+
+
+QUESTION: What is Food of the person who lives in House 2?
+
+OPTIONS:
+A) spaghetti
+B) grilled cheese
+C) stew
+D) stir fry
+E) pizza",96,8,8,7,9,9,8,3,4,6,20,21,21,20.666666666666668,21.0,21,0.5777233682247196,1.3303340137709694,1.2817744118027277,1.063277264599472,0.4212023841923933,5,0.0
+,,,,2,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Eric`, `Peter`, `Carol`, `Alice`, `Bob`, `Arnold`
+ - The people are of nationalities: `brit`, `norwegian`, `swede`, `chinese`, `german`, `dane`
+ - Everyone has a favorite smoothie: `dragonfruit`, `cherry`, `lime`, `desert`, `watermelon`, `blueberry`
+
+## Clues:
+1. The Chinese is somewhere to the right of the Swedish person.
+2. The Desert smoothie lover is the German.
+3. The person who drinks Blueberry smoothies is Bob.
+4. The person who drinks Blueberry smoothies is somewhere to the right of Eric.
+5. Peter and Carol are next to each other.
+6. The Swedish person is the Dragonfruit smoothie lover.
+7. Arnold is the Norwegian.
+8. The Dane is the person who likes Cherry smoothies.
+9. Peter is directly left of the Watermelon smoothie lover.
+10. Arnold is not in the third house.
+11. The Norwegian is somewhere to the left of the Chinese.
+12. The Dane is in the first house.
+13. The German is in the sixth house.
+14. The Chinese is not in the fifth house.
+
+
+QUESTION: What is Smoothie of the person who lives in House 2?
+
+OPTIONS:
+A) desert
+B) blueberry
+C) lime
+D) watermelon
+E) cherry
+F) dragonfruit",4.176865356954031,1.9645875521431369,True,2,2.212277804810894,,,,2.212277804810894,6,zebralogic,,,,,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Eric`, `Peter`, `Carol`, `Alice`, `Bob`, `Arnold`
+ - The people are of nationalities: `brit`, `norwegian`, `swede`, `chinese`, `german`, `dane`
+ - Everyone has a favorite smoothie: `dragonfruit`, `cherry`, `lime`, `desert`, `watermelon`, `blueberry`
+
+## Clues:
+1. The Chinese is somewhere to the right of the Swedish person.
+2. The Desert smoothie lover is the German.
+3. The person who drinks Blueberry smoothies is Bob.
+4. The person who drinks Blueberry smoothies is somewhere to the right of Eric.
+5. Peter and Carol are next to each other.
+6. The Swedish person is the Dragonfruit smoothie lover.
+7. Arnold is the Norwegian.
+8. The Dane is the person who likes Cherry smoothies.
+9. Peter is directly left of the Watermelon smoothie lover.
+10. Arnold is not in the third house.
+11. The Norwegian is somewhere to the left of the Chinese.
+12. The Dane is in the first house.
+13. The German is in the sixth house.
+14. The Chinese is not in the fifth house.
+
+
+QUESTION: What is Smoothie of the person who lives in House 2?
+
+OPTIONS:
+A) desert
+B) blueberry
+C) lime
+D) watermelon
+E) cherry
+F) dragonfruit",117,8,8,6,9,9,8,3,5,7,20,22,21,21.0,21.0,20,0.5777233682247196,1.4915866215007838,1.2817744118027277,1.1170281338427437,0.4786883260518572,5,0.0
+,,,,3,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Carol`, `Peter`, `Eric`, `Bob`, `Alice`
+ - Each person lives in a unique style of house: `ranch`, `colonial`, `modern`, `craftsman`, `mediterranean`, `victorian`
+ - Everyone has something unique for lunch: `pizza`, `stew`, `spaghetti`, `grilled cheese`, `stir fry`, `soup`
+ - Each person prefers a unique type of vacation: `cultural`, `cruise`, `mountain`, `camping`, `city`, `beach`
+ - People have unique heights: `average`, `very tall`, `very short`, `short`, `tall`, `super tall`
+ - Everyone has a unique favorite cigar: `yellow monster`, `prince`, `dunhill`, `pall mall`, `blue master`, `blends`
+
+## Clues:
+1. Alice is in the fifth house.
+2. The person who loves stir fry is the person living in a colonial-style house.
+3. Alice is the person who loves the spaghetti eater.
+4. Arnold is the person who loves the stew.
+5. There is one house between the person who has an average height and Peter.
+6. The person in a Craftsman-style house is not in the third house.
+7. The person who has an average height is the person who loves stir fry.
+8. The person who loves beach vacations is the person in a ranch-style home.
+9. Eric is in the fourth house.
+10. There is one house between the person living in a colonial-style house and the person who enjoys camping trips.
+11. The person who enjoys mountain retreats is the person who smokes Yellow Monster.
+12. The person who enjoys mountain retreats is the person who is very tall.
+13. The person who enjoys mountain retreats and the Dunhill smoker are next to each other.
+14. The person who loves the spaghetti eater is the person residing in a Victorian house.
+15. The person who is tall is the person who loves beach vacations.
+16. The person who is tall is somewhere to the left of the person residing in a Victorian house.
+17. The person who loves stir fry is directly left of Bob.
+18. The person in a modern-style house is somewhere to the left of Alice.
+19. The person in a Craftsman-style house is somewhere to the left of the person who is short.
+20. The person who loves stir fry is somewhere to the left of the Prince smoker.
+21. There are two houses between the person who loves eating grilled cheese and the person who is super tall.
+22. The person in a ranch-style home is the person who smokes Blue Master.
+23. The person who smokes many unique blends is directly left of the person who smokes Blue Master.
+24. The person who goes on cultural tours is the person who is a pizza lover.
+25. The person who is a pizza lover is somewhere to the left of the person who likes going on cruises.
+
+
+QUESTION: What is Cigar of the person who lives in House 1?
+
+OPTIONS:
+A) yellow monster
+B) prince
+C) blends
+D) pall mall
+E) blue master
+F) dunhill",2.9147527006942444,1.9812362766204703,True,3,0.933516424073774,,,,0.933516424073774,4,zebralogic,,,,,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Carol`, `Peter`, `Eric`, `Bob`, `Alice`
+ - Each person lives in a unique style of house: `ranch`, `colonial`, `modern`, `craftsman`, `mediterranean`, `victorian`
+ - Everyone has something unique for lunch: `pizza`, `stew`, `spaghetti`, `grilled cheese`, `stir fry`, `soup`
+ - Each person prefers a unique type of vacation: `cultural`, `cruise`, `mountain`, `camping`, `city`, `beach`
+ - People have unique heights: `average`, `very tall`, `very short`, `short`, `tall`, `super tall`
+ - Everyone has a unique favorite cigar: `yellow monster`, `prince`, `dunhill`, `pall mall`, `blue master`, `blends`
+
+## Clues:
+1. Alice is in the fifth house.
+2. The person who loves stir fry is the person living in a colonial-style house.
+3. Alice is the person who loves the spaghetti eater.
+4. Arnold is the person who loves the stew.
+5. There is one house between the person who has an average height and Peter.
+6. The person in a Craftsman-style house is not in the third house.
+7. The person who has an average height is the person who loves stir fry.
+8. The person who loves beach vacations is the person in a ranch-style home.
+9. Eric is in the fourth house.
+10. There is one house between the person living in a colonial-style house and the person who enjoys camping trips.
+11. The person who enjoys mountain retreats is the person who smokes Yellow Monster.
+12. The person who enjoys mountain retreats is the person who is very tall.
+13. The person who enjoys mountain retreats and the Dunhill smoker are next to each other.
+14. The person who loves the spaghetti eater is the person residing in a Victorian house.
+15. The person who is tall is the person who loves beach vacations.
+16. The person who is tall is somewhere to the left of the person residing in a Victorian house.
+17. The person who loves stir fry is directly left of Bob.
+18. The person in a modern-style house is somewhere to the left of Alice.
+19. The person in a Craftsman-style house is somewhere to the left of the person who is short.
+20. The person who loves stir fry is somewhere to the left of the Prince smoker.
+21. There are two houses between the person who loves eating grilled cheese and the person who is super tall.
+22. The person in a ranch-style home is the person who smokes Blue Master.
+23. The person who smokes many unique blends is directly left of the person who smokes Blue Master.
+24. The person who goes on cultural tours is the person who is a pizza lover.
+25. The person who is a pizza lover is somewhere to the left of the person who likes going on cruises.
+
+
+QUESTION: What is Cigar of the person who lives in House 1?
+
+OPTIONS:
+A) yellow monster
+B) prince
+C) blends
+D) pall mall
+E) blue master
+F) dunhill",86,9,9,10,10,10,8,3,2,7,22,21,25,22.666666666666668,22.0,21,1.0509438746203943,1.3303340137709694,2.302092351546192,1.5611234133125187,0.6567274457748796,6,0.0
+,,,,2,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Bob`, `Alice`, `Eric`, `Peter`
+ - People have unique favorite sports: `basketball`, `soccer`, `tennis`, `baseball`, `swimming`
+ - The people keep unique animals: `dog`, `fish`, `horse`, `bird`, `cat`
+ - People use unique phone models: `oneplus 9`, `google pixel 6`, `samsung galaxy s21`, `iphone 13`, `huawei p50`
+ - People have unique hair colors: `black`, `red`, `brown`, `blonde`, `gray`
+ - Each person lives in a unique style of house: `modern`, `craftsman`, `victorian`, `ranch`, `colonial`
+
+## Clues:
+1. The person who has gray hair is the person who loves tennis.
+2. The person in a ranch-style home is in the fourth house.
+3. The person living in a colonial-style house is the person who loves swimming.
+4. The dog owner is somewhere to the right of the person who has gray hair.
+5. The fish enthusiast is the person who has gray hair.
+6. The person who has black hair is not in the fifth house.
+7. The person who uses a Samsung Galaxy S21 is the bird keeper.
+8. There is one house between the fish enthusiast and the person who uses a Samsung Galaxy S21.
+9. The person residing in a Victorian house is somewhere to the left of the person in a Craftsman-style house.
+10. The person who has red hair is not in the fifth house.
+11. There is one house between the person who uses a Samsung Galaxy S21 and the person who uses a Huawei P50.
+12. The person who uses an iPhone 13 is the person in a Craftsman-style house.
+13. Eric is the person who has red hair.
+14. The person who has red hair is not in the fourth house.
+15. The person who uses a OnePlus 9 is in the first house.
+16. The person who loves soccer is the dog owner.
+17. The person who keeps horses is Bob.
+18. Arnold is the fish enthusiast.
+19. The person who loves baseball is Peter.
+20. The person who loves soccer is in the fourth house.
+21. The person who has blonde hair is directly left of the person who has black hair.
+
+
+QUESTION: What is HouseStyle of the person who lives in House 3?
+
+OPTIONS:
+A) colonial
+B) victorian
+C) modern
+D) craftsman
+E) ranch",4.191561797495077,2.5349613996921696,False,3,1.6566003978029076,,,,1.6566003978029076,5,zebralogic,,,,,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Bob`, `Alice`, `Eric`, `Peter`
+ - People have unique favorite sports: `basketball`, `soccer`, `tennis`, `baseball`, `swimming`
+ - The people keep unique animals: `dog`, `fish`, `horse`, `bird`, `cat`
+ - People use unique phone models: `oneplus 9`, `google pixel 6`, `samsung galaxy s21`, `iphone 13`, `huawei p50`
+ - People have unique hair colors: `black`, `red`, `brown`, `blonde`, `gray`
+ - Each person lives in a unique style of house: `modern`, `craftsman`, `victorian`, `ranch`, `colonial`
+
+## Clues:
+1. The person who has gray hair is the person who loves tennis.
+2. The person in a ranch-style home is in the fourth house.
+3. The person living in a colonial-style house is the person who loves swimming.
+4. The dog owner is somewhere to the right of the person who has gray hair.
+5. The fish enthusiast is the person who has gray hair.
+6. The person who has black hair is not in the fifth house.
+7. The person who uses a Samsung Galaxy S21 is the bird keeper.
+8. There is one house between the fish enthusiast and the person who uses a Samsung Galaxy S21.
+9. The person residing in a Victorian house is somewhere to the left of the person in a Craftsman-style house.
+10. The person who has red hair is not in the fifth house.
+11. There is one house between the person who uses a Samsung Galaxy S21 and the person who uses a Huawei P50.
+12. The person who uses an iPhone 13 is the person in a Craftsman-style house.
+13. Eric is the person who has red hair.
+14. The person who has red hair is not in the fourth house.
+15. The person who uses a OnePlus 9 is in the first house.
+16. The person who loves soccer is the dog owner.
+17. The person who keeps horses is Bob.
+18. Arnold is the fish enthusiast.
+19. The person who loves baseball is Peter.
+20. The person who loves soccer is in the fourth house.
+21. The person who has blonde hair is directly left of the person who has black hair.
+
+
+QUESTION: What is HouseStyle of the person who lives in House 3?
+
+OPTIONS:
+A) colonial
+B) victorian
+C) modern
+D) craftsman
+E) ranch",102,8,9,6,9,10,8,3,4,7,20,23,21,21.333333333333332,21.0,20,0.5777233682247196,1.6528392292305982,1.2817744118027277,1.1707790030860152,0.5460847134041984,6,0.0
+,,,,2,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Eric`, `Alice`, `Bob`, `Peter`
+ - Each person prefers a unique type of vacation: `mountain`, `city`, `cruise`, `beach`, `camping`
+ - Each person has a unique level of education: `doctorate`, `high school`, `bachelor`, `associate`, `master`
+ - Each person has a favorite color: `blue`, `red`, `white`, `yellow`, `green`
+ - People use unique phone models: `google pixel 6`, `iphone 13`, `oneplus 9`, `huawei p50`, `samsung galaxy s21`
+ - Everyone has something unique for lunch: `grilled cheese`, `stir fry`, `pizza`, `spaghetti`, `stew`
+
+## Clues:
+1. The person who loves the stew is not in the first house.
+2. There are two houses between the person who loves stir fry and the person with an associate's degree.
+3. The person who enjoys mountain retreats is the person with a bachelor's degree.
+4. The person with a doctorate is somewhere to the right of Bob.
+5. The person who uses a Samsung Galaxy S21 is in the third house.
+6. Eric is the person with a doctorate.
+7. The person with a doctorate is in the third house.
+8. The person who loves stir fry is the person with a bachelor's degree.
+9. The person with a doctorate is the person who is a pizza lover.
+10. The person whose favorite color is green is somewhere to the right of Peter.
+11. The person who enjoys camping trips is the person who uses an iPhone 13.
+12. The person who likes going on cruises is Alice.
+13. There is one house between the person with a high school diploma and the person who uses a Samsung Galaxy S21.
+14. The person who uses a Google Pixel 6 is Arnold.
+15. The person who uses a OnePlus 9 is somewhere to the right of the person who uses a Huawei P50.
+16. Arnold is the person who loves eating grilled cheese.
+17. The person who loves eating grilled cheese is not in the fourth house.
+18. There are two houses between the person with a bachelor's degree and the person whose favorite color is red.
+19. The person who loves beach vacations is somewhere to the right of the person who prefers city breaks.
+20. The person whose favorite color is green is not in the second house.
+21. The person who loves blue is somewhere to the right of Peter.
+22. There is one house between the person who enjoys camping trips and the person who loves yellow.
+
+
+QUESTION: What is Food of the person who lives in House 1?
+
+OPTIONS:
+A) grilled cheese
+B) pizza
+C) spaghetti
+D) stew
+E) stir fry",3.5829866987407355,2.535172725104985,False,3,1.0478139736357504,,,,1.0478139736357504,4,zebralogic,,,,,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Eric`, `Alice`, `Bob`, `Peter`
+ - Each person prefers a unique type of vacation: `mountain`, `city`, `cruise`, `beach`, `camping`
+ - Each person has a unique level of education: `doctorate`, `high school`, `bachelor`, `associate`, `master`
+ - Each person has a favorite color: `blue`, `red`, `white`, `yellow`, `green`
+ - People use unique phone models: `google pixel 6`, `iphone 13`, `oneplus 9`, `huawei p50`, `samsung galaxy s21`
+ - Everyone has something unique for lunch: `grilled cheese`, `stir fry`, `pizza`, `spaghetti`, `stew`
+
+## Clues:
+1. The person who loves the stew is not in the first house.
+2. There are two houses between the person who loves stir fry and the person with an associate's degree.
+3. The person who enjoys mountain retreats is the person with a bachelor's degree.
+4. The person with a doctorate is somewhere to the right of Bob.
+5. The person who uses a Samsung Galaxy S21 is in the third house.
+6. Eric is the person with a doctorate.
+7. The person with a doctorate is in the third house.
+8. The person who loves stir fry is the person with a bachelor's degree.
+9. The person with a doctorate is the person who is a pizza lover.
+10. The person whose favorite color is green is somewhere to the right of Peter.
+11. The person who enjoys camping trips is the person who uses an iPhone 13.
+12. The person who likes going on cruises is Alice.
+13. There is one house between the person with a high school diploma and the person who uses a Samsung Galaxy S21.
+14. The person who uses a Google Pixel 6 is Arnold.
+15. The person who uses a OnePlus 9 is somewhere to the right of the person who uses a Huawei P50.
+16. Arnold is the person who loves eating grilled cheese.
+17. The person who loves eating grilled cheese is not in the fourth house.
+18. There are two houses between the person with a bachelor's degree and the person whose favorite color is red.
+19. The person who loves beach vacations is somewhere to the right of the person who prefers city breaks.
+20. The person whose favorite color is green is not in the second house.
+21. The person who loves blue is somewhere to the right of Peter.
+22. There is one house between the person who enjoys camping trips and the person who loves yellow.
+
+
+QUESTION: What is Food of the person who lives in House 1?
+
+OPTIONS:
+A) grilled cheese
+B) pizza
+C) spaghetti
+D) stew
+E) stir fry",90,9,9,6,10,10,8,3,2,7,22,21,21,21.333333333333332,21.0,21,1.0509438746203943,1.3303340137709694,1.2817744118027277,1.2210174333980304,0.1492758194829156,6,0.0
+,,,,4,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Bob`, `Arnold`, `Alice`, `Peter`, `Eric`
+ - People use unique phone models: `oneplus 9`, `google pixel 6`, `iphone 13`, `huawei p50`, `samsung galaxy s21`
+ - Each person has a favorite color: `blue`, `red`, `yellow`, `green`, `white`
+ - The mothers' names in different houses are unique: `Janelle`, `Penny`, `Holly`, `Aniya`, `Kailyn`
+ - The people are of nationalities: `german`, `norwegian`, `swede`, `dane`, `brit`
+ - Everyone has something unique for lunch: `spaghetti`, `grilled cheese`, `stew`, `pizza`, `stir fry`
+
+## Clues:
+1. The person who uses a OnePlus 9 and Arnold are next to each other.
+2. There are two houses between the person who uses a OnePlus 9 and The person whose mother's name is Kailyn.
+3. The person whose mother's name is Penny is somewhere to the left of the Swedish person.
+4. The person who loves yellow is the person who uses a Google Pixel 6.
+5. The person who loves eating grilled cheese is The person whose mother's name is Holly.
+6. Arnold is the person who loves the spaghetti eater.
+7. Bob is the person who uses a Huawei P50.
+8. The German is the person who is a pizza lover.
+9. Eric is directly left of the person who loves blue.
+10. Alice is The person whose mother's name is Holly.
+11. The person who loves stir fry is the British person.
+12. The person whose mother's name is Penny is not in the third house.
+13. Arnold is directly left of the person who uses a Huawei P50.
+14. The British person is somewhere to the left of the Dane.
+15. The person who uses a Google Pixel 6 is Arnold.
+16. The person whose mother's name is Aniya is the person who uses a Samsung Galaxy S21.
+17. The person who loves blue is the Norwegian.
+18. The person who loves white is the person who uses a Huawei P50.
+19. The person whose favorite color is red is directly left of the person who loves blue.
+
+
+QUESTION: What is Mother of the person who lives in House 3?
+
+OPTIONS:
+A) Holly
+B) Aniya
+C) Penny
+D) Kailyn
+E) Janelle",3.842860494842243,2.799261204772865,False,2,1.0435992900693782,,,,1.0435992900693782,4,zebralogic,,,,,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Bob`, `Arnold`, `Alice`, `Peter`, `Eric`
+ - People use unique phone models: `oneplus 9`, `google pixel 6`, `iphone 13`, `huawei p50`, `samsung galaxy s21`
+ - Each person has a favorite color: `blue`, `red`, `yellow`, `green`, `white`
+ - The mothers' names in different houses are unique: `Janelle`, `Penny`, `Holly`, `Aniya`, `Kailyn`
+ - The people are of nationalities: `german`, `norwegian`, `swede`, `dane`, `brit`
+ - Everyone has something unique for lunch: `spaghetti`, `grilled cheese`, `stew`, `pizza`, `stir fry`
+
+## Clues:
+1. The person who uses a OnePlus 9 and Arnold are next to each other.
+2. There are two houses between the person who uses a OnePlus 9 and The person whose mother's name is Kailyn.
+3. The person whose mother's name is Penny is somewhere to the left of the Swedish person.
+4. The person who loves yellow is the person who uses a Google Pixel 6.
+5. The person who loves eating grilled cheese is The person whose mother's name is Holly.
+6. Arnold is the person who loves the spaghetti eater.
+7. Bob is the person who uses a Huawei P50.
+8. The German is the person who is a pizza lover.
+9. Eric is directly left of the person who loves blue.
+10. Alice is The person whose mother's name is Holly.
+11. The person who loves stir fry is the British person.
+12. The person whose mother's name is Penny is not in the third house.
+13. Arnold is directly left of the person who uses a Huawei P50.
+14. The British person is somewhere to the left of the Dane.
+15. The person who uses a Google Pixel 6 is Arnold.
+16. The person whose mother's name is Aniya is the person who uses a Samsung Galaxy S21.
+17. The person who loves blue is the Norwegian.
+18. The person who loves white is the person who uses a Huawei P50.
+19. The person whose favorite color is red is directly left of the person who loves blue.
+
+
+QUESTION: What is Mother of the person who lives in House 3?
+
+OPTIONS:
+A) Holly
+B) Aniya
+C) Penny
+D) Kailyn
+E) Janelle",89,9,9,8,10,10,7,3,6,6,22,25,21,22.666666666666668,22.0,21,1.0509438746203943,1.975344444690227,1.2817744118027277,1.4360209103711163,0.4811165037980029,6,0.0
+,,,,4,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Bob`, `Alice`, `Eric`, `Peter`, `Carol`
+ - People have unique favorite sports: `volleyball`, `soccer`, `basketball`, `baseball`, `swimming`, `tennis`
+ - Each person has a unique hobby: `gardening`, `cooking`, `painting`, `woodworking`, `knitting`, `photography`
+ - Each mother is accompanied by their child: `Bella`, `Meredith`, `Alice`, `Samantha`, `Fred`, `Timothy`
+ - Each person has a unique birthday month: `feb`, `jan`, `mar`, `may`, `sept`, `april`
+ - Everyone has something unique for lunch: `stir fry`, `grilled cheese`, `pizza`, `spaghetti`, `stew`, `soup`
+
+## Clues:
+1. The person who loves soccer is somewhere to the right of Eric.
+2. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist.
+3. The person whose birthday is in February is not in the third house.
+4. The person who is the mother of Timothy is directly left of Arnold.
+5. The person who loves cooking is somewhere to the left of the person's child is named Fred.
+6. Alice is the person who paints as a hobby.
+7. The person's child is named Alice is the person who loves cooking.
+8. The person whose birthday is in March is the person's child is named Samantha.
+9. The person who loves the soup is the person whose birthday is in May.
+10. Carol is somewhere to the right of the person whose birthday is in May.
+11. The person whose birthday is in March and the person who is a pizza lover are next to each other.
+12. The person whose birthday is in February is not in the fourth house.
+13. There are two houses between the person who loves baseball and the person who loves the stew.
+14. The person whose birthday is in May is somewhere to the left of the person who loves volleyball.
+15. The person whose birthday is in January is somewhere to the right of Arnold.
+16. The person who loves cooking is not in the third house.
+17. The person who enjoys knitting is the person whose birthday is in September.
+18. The person who enjoys gardening is the person's child is named Meredith.
+19. The person who is a pizza lover is the person who loves swimming.
+20. There is one house between the person who loves basketball and the person whose birthday is in May.
+21. The person who loves the soup is directly left of the person who loves the spaghetti eater.
+22. The person who loves the stew is the person's child is named Bella.
+23. The person who enjoys knitting is somewhere to the left of the person who loves the soup.
+24. Bob is somewhere to the left of the person who loves the stew.
+25. Arnold is the person who loves stir fry.
+26. The woodworking hobbyist is directly left of the person who loves the soup.
+
+
+QUESTION: What is Hobby of the person who lives in House 6?
+
+OPTIONS:
+A) knitting
+B) cooking
+C) woodworking
+D) painting
+E) photography
+F) gardening",3.972971785200272,2.3194554706499075,False,3,1.6535163145503642,,,,1.6535163145503642,5,zebralogic,,,,,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Arnold`, `Bob`, `Alice`, `Eric`, `Peter`, `Carol`
+ - People have unique favorite sports: `volleyball`, `soccer`, `basketball`, `baseball`, `swimming`, `tennis`
+ - Each person has a unique hobby: `gardening`, `cooking`, `painting`, `woodworking`, `knitting`, `photography`
+ - Each mother is accompanied by their child: `Bella`, `Meredith`, `Alice`, `Samantha`, `Fred`, `Timothy`
+ - Each person has a unique birthday month: `feb`, `jan`, `mar`, `may`, `sept`, `april`
+ - Everyone has something unique for lunch: `stir fry`, `grilled cheese`, `pizza`, `spaghetti`, `stew`, `soup`
+
+## Clues:
+1. The person who loves soccer is somewhere to the right of Eric.
+2. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist.
+3. The person whose birthday is in February is not in the third house.
+4. The person who is the mother of Timothy is directly left of Arnold.
+5. The person who loves cooking is somewhere to the left of the person's child is named Fred.
+6. Alice is the person who paints as a hobby.
+7. The person's child is named Alice is the person who loves cooking.
+8. The person whose birthday is in March is the person's child is named Samantha.
+9. The person who loves the soup is the person whose birthday is in May.
+10. Carol is somewhere to the right of the person whose birthday is in May.
+11. The person whose birthday is in March and the person who is a pizza lover are next to each other.
+12. The person whose birthday is in February is not in the fourth house.
+13. There are two houses between the person who loves baseball and the person who loves the stew.
+14. The person whose birthday is in May is somewhere to the left of the person who loves volleyball.
+15. The person whose birthday is in January is somewhere to the right of Arnold.
+16. The person who loves cooking is not in the third house.
+17. The person who enjoys knitting is the person whose birthday is in September.
+18. The person who enjoys gardening is the person's child is named Meredith.
+19. The person who is a pizza lover is the person who loves swimming.
+20. There is one house between the person who loves basketball and the person whose birthday is in May.
+21. The person who loves the soup is directly left of the person who loves the spaghetti eater.
+22. The person who loves the stew is the person's child is named Bella.
+23. The person who enjoys knitting is somewhere to the left of the person who loves the soup.
+24. Bob is somewhere to the left of the person who loves the stew.
+25. Arnold is the person who loves stir fry.
+26. The woodworking hobbyist is directly left of the person who loves the soup.
+
+
+QUESTION: What is Hobby of the person who lives in House 6?
+
+OPTIONS:
+A) knitting
+B) cooking
+C) woodworking
+D) painting
+E) photography
+F) gardening",100,9,9,6,10,10,8,3,2,7,22,21,21,21.333333333333332,21.0,21,1.0509438746203943,1.3303340137709694,1.2817744118027277,1.2210174333980304,0.1492758194829156,6,0.0
+,,,,3,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Bob`, `Eric`, `Arnold`, `Carol`, `Alice`, `Peter`
+ - Each person has a unique hobby: `cooking`, `painting`, `knitting`, `photography`, `woodworking`, `gardening`
+ - People have unique hair colors: `brown`, `auburn`, `black`, `red`, `gray`, `blonde`
+ - People have unique favorite sports: `swimming`, `volleyball`, `basketball`, `baseball`, `tennis`, `soccer`
+ - The mothers' names in different houses are unique: `Sarah`, `Holly`, `Penny`, `Janelle`, `Kailyn`, `Aniya`
+ - Everyone has a unique favorite cigar: `dunhill`, `blends`, `pall mall`, `prince`, `yellow monster`, `blue master`
+
+## Clues:
+1. The person who has gray hair is directly left of The person whose mother's name is Janelle.
+2. The person who loves soccer is in the sixth house.
+3. Arnold is the person who has blonde hair.
+4. The photography enthusiast is the person who smokes Yellow Monster.
+5. There is one house between the Dunhill smoker and the person who loves cooking.
+6. The person who paints as a hobby is the person who has blonde hair.
+7. The Dunhill smoker is directly left of Alice.
+8. The person who paints as a hobby is directly left of the person who loves volleyball.
+9. The person who loves soccer is The person whose mother's name is Aniya.
+10. The person partial to Pall Mall is somewhere to the left of Carol.
+11. The person who enjoys knitting and the person who loves basketball are next to each other.
+12. The person partial to Pall Mall is directly left of The person whose mother's name is Holly.
+13. The person who loves soccer is the Prince smoker.
+14. The person who loves swimming is The person whose mother's name is Penny.
+15. The person whose mother's name is Kailyn is the person who loves volleyball.
+16. The person who loves basketball is The person whose mother's name is Janelle.
+17. The person who enjoys knitting is the person who loves volleyball.
+18. The person who enjoys knitting is not in the third house.
+19. The person who has auburn hair is somewhere to the left of the photography enthusiast.
+20. The person whose mother's name is Sarah is not in the fifth house.
+21. Bob is directly left of the person who has red hair.
+22. The Dunhill smoker is the person who enjoys gardening.
+23. The person who loves baseball is the person who has auburn hair.
+24. Eric is the person who smokes many unique blends.
+25. The person who has brown hair is somewhere to the right of The person whose mother's name is Penny.
+
+
+QUESTION: What is Name of the person who lives in House 3?
+
+OPTIONS:
+A) Arnold
+B) Bob
+C) Carol
+D) Peter
+E) Eric
+F) Alice",3.2451962749291,1.9764877551465057,True,3,1.268708519782594,,,,1.268708519782594,4,zebralogic,,,,,"CONTEXT:
+There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Bob`, `Eric`, `Arnold`, `Carol`, `Alice`, `Peter`
+ - Each person has a unique hobby: `cooking`, `painting`, `knitting`, `photography`, `woodworking`, `gardening`
+ - People have unique hair colors: `brown`, `auburn`, `black`, `red`, `gray`, `blonde`
+ - People have unique favorite sports: `swimming`, `volleyball`, `basketball`, `baseball`, `tennis`, `soccer`
+ - The mothers' names in different houses are unique: `Sarah`, `Holly`, `Penny`, `Janelle`, `Kailyn`, `Aniya`
+ - Everyone has a unique favorite cigar: `dunhill`, `blends`, `pall mall`, `prince`, `yellow monster`, `blue master`
+
+## Clues:
+1. The person who has gray hair is directly left of The person whose mother's name is Janelle.
+2. The person who loves soccer is in the sixth house.
+3. Arnold is the person who has blonde hair.
+4. The photography enthusiast is the person who smokes Yellow Monster.
+5. There is one house between the Dunhill smoker and the person who loves cooking.
+6. The person who paints as a hobby is the person who has blonde hair.
+7. The Dunhill smoker is directly left of Alice.
+8. The person who paints as a hobby is directly left of the person who loves volleyball.
+9. The person who loves soccer is The person whose mother's name is Aniya.
+10. The person partial to Pall Mall is somewhere to the left of Carol.
+11. The person who enjoys knitting and the person who loves basketball are next to each other.
+12. The person partial to Pall Mall is directly left of The person whose mother's name is Holly.
+13. The person who loves soccer is the Prince smoker.
+14. The person who loves swimming is The person whose mother's name is Penny.
+15. The person whose mother's name is Kailyn is the person who loves volleyball.
+16. The person who loves basketball is The person whose mother's name is Janelle.
+17. The person who enjoys knitting is the person who loves volleyball.
+18. The person who enjoys knitting is not in the third house.
+19. The person who has auburn hair is somewhere to the left of the photography enthusiast.
+20. The person whose mother's name is Sarah is not in the fifth house.
+21. Bob is directly left of the person who has red hair.
+22. The Dunhill smoker is the person who enjoys gardening.
+23. The person who loves baseball is the person who has auburn hair.
+24. Eric is the person who smokes many unique blends.
+25. The person who has brown hair is somewhere to the right of The person whose mother's name is Penny.
+
+
+QUESTION: What is Name of the person who lives in House 3?
+
+OPTIONS:
+A) Arnold
+B) Bob
+C) Carol
+D) Peter
+E) Eric
+F) Alice",93,9,9,6,10,10,8,3,2,7,22,21,21,21.333333333333332,21.0,21,1.0509438746203943,1.3303340137709694,1.2817744118027277,1.2210174333980304,0.1492758194829156,6,0.0
+,,,,3,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Peter`, `Alice`, `Arnold`, `Bob`, `Eric`
+ - Each person has a unique hobby: `photography`, `cooking`, `knitting`, `gardening`, `painting`
+ - Each person has a unique favorite drink: `root beer`, `milk`, `water`, `coffee`, `tea`
+
+## Clues:
+1. Eric is the coffee drinker.
+2. The tea drinker is the person who paints as a hobby.
+3. The person who enjoys knitting is not in the fourth house.
+4. Peter is not in the fourth house.
+5. Eric is somewhere to the right of the root beer lover.
+6. Arnold is the person who loves cooking.
+7. The one who only drinks water is somewhere to the right of the person who enjoys gardening.
+8. There is one house between Bob and the person who paints as a hobby.
+9. The person who enjoys gardening is directly left of the root beer lover.
+10. The photography enthusiast is the one who only drinks water.
+
+
+QUESTION: What is Hobby of the person who lives in House 3?
+
+OPTIONS:
+A) knitting
+B) gardening
+C) photography
+D) painting
+E) cooking",3.0194230901152066,2.7691760743479072,False,1,0.2502470157672993,,,,0.2502470157672993,3,zebralogic,,,,,"CONTEXT:
+There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
+ - Each person has a unique name: `Peter`, `Alice`, `Arnold`, `Bob`, `Eric`
+ - Each person has a unique hobby: `photography`, `cooking`, `knitting`, `gardening`, `painting`
+ - Each person has a unique favorite drink: `root beer`, `milk`, `water`, `coffee`, `tea`
+
+## Clues:
+1. Eric is the coffee drinker.
+2. The tea drinker is the person who paints as a hobby.
+3. The person who enjoys knitting is not in the fourth house.
+4. Peter is not in the fourth house.
+5. Eric is somewhere to the right of the root beer lover.
+6. Arnold is the person who loves cooking.
+7. The one who only drinks water is somewhere to the right of the person who enjoys gardening.
+8. There is one house between Bob and the person who paints as a hobby.
+9. The person who enjoys gardening is directly left of the root beer lover.
+10. The photography enthusiast is the one who only drinks water.
+
+
+QUESTION: What is Hobby of the person who lives in House 3?
+
+OPTIONS:
+A) knitting
+B) gardening
+C) photography
+D) painting
+E) cooking",80,8,8,7,9,9,8,3,3,6,20,20,21,20.333333333333332,20.0,20,0.5777233682247196,1.169081406041155,1.2817744118027277,1.0095263953562006,0.3781736625769006,5,0.1875

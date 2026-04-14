@@ -1,12 +1,16 @@
-import NewsItem from "@/model/news-item";
+import DatasetItem from "@/model/dataset-item";
 import { TutorialTooltipStep } from "@/model/tutorial-tooltip-step";
 import { XAIFeatureLevel } from "@/model/xai-feature-level";
 import { useState } from "react";
-import ThuthfulnessSlider from "./TruthfulnessSlider";
+import TruthfulnessSlider from "./TruthfulnessSlider";
+import TruthfulnessBoolean from "./TruthfulnessBoolean";
+import TruthfulnessMultipleChoice from './TruthfulnessMultipleChoice';
+import ConfidenceSlider from "./ConfidenceSlider";
+
 import TutorialTooltip from "./TutorialTooltip";
 
-const NewsItemComponent = ({
-  newsItem,
+const DatasetItemComponent = ({
+  datasetItem,
   xaiFeatures,
   isInput = false,
   onRatingChange = () => {},
@@ -15,17 +19,25 @@ const NewsItemComponent = ({
   defaultRatingValue = undefined,
   showError = false,
 }: {
-  newsItem: NewsItem;
+  datasetItem: DatasetItem;
   xaiFeatures: XAIFeatureLevel;
   isInput: boolean;
-  onRatingChange: (value: number) => void;
+  onRatingChange: (value: any) => void;
   isTutorialMode: boolean;
   tutorialTooltip: TutorialTooltipStep | null;
-  defaultRatingValue: number | undefined;
+  defaultRatingValue: any;
   showError: boolean;
 }) => {
-  const [ratingValue, setRatingValue] = useState<number | undefined>(
-    defaultRatingValue
+  // Parse the stored object if it exists, otherwise fall back to raw value or undefined
+  const [ratingValue, setRatingValue] = useState<number | boolean | string | undefined>(
+    typeof defaultRatingValue === "object" && defaultRatingValue !== null
+      ? defaultRatingValue.rating
+      : defaultRatingValue
+  );
+  const [confidenceValue, setConfidenceValue] = useState<number | undefined>(
+    typeof defaultRatingValue === "object" && defaultRatingValue !== null
+      ? defaultRatingValue.confidence
+      : undefined
   );
 
   const xaiHighlight = (content: string) => {
@@ -72,7 +84,6 @@ const NewsItemComponent = ({
         fontFamily: "Inter, sans-serif",
         color: "#1D1D1F",
         whiteSpace: "normal",
-
         display: "grid",
         gridTemplateColumns: "minmax(58%, 1fr) minmax(380px, 1fr)",
         gap: "32px",
@@ -150,7 +161,7 @@ const NewsItemComponent = ({
             <b>Step 1 - Read and Rate:</b> During step 1 (<b>Read</b>) you are
             asked to read the news item carefully. You see here how the news
             items are presented to you, with the title and the domain (here{" "}
-            {newsItem.category}) where it is written in. Please click next.
+            {datasetItem.category}) where it is written in. Please click next.
           </TutorialTooltip>
         )}
         <div
@@ -161,17 +172,17 @@ const NewsItemComponent = ({
             color: "#0055F6",
           }}
         >
-          {newsItem.category}
+          {datasetItem.category}
         </div>
-        <h1>{newsItem.title}</h1>
-        <h2>{newsItem.subtitle}</h2>
+        <h1>{datasetItem.title}</h1>
+        <h2>{datasetItem.subtitle}</h2>
         <div></div>
         <p
           dangerouslySetInnerHTML={{
             __html:
               xaiFeatures === "salient"
-                ? xaiHighlight(newsItem.xaiFeatures.highlightedContent)
-                : newsItem.content,
+                ? xaiHighlight(datasetItem.xaiFeatures.highlightedContent || "")
+                : datasetItem.content,
           }}
           css={{
             textAlign: "justify",
@@ -194,7 +205,7 @@ const NewsItemComponent = ({
               background: "transparent",
             }}
           >
-            <h1>AI-System Truthfulness Rating</h1>
+            <h1>AI-System Answer</h1>
             <div className="line"></div>
             <div
               css={{
@@ -213,122 +224,20 @@ const NewsItemComponent = ({
                   carefully and click next.
                 </TutorialTooltip>
               )}
-              <h2>Truthfulness</h2>
-              <ThuthfulnessSlider
-                initialScore={newsItem.xaiFeatures.truthfulness}
-              />
+              {datasetItem.ratingType === 'boolean' ? (
+                <TruthfulnessBoolean initialScore={datasetItem.xaiFeatures?.truthfulness as boolean} />
+              ) : datasetItem.ratingType === 'multiple-choice' ? (
+                <TruthfulnessMultipleChoice 
+                  initialScore={datasetItem.xaiFeatures?.truthfulness as string} 
+                  options={datasetItem.options || []} 
+                />
+              ) : (
+                <TruthfulnessSlider initialScore={datasetItem.xaiFeatures?.truthfulness as number} />
+              )}
             </div>
             <div className="line"></div>
-            <div
-              css={{
-                display: "flex",
-              }}
-            >
-              <div
-                css={{
-                  flex: 1,
-                }}
-              >
-                <h2>Publishing date</h2> {newsItem.publishingDate}
-              </div>
-              <div
-                css={{
-                  flex: 1,
-                }}
-              >
-                <h2>Source</h2> {newsItem.source}
-              </div>
-            </div>
             {xaiFeatures === "salient" && (
               <>
-                <div className="line"></div>
-                <div
-                  css={{
-                    gap: "8px",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    position: "relative",
-                  }}
-                >
-                  {tutorialTooltip === "readability" && (
-                    <TutorialTooltip>
-                      <b>Step 2 - Inform Readability:</b> The{" "}
-                      <b>explainability feature 1 - readability</b> of the
-                      source is displayed here. There are three readability
-                      categories: Easy, Medium, and Hard. The <b>AI-System</b>{" "}
-                      in the background automatically classifies the news
-                      article in one of the categories. Please click next.
-                    </TutorialTooltip>
-                  )}
-                  <h2>
-                    Explainability Feature 1: Readability of the news article
-                  </h2>
-                  <div
-                    css={{
-                      display: "flex",
-                      width: "340px",
-                      height: "36px",
-
-                      ".level": {
-                        flex: 1,
-                        height: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        border: "1px solid #E5E5E5",
-                        fontSize: "14px",
-                      },
-
-                      ".selected": {
-                        border: "1px solid #7F7F7F !important",
-                        backgroundColor: "#F3F3F3",
-                        fontWeight: 500,
-                      },
-                    }}
-                  >
-                    <div
-                      className={`level ${
-                        newsItem.xaiFeatures.readability === "easy"
-                          ? "selected"
-                          : ""
-                      }`}
-                      css={{
-                        borderRight: "none !important",
-                        borderRadius: "4px 0 0 4px",
-                      }}
-                    >
-                      Easy
-                    </div>
-                    <div
-                      className={`level ${
-                        newsItem.xaiFeatures.readability === "medium"
-                          ? "selected"
-                          : ""
-                      }`}
-                      css={[
-                        newsItem.xaiFeatures.readability === "easy" &&
-                          "border-left: none !important",
-                        newsItem.xaiFeatures.readability === "hard" &&
-                          "border-right: none !important",
-                      ]}
-                    >
-                      Medium
-                    </div>
-                    <div
-                      className={`level ${
-                        newsItem.xaiFeatures.readability === "hard"
-                          ? "selected"
-                          : ""
-                      }`}
-                      css={{
-                        borderLeft: "none !important",
-                        borderRadius: "0 4px 4px 0",
-                      }}
-                    >
-                      Hard
-                    </div>
-                  </div>
-                </div>
                 <div className="line"></div>
                 <div
                   css={{
@@ -349,12 +258,12 @@ const NewsItemComponent = ({
                     </TutorialTooltip>
                   )}
                   <h2>
-                    Explainability Feature 2: Text passages, where the
+                    Text passages, where the
                     AI-System&apos;s truthfulness rating is based on
                   </h2>
                   <div>
                     {getHighlightedSentences(
-                      newsItem.xaiFeatures.highlightedContent
+                      datasetItem.xaiFeatures.highlightedContent || ""
                     ).map((sentence, index) => (
                       <blockquote
                         key={index}
@@ -363,50 +272,6 @@ const NewsItemComponent = ({
                           padding: "8px",
                           margin: "8px 0",
                           backgroundColor: "#FFE8261A",
-                        }}
-                      >
-                        {sentence}
-                      </blockquote>
-                    ))}
-                  </div>
-                </div>
-                <div className="line"></div>
-                <div
-                  css={{
-                    position: "relative",
-                  }}
-                >
-                  {tutorialTooltip === "sentiment-highlights" && (
-                    <TutorialTooltip>
-                      <b>Step 2 - Inform Sentiment Highlights:</b> The{" "}
-                      <b>explainability feature 3 - text highlighted in blue</b>{" "}
-                      are the words and phrases containing emotional content.
-                      Sometimes fake news rely on emotional speech to engage the
-                      reader emotionally. The <b>AI-System</b> in the background
-                      automatically marks the sentences where emotional speech
-                      appears. Please click next.
-                    </TutorialTooltip>
-                  )}
-                  <h2>
-                    Explainability Feature 3: Words and phrases referring to
-                    emotional content
-                  </h2>
-                  <div
-                    css={{
-                      display: "flex",
-                      gap: "8px",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    {getSentimentHighlights(
-                      newsItem.xaiFeatures.highlightedContent
-                    ).map((sentence, index) => (
-                      <blockquote
-                        key={index}
-                        css={{
-                          borderLeft: "6px solid #00FEFE",
-                          padding: "8px",
-                          backgroundColor: "#00FEFE1A",
                         }}
                       >
                         {sentence}
@@ -444,10 +309,33 @@ const NewsItemComponent = ({
                       backgroundColor: "#FF6FFF1A",
                     }}
                   >
-                    {newsItem.xaiFeatures.naturalLanguageExplanation}
+                    {datasetItem.xaiFeatures.naturalLanguageExplanation}
                   </blockquote>
                 </div>
               </>
+            )}
+            {(xaiFeatures === 'counterfactual') && (
+              <div className="line"></div>
+            )}
+
+            {(xaiFeatures === 'counterfactual') && (
+              <div style={{ position: 'relative' }}>
+                {tutorialTooltip === 'counterfactual-explanation' && (
+                  <TutorialTooltip>
+                    <b>Step 2 - Inform (Counterfactual Explanation)</b><br/><br/>
+                    This <b>explainability feature</b> shows what would need to change in the text for the <b>AI-System</b> to alter its truthfulness rating. Please read the counterfactual explanation carefully and click next.
+                  </TutorialTooltip>
+                )}
+                <h2>Explainability Feature: Counterfactual Explanation</h2>
+                <blockquote style={{ 
+                  borderLeft: '6px solid #FF9F1C', // Using orange for distinction
+                  padding: '8px', 
+                  margin: '8px 0', 
+                  backgroundColor: '#FF9F1C1A' 
+                }}>
+                  {datasetItem.xaiFeatures?.counterfactualExplanation}
+                </blockquote>
+              </div>
             )}
           </section>
         )}
@@ -482,23 +370,54 @@ const NewsItemComponent = ({
               next.
             </TutorialTooltip>
           )}
-          <h1>Your rating</h1>
+          <h1>Your answer</h1>
           <div className="line"></div>
-          <div
-            css={{
-              display: "flex",
-              gap: "8px",
-            }}
-          >
-            <h2>Truthfulness</h2>
-            <ThuthfulnessSlider
-              initialScore={ratingValue}
-              interactive
-              onChange={(score) => {
-                setRatingValue(score);
-                onRatingChange(score);
-              }}
+          
+          <div css={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+            
+            {/* 1. Truthfulness Rating Block */}
+            <div css={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <h2>Truthfulness</h2>
+              {datasetItem.ratingType === 'boolean' ? (
+                <TruthfulnessBoolean
+                  initialScore={ratingValue as boolean}
+                  interactive
+                  onChange={(score) => {
+                    setRatingValue(score);
+                    onRatingChange({ rating: score, confidence: confidenceValue });
+                  }}
+                />
+              ) : datasetItem.ratingType === 'multiple-choice' ? (
+                <TruthfulnessMultipleChoice
+                  initialScore={ratingValue as string}
+                  options={datasetItem.options || []}
+                  interactive
+                  onChange={(score) => {
+                    setRatingValue(score as any);
+                    onRatingChange({ rating: score, confidence: confidenceValue });
+                  }}
+                />
+              ) : (
+                <TruthfulnessSlider
+                  initialScore={ratingValue as number}
+                  interactive
+                  onChange={(score) => {
+                    setRatingValue(score);
+                    onRatingChange({ rating: score, confidence: confidenceValue });
+                  }}
+                />
+              )}
+            </div>
+
+            {/* 2. Confidence Rating Block */}
+            <ConfidenceSlider 
+              initialScore={confidenceValue} 
+              onChange={(newConfidence) => {
+                setConfidenceValue(newConfidence);
+                onRatingChange({ rating: ratingValue, confidence: newConfidence });
+              }} 
             />
+
           </div>
         </div>
       )}
@@ -506,4 +425,4 @@ const NewsItemComponent = ({
   );
 };
 
-export default NewsItemComponent;
+export default DatasetItemComponent;

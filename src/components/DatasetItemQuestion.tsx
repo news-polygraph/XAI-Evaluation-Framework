@@ -1,18 +1,18 @@
-import NewsItem from "@/model/news-item";
+import DatasetItem from "@/model/dataset-item";
 import React from "react";
 import { Question, Serializer, ElementFactory } from "survey-core";
 import { SurveyElementBase, ReactQuestionFactory } from "survey-react-ui";
-import NewsItemComponent from "./NewsItemComponent";
+import DatasetItemComponent from "./DatasetItemComponent";
 
-const QUESTION_TYPE = "newsitem";
+const QUESTION_TYPE = "datasetitem";
 
 export const registerMyQuestion = () => {
   ElementFactory.Instance.registerElement(QUESTION_TYPE, (name) => {
-    return new NewsItemQuestionModel(name);
+    return new DatasetItemQuestionModel(name);
   });
 };
 
-export class NewsItemQuestionModel extends Question {
+export class DatasetItemQuestionModel extends Question {
   getType() {
     return QUESTION_TYPE;
   }
@@ -25,20 +25,20 @@ export class NewsItemQuestionModel extends Question {
   }
 }
 
-export class NewsItemQuestion extends SurveyElementBase<
+export class DatasetItemQuestion extends SurveyElementBase<
   {
     question: {
-      newsitem: NewsItem;
+      datasetitem: DatasetItem;
       xaiFeatures: "none" | "basic";
       isInput: boolean;
       isTutorialMode: boolean;
       tutorialTooltip: string;
-      value?: number;
+      value?: number | boolean;
       hasVisibleErrors: boolean;
     };
   },
   {
-    value?: number;
+    value?: number | boolean;
   }
 > {
   constructor(props: any) {
@@ -56,8 +56,9 @@ export class NewsItemQuestion extends SurveyElementBase<
   render() {
     if (!this.question) return null;
     return (
-      <NewsItemComponent
-        newsItem={this.question.newsitem}
+      <div style={{ userSelect: "none", WebkitUserSelect: "none" }}>
+      <DatasetItemComponent
+        datasetItem={this.question.datasetitem}
         xaiFeatures={this.question.xaiFeatures}
         isInput={this.question.isInput}
         onRatingChange={(value) => {
@@ -68,6 +69,7 @@ export class NewsItemQuestion extends SurveyElementBase<
         defaultRatingValue={this.question.value}
         showError={this.question.hasVisibleErrors}
       />
+      </div>
     );
   }
 }
@@ -75,16 +77,16 @@ export class NewsItemQuestion extends SurveyElementBase<
 Serializer.addClass(
   QUESTION_TYPE,
   [
-    "newsitem:object",
+    "datasetitem:object",
     "xaiFeatures:string",
     "isInput:boolean",
     "isTutorialMode:boolean",
     "tutorialTooltip:string",
   ],
-  () => new NewsItemQuestionModel(""),
+  () => new DatasetItemQuestionModel(""),
   "question"
 );
 
 ReactQuestionFactory.Instance.registerQuestion(QUESTION_TYPE, (props) => {
-  return React.createElement(NewsItemQuestion, props);
+  return React.createElement(DatasetItemQuestion, props);
 });

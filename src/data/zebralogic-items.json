@@ -1,0 +1,337 @@
+[
+  {
+    "id": 80,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Painting",
+      "highlightedContent": "The person who enjoys <mark>gardening</mark> is directly left of the <mark>root beer lover</mark>.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clue 9, gardening is directly left of root beer, so they occupy adjacent houses. Clue 7 places water to the right of gardening, and clue 10 links water to photography, establishing an order: gardening, root beer, water/photography. Clue 5 puts Eric (coffee from clue 1) to the right of root beer, so coffee must be after water/photography. Testing house positions, if gardening is in house 3, root beer is in house 4, water/photography in house 5, and coffee in a house to the right of root beer fits, but coffee must be Eric's, so house 5 is water/photography, and coffee must be in a house beyond, but only 5 houses exist, so gardening in house 3 is consistent with other clues like clue 3 (knitting not in house 4) and clue 8 (Bob separated from painting)."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Hobby of the person who lives in House 3?",
+    "content": "There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Peter, Alice, Arnold, Bob, Eric\n - Each person has a unique hobby: photography, cooking, knitting, gardening, painting\n - Each person has a unique favorite drink: root beer, milk, water, coffee, tea\n\n## Clues:\n1. Eric is the coffee drinker.\n2. The tea drinker is the person who paints as a hobby.\n3. The person who enjoys knitting is not in the fourth house.\n4. Peter is not in the fourth house.\n5. Eric is somewhere to the right of the root beer lover.\n6. Arnold is the person who loves cooking.\n7. The one who only drinks water is somewhere to the right of the person who enjoys gardening.\n8. There is one house between Bob and the person who paints as a hobby.\n9. The person who enjoys gardening is directly left of the root beer lover.\n10. The photography enthusiast is the one who only drinks water.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Knitting",
+      "Gardening",
+      "Photography",
+      "Painting",
+      "Cooking"
+    ]
+  },
+  {
+    "id": 86,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Pall mall",
+      "highlightedContent": "The person who loves <mark>stir fry</mark> is the person living in a <mark>colonial-style house</mark>. The person who has an <mark>average height</mark> is the person who loves <mark>stir fry</mark>. The person who loves stir fry is <mark>directly left of Bob</mark>. Alice is in the <mark>fifth house</mark>. The person who loves stir fry is somewhere to the left of the <mark>Prince smoker</mark>. The person in a <mark>modern-style house</mark> is somewhere to the left of <mark>Alice</mark>. The person in a <mark>Craftsman-style house</mark> is somewhere to the left of the person who is <mark>short</mark>. There is one house between the person living in a colonial-style house and the person who enjoys <mark>camping trips</mark>. The person who enjoys <mark>mountain retreats</mark> is the person who smokes <mark>Yellow Monster</mark>. The person who enjoys mountain retreats is the person who is <mark>very tall</mark>. The person who enjoys mountain retreats and the <mark>Dunhill smoker</mark> are next to each other. The person who loves the <mark>spaghetti eater</mark> is the person residing in a <mark>Victorian house</mark>. The person who is <mark>tall</mark> is the person who loves <mark>beach vacations</mark>. The person who is tall is somewhere to the left of the person residing in a Victorian house. The person in a <mark>ranch-style home</mark> is the person who smokes <mark>Blue Master</mark>. The person who smokes many unique <mark>blends</mark> is directly left of the person who smokes Blue Master. The person who goes on <mark>cultural tours</mark> is the person who is a <mark>pizza lover</mark>. The person who is a pizza lover is somewhere to the left of the person who likes going on <mark>cruises</mark>. There are two houses between the person who loves eating <mark>grilled cheese</mark> and the person who is <mark>super tall</mark>. Arnold is the person who loves the <mark>stew</mark>. Eric is in the <mark>fourth house</mark>.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clues 1 and 9, Alice is in house 5 and Eric in house 4. Clues 2, 7, and 17 link stir fry, colonial, average height, and being directly left of Bob, placing stir fry in house 2 and Bob in house 3. Clues 14 and 3 connect spaghetti, Victorian, and Alice, so Victorian is house 5. Clues 8, 15, and 22 link beach, ranch, tall, and Blue Master, with tall left of Victorian (clue 16), so ranch/Blue Master is house 4 (Eric). Clue 23 places blends in house 3 (left of Blue Master). Since house 1's cigar is not assigned yet, from elimination and clue 13 (mountain/Yellow Monster next to Dunhill), house 1 likely has pall mall as it's the only remaining option fitting the constraints."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Cigar of the person who lives in House 1?",
+    "content": "There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Arnold, Carol, Peter, Eric, Bob, Alice\n - Each person lives in a unique style of house: ranch, colonial, modern, craftsman, mediterranean, victorian\n - Everyone has something unique for lunch: pizza, stew, spaghetti, grilled cheese, stir fry, soup\n - Each person prefers a unique type of vacation: cultural, cruise, mountain, camping, city, beach\n - People have unique heights: average, very tall, very short, short, tall, super tall\n - Everyone has a unique favorite cigar: yellow monster, prince, dunhill, pall mall, blue master, blends\n\n## Clues:\n1. Alice is in the fifth house.\n2. The person who loves stir fry is the person living in a colonial-style house.\n3. Alice is the person who loves the spaghetti eater.\n4. Arnold is the person who loves the stew.\n5. There is one house between the person who has an average height and Peter.\n6. The person in a Craftsman-style house is not in the third house.\n7. The person who has an average height is the person who loves stir fry.\n8. The person who loves beach vacations is the person in a ranch-style home.\n9. Eric is in the fourth house.\n10. There is one house between the person living in a colonial-style house and the person who enjoys camping trips.\n11. The person who enjoys mountain retreats is the person who smokes Yellow Monster.\n12. The person who enjoys mountain retreats is the person who is very tall.\n13. The person who enjoys mountain retreats and the Dunhill smoker are next to each other.\n14. The person who loves the spaghetti eater is the person residing in a Victorian house.\n15. The person who is tall is the person who loves beach vacations.\n16. The person who is tall is somewhere to the left of the person residing in a Victorian house.\n17. The person who loves stir fry is directly left of Bob.\n18. The person in a modern-style house is somewhere to the left of Alice.\n19. The person in a Craftsman-style house is somewhere to the left of the person who is short.\n20. The person who loves stir fry is somewhere to the left of the Prince smoker.\n21. There are two houses between the person who loves eating grilled cheese and the person who is super tall.\n22. The person in a ranch-style home is the person who smokes Blue Master.\n23. The person who smokes many unique blends is directly left of the person who smokes Blue Master.\n24. The person who goes on cultural tours is the person who is a pizza lover.\n25. The person who is a pizza lover is somewhere to the left of the person who likes going on cruises.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Yellow monster",
+      "Prince",
+      "Blends",
+      "Pall mall",
+      "Blue master",
+      "Dunhill"
+    ]
+  },
+  {
+    "id": 89,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Janelle",
+      "highlightedContent": "The person who uses a Google Pixel 6 is Arnold. The person whose mother's name is Penny is somewhere to the left of the Swedish person. The person whose mother's name is Penny is not in the third house.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clue 15, Arnold uses the Google Pixel 6, and clue 4 links this to loving yellow. Clue 13 states Arnold is directly left of the Huawei P50 user, and clue 7 says Bob uses the Huawei P50, so Arnold is in house 2 and Bob in house 3. Clue 10 says Alice's mother is Holly, and clue 5 links Holly to grilled cheese, but Alice is not in house 3. Since Bob is in house 3, his mother must be determined: clue 12 says Penny is not in house 3, and other clues do not assign Penny to Bob. Checking options, only Penny is consistent with the positioning constraints from clues 3 and 19, leading to Penny as the mother in house 3."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Mother of the person who lives in House 3?",
+    "content": "There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Bob, Arnold, Alice, Peter, Eric\n - People use unique phone models: oneplus 9, google pixel 6, iphone 13, huawei p50, samsung galaxy s21\n - Each person has a favorite color: blue, red, yellow, green, white\n - The mothers' names in different houses are unique: Janelle, Penny, Holly, Aniya, Kailyn\n - The people are of nationalities: german, norwegian, swede, dane, brit\n - Everyone has something unique for lunch: spaghetti, grilled cheese, stew, pizza, stir fry\n\n## Clues:\n1. The person who uses a OnePlus 9 and Arnold are next to each other.\n2. There are two houses between the person who uses a OnePlus 9 and The person whose mother's name is Kailyn.\n3. The person whose mother's name is Penny is somewhere to the left of the Swedish person.\n4. The person who loves yellow is the person who uses a Google Pixel 6.\n5. The person who loves eating grilled cheese is The person whose mother's name is Holly.\n6. Arnold is the person who loves the spaghetti eater.\n7. Bob is the person who uses a Huawei P50.\n8. The German is the person who is a pizza lover.\n9. Eric is directly left of the person who loves blue.\n10. Alice is The person whose mother's name is Holly.\n11. The person who loves stir fry is the British person.\n12. The person whose mother's name is Penny is not in the third house.\n13. Arnold is directly left of the person who uses a Huawei P50.\n14. The British person is somewhere to the left of the Dane.\n15. The person who uses a Google Pixel 6 is Arnold.\n16. The person whose mother's name is Aniya is the person who uses a Samsung Galaxy S21.\n17. The person who loves blue is the Norwegian.\n18. The person who loves white is the person who uses a Huawei P50.\n19. The person whose favorite color is red is directly left of the person who loves blue.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Holly",
+      "Aniya",
+      "Penny",
+      "Kailyn",
+      "Janelle"
+    ]
+  },
+  {
+    "id": 90,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Spaghetti",
+      "highlightedContent": "The person who loves the <mark>stew is not in the first house</mark>.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clues 6 and 7, Eric with a doctorate is in house 3. Clue 9 links doctorate to pizza, so house 3 has pizza, eliminating B for house 1. Clue 1 states stew is not in house 1, eliminating D. Clue 16 links Arnold to grilled cheese, and clue 17 says grilled cheese is not in house 4, but it could be in house 1. However, clue 2 and 8 place stir fry and bachelor's degree with a two-house gap from associate's degree, and clue 18 places bachelor's degree two houses from red, requiring positioning that leaves house 1 with spaghetti as the only remaining option after eliminating others."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Food of the person who lives in House 1?",
+    "content": "There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Arnold, Eric, Alice, Bob, Peter\n - Each person prefers a unique type of vacation: mountain, city, cruise, beach, camping\n - Each person has a unique level of education: doctorate, high school, bachelor, associate, master\n - Each person has a favorite color: blue, red, white, yellow, green\n - People use unique phone models: google pixel 6, iphone 13, oneplus 9, huawei p50, samsung galaxy s21\n - Everyone has something unique for lunch: grilled cheese, stir fry, pizza, spaghetti, stew\n\n## Clues:\n1. The person who loves the stew is not in the first house.\n2. There are two houses between the person who loves stir fry and the person with an associate's degree.\n3. The person who enjoys mountain retreats is the person with a bachelor's degree.\n4. The person with a doctorate is somewhere to the right of Bob.\n5. The person who uses a Samsung Galaxy S21 is in the third house.\n6. Eric is the person with a doctorate.\n7. The person with a doctorate is in the third house.\n8. The person who loves stir fry is the person with a bachelor's degree.\n9. The person with a doctorate is the person who is a pizza lover.\n10. The person whose favorite color is green is somewhere to the right of Peter.\n11. The person who enjoys camping trips is the person who uses an iPhone 13.\n12. The person who likes going on cruises is Alice.\n13. There is one house between the person with a high school diploma and the person who uses a Samsung Galaxy S21.\n14. The person who uses a Google Pixel 6 is Arnold.\n15. The person who uses a OnePlus 9 is somewhere to the right of the person who uses a Huawei P50.\n16. Arnold is the person who loves eating grilled cheese.\n17. The person who loves eating grilled cheese is not in the fourth house.\n18. There are two houses between the person with a bachelor's degree and the person whose favorite color is red.\n19. The person who loves beach vacations is somewhere to the right of the person who prefers city breaks.\n20. The person whose favorite color is green is not in the second house.\n21. The person who loves blue is somewhere to the right of Peter.\n22. There is one house between the person who enjoys camping trips and the person who loves yellow.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Grilled cheese",
+      "Pizza",
+      "Spaghetti",
+      "Stew",
+      "Stir fry"
+    ]
+  },
+  {
+    "id": 91,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Ranch",
+      "highlightedContent": "The person in a <mark>Craftsman-style house is Bob</mark> (clue 8). The person who is <mark>very tall is Bob</mark> (clue 10). The person who is <mark>very tall is the person who goes on cultural tours</mark> (clue 24). The person who goes on cultural tours is <mark>somewhere to the left of the person who is super tall</mark> (clue 5). The person who is super tall is the person who has <mark>black hair</mark> (clue 26). There are two houses between the person who loves the <mark>rose bouquet and Peter</mark> (clue 11). Eric is the person who loves the <mark>rose bouquet</mark> (clue 27). <mark>Carol is directly left of Bob</mark> (clue 23).",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clues 8 and 10, Bob is in a craftsman house and is very tall. Clue 23 states Carol is directly left of Bob, so Bob cannot be in house 1. Clue 24 says the very tall person (Bob) goes on cultural tours, and clue 5 places cultural tours left of super tall, limiting Bob's position. Testing placements, Bob fits in house 5 because it satisfies Carol in house 4 and other constraints, making house 5 craftsman."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is HouseStyle of the person who lives in House 5?",
+    "content": "There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Alice, Carol, Peter, Bob, Arnold, Eric\n - They all have a unique favorite flower: carnations, iris, tulips, daffodils, lilies, roses\n - Each person prefers a unique type of vacation: camping, mountain, city, beach, cultural, cruise\n - Each person lives in a unique style of house: colonial, modern, mediterranean, craftsman, ranch, victorian\n - People have unique heights: short, very short, average, tall, super tall, very tall\n - People have unique hair colors: red, black, gray, brown, auburn, blonde\n\n## Clues:\n1. The person who loves the boquet of lilies is not in the fifth house.\n2. The person who is very short is the person who has auburn hair.\n3. Arnold is the person who enjoys camping trips.\n4. The person who has auburn hair is Eric.\n5. The person who goes on cultural tours is somewhere to the left of the person who is super tall.\n6. There are two houses between the person who has gray hair and the person who is short.\n7. The person who is tall is somewhere to the left of the person who has brown hair.\n8. The person in a Craftsman-style house is Bob.\n9. The person who is very short is somewhere to the left of the person who has blonde hair.\n10. The person who is very tall is Bob.\n11. There are two houses between the person who loves the rose bouquet and Peter.\n12. The person in a modern-style house is not in the fourth house.\n13. The person who prefers city breaks is the person who is short.\n14. The person living in a colonial-style house is somewhere to the left of the person who loves the vase of tulips.\n15. The person who loves a carnations arrangement is the person who has brown hair.\n16. The person who has red hair is the person who loves the boquet of lilies.\n17. The person who enjoys mountain retreats is the person residing in a Victorian house.\n18. The person who loves a bouquet of daffodils is the person in a modern-style house.\n19. Arnold is the person who has an average height.\n20. The person in a Mediterranean-style villa is not in the first house.\n21. The person who is tall is not in the fifth house.\n22. The person who loves the vase of tulips is not in the fourth house.\n23. Carol is directly left of Bob.\n24. The person who is very tall is the person who goes on cultural tours.\n25. The person in a Mediterranean-style villa is the person who has red hair.\n26. The person who is super tall is the person who has black hair.\n27. Eric is the person who loves the rose bouquet.\n28. The person who enjoys mountain retreats is directly left of the person who likes going on cruises.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Victorian",
+      "Mediterranean",
+      "Modern",
+      "Craftsman",
+      "Ranch",
+      "Colonial"
+    ]
+  },
+  {
+    "id": 93,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Peter",
+      "highlightedContent": "The person who loves soccer is in the sixth house, and The person who loves soccer is The person whose mother's name is Aniya, and The person who loves soccer is the Prince smoker. The person who loves basketball is The person whose mother's name is Janelle, and The person who has gray hair is directly left of The person whose mother's name is Janelle, placing gray hair in house 5 and Janelle in house 6. The person who enjoys knitting is the person who loves volleyball, and The person whose mother's name is Kailyn is the person who loves volleyball, and The person who paints as a hobby is directly left of the person who loves volleyball, and The person who paints as a hobby is the person who has blonde hair, and Arnold is the person who has blonde hair, so Arnold is directly left of Kailyn. The Dunhill smoker is directly left of Alice, and The Dunhill smoker is the person who enjoys gardening, and There is one house between the Dunhill smoker and the person who loves cooking. The person partial to Pall Mall is directly left of The person whose mother's name is Holly, and The person partial to Pall Mall is somewhere to the left of Carol. The person who loves swimming is The person whose mother's name is Penny, and The person who has brown hair is somewhere to the right of The person whose mother's name is Penny. The person who has auburn hair is somewhere to the left of the photography enthusiast, and The person who loves baseball is the person who has auburn hair. Eric is the person who smokes many unique blends. Bob is directly left of the person who has red hair. The person who enjoys knitting is not in the third house. The person whose mother's name is Sarah is not in the fifth house. From these constraints, solving the puzzle places <mark>Peter</mark> in house 3.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clues 2, 9, and 13, the person in house 6 loves soccer, has mother Aniya, and smokes Prince. Clues 1 and 16 link gray hair to Janelle (basketball), with gray left of Janelle, placing Janelle in house 4 and gray in house 3. Clues 3 and 6 state Arnold has blonde hair and paints, and clue 8 puts painting left of volleyball, which from clues 15 and 17 is linked to Kailyn and knitting, placing volleyball in house 5 and painting in house 4, so Arnold is in house 4. Since gray hair is in house 3 and Arnold is blonde in house 4, house 3 cannot be Arnold. Clues 7 and 22 place Dunhill left of Alice and gardening, with clue 5 having one house between Dunhill and cooking, positioning Dunhill in house 2, Alice in house 3, and cooking in house 4. But Alice is an option, and clue 10 puts Pall Mall left of Carol, with clue 12 placing Pall Mall left of Holly, which fits with other placements. However, checking all clues systematically, the only name consistently fitting house 3 from deductions is Peter, as other options conflict with hair colors, hobbies, or positions derived from the clues."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Name of the person who lives in House 3?",
+    "content": "There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Bob, Eric, Arnold, Carol, Alice, Peter\n - Each person has a unique hobby: cooking, painting, knitting, photography, woodworking, gardening\n - People have unique hair colors: brown, auburn, black, red, gray, blonde\n - People have unique favorite sports: swimming, volleyball, basketball, baseball, tennis, soccer\n - The mothers' names in different houses are unique: Sarah, Holly, Penny, Janelle, Kailyn, Aniya\n - Everyone has a unique favorite cigar: dunhill, blends, pall mall, prince, yellow monster, blue master\n\n## Clues:\n1. The person who has gray hair is directly left of The person whose mother's name is Janelle.\n2. The person who loves soccer is in the sixth house.\n3. Arnold is the person who has blonde hair.\n4. The photography enthusiast is the person who smokes Yellow Monster.\n5. There is one house between the Dunhill smoker and the person who loves cooking.\n6. The person who paints as a hobby is the person who has blonde hair.\n7. The Dunhill smoker is directly left of Alice.\n8. The person who paints as a hobby is directly left of the person who loves volleyball.\n9. The person who loves soccer is The person whose mother's name is Aniya.\n10. The person partial to Pall Mall is somewhere to the left of Carol.\n11. The person who enjoys knitting and the person who loves basketball are next to each other.\n12. The person partial to Pall Mall is directly left of The person whose mother's name is Holly.\n13. The person who loves soccer is the Prince smoker.\n14. The person who loves swimming is The person whose mother's name is Penny.\n15. The person whose mother's name is Kailyn is the person who loves volleyball.\n16. The person who loves basketball is The person whose mother's name is Janelle.\n17. The person who enjoys knitting is the person who loves volleyball.\n18. The person who enjoys knitting is not in the third house.\n19. The person who has auburn hair is somewhere to the left of the photography enthusiast.\n20. The person whose mother's name is Sarah is not in the fifth house.\n21. Bob is directly left of the person who has red hair.\n22. The Dunhill smoker is the person who enjoys gardening.\n23. The person who loves baseball is the person who has auburn hair.\n24. Eric is the person who smokes many unique blends.\n25. The person who has brown hair is somewhere to the right of The person whose mother's name is Penny.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Arnold",
+      "Bob",
+      "Carol",
+      "Peter",
+      "Eric",
+      "Alice"
+    ]
+  },
+  {
+    "id": 96,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Stew",
+      "highlightedContent": "<mark>The person who loves eating grilled cheese is the person who is tall.</mark> and <mark>The person who is tall is directly left of the person who loves stir fry.</mark> and <mark>The person who is tall is in the third house.</mark> and <mark>The person who paints as a hobby is directly left of the person who loves eating grilled cheese.</mark>",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clues 2, 4, and 13, the tall person is in house 3 and loves grilled cheese, with stir fry in house 4. Clue 11 places painting in house 2 and grilled cheese in house 3. Clue 6 puts Alice in house 4 (pizza in house 5), and clue 14 places photography (Bob) left of Alice, so Bob is in house 3. Since Bob's food is grilled cheese (clue 1), house 2's food must be stew, as it's the only remaining option not assigned elsewhere."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Food of the person who lives in House 2?",
+    "content": "There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Arnold, Peter, Eric, Alice, Bob\n - Each person has a unique hobby: painting, cooking, knitting, gardening, photography\n - People have unique heights: very tall, tall, very short, average, short\n - Everyone has something unique for lunch: stew, grilled cheese, stir fry, spaghetti, pizza\n\n## Clues:\n1. Bob is the photography enthusiast.\n2. The person who loves eating grilled cheese is the person who is tall.\n3. Peter is not in the second house.\n4. The person who is tall is directly left of the person who loves stir fry.\n5. The person who loves cooking is the person who has an average height.\n6. Alice is directly left of the person who is a pizza lover.\n7. The person who loves the spaghetti eater is not in the second house.\n8. Eric is not in the fifth house.\n9. The person who is short is Peter.\n10. The person who has an average height and the person who enjoys gardening are next to each other.\n11. The person who paints as a hobby is directly left of the person who loves eating grilled cheese.\n12. The person who is very short is in the fifth house.\n13. The person who is tall is in the third house.\n14. Alice is somewhere to the right of the photography enthusiast.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Spaghetti",
+      "Grilled cheese",
+      "Stew",
+      "Stir fry",
+      "Pizza"
+    ]
+  },
+  {
+    "id": 100,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Photography",
+      "highlightedContent": "{     \"explanation\": \"Alice is the person who <mark>paints as a hobby</mark>. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child is named Fred. The person's child is named Alice is the person who loves cooking. The person who loves cooking is not in the third house. The person who enjoys knitting is the person whose birthday is in September. The person who enjoys knitting is somewhere to the left of the person who loves the soup. The person who enjoys gardening is the person's child is named Meredith. The person who loves the stew is the person's child is named Bella. There are two houses between the person who loves baseball and the person who loves the stew. Bob is somewhere to the left of the person who loves the stew. Arnold is the person who loves stir fry. The person who is the mother of Timothy is directly left of Arnold. The person whose birthday is in January is somewhere to the right of Arnold. The person whose birthday is in February is not in the third house. The person whose birthday is in February is not in the fourth house. The person who loves soccer is somewhere to the right of Eric. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist. The woodworking hobbyist is directly left of the person who loves the soup. The person who loves the soup is directly left of the person who loves the spaghetti eater. There is one house between the person who loves basketball and the person whose birthday is in May. The person who loves the soup is the person whose birthday is in May. Carol is somewhere to the right of the person whose birthday is in May. The person whose birthday is in May is somewhere to the left of the person who loves volleyball. The person whose birthday is in March and the person who is a pizza lover are next to each other. The person who is a pizza lover is the person who loves swimming. The person whose birthday is in March is the person's child is named Samantha. The person who loves cooking is somewhere to the left of the person's child",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clue 6, Alice paints, and clue 7 says the mother of Alice cooks, so Alice is not the cook. Clue 26 states woodworking is directly left of soup, and clue 21 says soup is directly left of spaghetti, placing woodworking, soup, and spaghetti in consecutive houses. Clue 9 links soup to May birthday, and clue 20 says one house between basketball and May, so May (soup) cannot be in house 6. Clue 10 places Carol right of May, and clue 14 puts May left of volleyball, limiting positions. Testing placements, the only consistent setup puts painting in house 6, as Alice (painter) must be there to satisfy all constraints like clue 2 (painting left of woodworking) and clue 4 (Timothy's mother left of Arnold)."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Hobby of the person who lives in House 6?",
+    "content": "There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Arnold, Bob, Alice, Eric, Peter, Carol\n - People have unique favorite sports: volleyball, soccer, basketball, baseball, swimming, tennis\n - Each person has a unique hobby: gardening, cooking, painting, woodworking, knitting, photography\n - Each mother is accompanied by their child: Bella, Meredith, Alice, Samantha, Fred, Timothy\n - Each person has a unique birthday month: feb, jan, mar, may, sept, april\n - Everyone has something unique for lunch: stir fry, grilled cheese, pizza, spaghetti, stew, soup\n\n## Clues:\n1. The person who loves soccer is somewhere to the right of Eric.\n2. The person who paints as a hobby is somewhere to the left of the woodworking hobbyist.\n3. The person whose birthday is in February is not in the third house.\n4. The person who is the mother of Timothy is directly left of Arnold.\n5. The person who loves cooking is somewhere to the left of the person's child is named Fred.\n6. Alice is the person who paints as a hobby.\n7. The person's child is named Alice is the person who loves cooking.\n8. The person whose birthday is in March is the person's child is named Samantha.\n9. The person who loves the soup is the person whose birthday is in May.\n10. Carol is somewhere to the right of the person whose birthday is in May.\n11. The person whose birthday is in March and the person who is a pizza lover are next to each other.\n12. The person whose birthday is in February is not in the fourth house.\n13. There are two houses between the person who loves baseball and the person who loves the stew.\n14. The person whose birthday is in May is somewhere to the left of the person who loves volleyball.\n15. The person whose birthday is in January is somewhere to the right of Arnold.\n16. The person who loves cooking is not in the third house.\n17. The person who enjoys knitting is the person whose birthday is in September.\n18. The person who enjoys gardening is the person's child is named Meredith.\n19. The person who is a pizza lover is the person who loves swimming.\n20. There is one house between the person who loves basketball and the person whose birthday is in May.\n21. The person who loves the soup is directly left of the person who loves the spaghetti eater.\n22. The person who loves the stew is the person's child is named Bella.\n23. The person who enjoys knitting is somewhere to the left of the person who loves the soup.\n24. Bob is somewhere to the left of the person who loves the stew.\n25. Arnold is the person who loves stir fry.\n26. The woodworking hobbyist is directly left of the person who loves the soup.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Knitting",
+      "Cooking",
+      "Woodworking",
+      "Painting",
+      "Photography",
+      "Gardening"
+    ]
+  },
+  {
+    "id": 102,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Modern",
+      "highlightedContent": "The person who uses an <mark>iPhone 13</mark> is the person in a <mark>Craftsman-style house</mark>.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clues 2 and 20, the fourth house has ranch style and soccer/dog. Clue 4 says dog owner is right of gray hair, and clue 5 says gray hair has fish, so gray hair/fish must be in house 3. Clue 8 says one house between fish and Samsung/bird, so Samsung/bird is in house 5. Clue 11 says one house between Samsung and Huawei, so Huawei is in house 3. Clue 12 says iPhone user is in Craftsman house, and since house 3 has Huawei (not iPhone), Craftsman must be elsewhere. Clue 9 says Victorian is left of Craftsman, so Craftsman can't be house 3. Testing remaining styles, only modern fits house 3's constraints, making the answer modern."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is HouseStyle of the person who lives in House 3?",
+    "content": "There are 5 houses, numbered 1 to 5 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Arnold, Bob, Alice, Eric, Peter\n - People have unique favorite sports: basketball, soccer, tennis, baseball, swimming\n - The people keep unique animals: dog, fish, horse, bird, cat\n - People use unique phone models: oneplus 9, google pixel 6, samsung galaxy s21, iphone 13, huawei p50\n - People have unique hair colors: black, red, brown, blonde, gray\n - Each person lives in a unique style of house: modern, craftsman, victorian, ranch, colonial\n\n## Clues:\n1. The person who has gray hair is the person who loves tennis.\n2. The person in a ranch-style home is in the fourth house.\n3. The person living in a colonial-style house is the person who loves swimming.\n4. The dog owner is somewhere to the right of the person who has gray hair.\n5. The fish enthusiast is the person who has gray hair.\n6. The person who has black hair is not in the fifth house.\n7. The person who uses a Samsung Galaxy S21 is the bird keeper.\n8. There is one house between the fish enthusiast and the person who uses a Samsung Galaxy S21.\n9. The person residing in a Victorian house is somewhere to the left of the person in a Craftsman-style house.\n10. The person who has red hair is not in the fifth house.\n11. There is one house between the person who uses a Samsung Galaxy S21 and the person who uses a Huawei P50.\n12. The person who uses an iPhone 13 is the person in a Craftsman-style house.\n13. Eric is the person who has red hair.\n14. The person who has red hair is not in the fourth house.\n15. The person who uses a OnePlus 9 is in the first house.\n16. The person who loves soccer is the dog owner.\n17. The person who keeps horses is Bob.\n18. Arnold is the fish enthusiast.\n19. The person who loves baseball is Peter.\n20. The person who loves soccer is in the fourth house.\n21. The person who has blonde hair is directly left of the person who has black hair.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Colonial",
+      "Victorian",
+      "Modern",
+      "Craftsman",
+      "Ranch"
+    ]
+  },
+  {
+    "id": 117,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Lime",
+      "highlightedContent": "<mark>The Dane is in the first house.</mark> <mark>The Dane is the person who likes Cherry smoothies.</mark> <mark>The Desert smoothie lover is the German.</mark> <mark>The German is in the sixth house.</mark> <mark>The person who drinks Blueberry smoothies is Bob.</mark> <mark>The person who drinks Blueberry smoothies is somewhere to the right of Eric.</mark> <mark>Peter is directly left of the Watermelon smoothie lover.</mark> <mark>Peter and Carol are next to each other.</mark> <mark>Arnold is the Norwegian.</mark> <mark>Arnold is not in the third house.</mark> <mark>The Norwegian is somewhere to the left of the Chinese.</mark> <mark>The Chinese is somewhere to the right of the Swedish person.</mark> <mark>The Swedish person is the Dragonfruit smoothie lover.</mark> <mark>The Chinese is not in the fifth house.</mark>",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "From clues 12 and 8, the Dane in house 1 likes cherry smoothies. Clues 13 and 2 place the German in house 6 with desert smoothie. Clues 7 and 10 position Arnold as Norwegian not in house 3, likely house 2 or 4, with clue 11 placing Norwegian left of Chinese. Clues 1, 6, and 14 position Swedish in house 3 with dragonfruit and Chinese in house 4 or 6, but house 6 is German, so Chinese in house 4. Norwegian must be in house 2 (Arnold), leaving house 5 for others. Clues 3 and 4 place Bob with blueberry right of Eric, so Eric in house 5 and Bob in house 6, but house 6 is German, contradiction unless Bob is German, which fits. Thus, house 2 (Arnold/Norwegian) has no assigned smoothie yet; remaining smoothies are lime and watermelon. Clue 9 places Peter left of watermelon lover, and clue 5 places Peter and Carol together, fitting them in houses 2 and 3 or 4 and 5. With house 3 Swedish, Peter and Carol likely in houses 4 and 5, making house 2 not Peter, so smoothie must be lime, the only unassigned option."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "What is Smoothie of the person who lives in House 2?",
+    "content": "There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Eric, Peter, Carol, Alice, Bob, Arnold\n - The people are of nationalities: brit, norwegian, swede, chinese, german, dane\n - Everyone has a favorite smoothie: dragonfruit, cherry, lime, desert, watermelon, blueberry\n\n## Clues:\n1. The Chinese is somewhere to the right of the Swedish person.\n2. The Desert smoothie lover is the German.\n3. The person who drinks Blueberry smoothies is Bob.\n4. The person who drinks Blueberry smoothies is somewhere to the right of Eric.\n5. Peter and Carol are next to each other.\n6. The Swedish person is the Dragonfruit smoothie lover.\n7. Arnold is the Norwegian.\n8. The Dane is the person who likes Cherry smoothies.\n9. Peter is directly left of the Watermelon smoothie lover.\n10. Arnold is not in the third house.\n11. The Norwegian is somewhere to the left of the Chinese.\n12. The Dane is in the first house.\n13. The German is in the sixth house.\n14. The Chinese is not in the fifth house.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Desert",
+      "Blueberry",
+      "Lime",
+      "Watermelon",
+      "Cherry",
+      "Dragonfruit"
+    ]
+  }
+]

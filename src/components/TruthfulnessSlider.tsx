@@ -1,7 +1,7 @@
 import { createTheme, debounce, Slider, ThemeProvider } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
-const ThuthfulnessSlider = ({
+const TruthfulnessSlider = ({
   initialScore,
   interactive = false,
   onChange,
@@ -189,4 +189,4 @@ const ThuthfulnessSlider = ({
   );
 };
 
-export default ThuthfulnessSlider;
+export default TruthfulnessSlider;

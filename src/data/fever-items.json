@@ -1,0 +1,322 @@
+[
+  {
+    "id": 42,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Supported",
+      "highlightedContent": "Donald Trump is in federal court trying to do away with the Affordable Care Act, <mark>100 million people with preexisting conditions like your mom would not have to pay more for their insurance under now.</mark> What is the Affordable care act The Affordable Care Act (ACA) provides individuals and families greater access to affordable health insurance options including medical, dental, vision, and other types of health insurance that may not otherwise be available. Under the ACA: You may be able to purchase health care coverage through a state or federal marketplace that offers a choice of plans. Insurers can't refuse coverage based on gender or a pre-existing condition. There are no lifetime or annual limits on coverage. Young adults can stay on their family’s insurance plan until age 26. Seniors who hit the Medicare Prescription Drug Plan coverage gap or \"donut hole\" can get a discount on medications. What was Trump's stance on the Affordable Care Act The Trump administration yesterday asked the Supreme Court to repeal the Affordable Care Act (ACA, also known as Obamacare) stating <mark>\"the entire ACA act must fall,\"</mark> hours after Republican state attorneys general, the coalition challenging the law, filed its briefs in the case. Overturning the ACA was a key campaign rallying point for President Trump in 2016 and Republican lawmakers have largely opposed the law since its inception in 2010.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The text states Trump's administration sought to repeal the ACA, which protects pre-existing conditions, contradicting the claim that he would not make such people pay more. This shows his stance refutes the initial statement by opposing the law's provisions."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "Donald Trump is in federal court trying to do away with the Affordable Care Act, 100 million people with preexisting conditions like your mom would not have to pay more for their insurance under now.",
+    "content": "What is the Affordable care act The Affordable Care Act (ACA) provides individuals and families greater access to affordable health insurance options including medical, dental, vision, and other types of health insurance that may not otherwise be available. Under the ACA:\n\nYou may be able to purchase health care coverage through a state or federal marketplace that offers a choice of plans. \nInsurers can't refuse coverage based on gender or a pre-existing condition. \nThere are no lifetime or annual limits on coverage. \nYoung adults can stay on their family’s insurance plan until age 26. \nSeniors who hit the Medicare Prescription Drug Plan coverage gap or \"donut hole\" can get a discount on medications. What was Trump's stance on the Affordable Care Act The Trump administration yesterday asked the Supreme Court to repeal the Affordable Care Act (ACA, also known as Obamacare) stating \"the entire ACA act must fall,\" hours after Republican state attorneys general, the coalition challenging the law, filed its briefs in the case. Overturning the ACA was a key campaign rallying point for President Trump in 2016 and Republican lawmakers have largely opposed the law since its inception in 2010.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 49,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "The claim states <mark>81 times</mark> that of the Black median, but the text provides data showing <mark>nearly ten times greater</mark> and <mark>6.7 times greater</mark>, which directly refutes the 81 times figure.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The claim states a median wealth ratio of 81 times, but the text provides data showing typical net worth ratios of 10 times (median) and 6.7 times (average), which are much lower. This discrepancy directly contradicts the claim's specific figure, indicating it is not supported by the facts presented."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "The Median White Household Wealth In The US Is 81 Times that of The Black Median Household Wealth",
+    "content": "What is the average net worth of a typical white family in the USA compared to that of a typical black family? At $171,000, the net worth of a typical white family is nearly ten times greater than that of a Black family ($17,150) in 2016. What is the average net worth of a typical white family in the USA compared to that of a typical black family? White average wealth ($929,800), which is more influenced by very rich families and does not characterize the typical experience, is 6.7 times greater than Black average wealth ($138,100). Where does the claim get it's facts from? An article from the DCFPI.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 51,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "The probe is considered over with regard to <mark>Clinton</mark>.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The text states the FBI examined the laptop for a sexting incident, not for child trafficking claims, and that the probe regarding Clinton is over with no charges, indicating the initial claim is unsupported."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "Anthony Weiner’s laptop contained proof Hillary Clinton & her associates are involved in child trafficking & paedophilia",
+    "content": "Was Anthony Weiner's laptop examined by the FBI? It was examined by the FBI in regards to a sexting incident. Was Hillary Clinton charged with any crime discovered in the contents of Anthony Weiner's laptop The probe is considered over with regard to Clinton.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 53,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "The Indian Government <mark>didn't provide free android phones to students during the pandemic</mark>. The link was created under <mark>a blog and there is no official statement from the government</mark> as regards that and it is <mark>highly unusual for the federal government to make such provisions under a blog</mark>.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The claim states the government provided free smartphones, but the link is to a non-official blog with no government statement, indicating the claim is false. The response 'Refutes' correctly identifies this as a refutation of the claim. The lack of official support and unusual nature of a blog-based government provision further supports the refutation."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "All students in India who had to switch to an online mode of education due to the coronavirus pandemic are being provided free Android smartphones by the government.",
+    "content": "What's the link provided in the claim to obtain the free phone provided by the Indian government  to students during the coronavirus pandemic? Https://registration–form-free–smartphone.blogspot.com/ What page does the link refer to? A blog. Did the Indian Government provide free smartphones to students during the pandemic The Indian Government didn't provide free android phones to students during the pandemic. The link was created under a blog and there is no official statement from the government as regards that and it is highly unusual for the federal government to make such provisions under a blog",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 54,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "Viral message claims that all Haldiram’s food products were banned in USA but the USFDA did seize a consignment and issued a warning letter in 2017 Are products form Haldiram foods available to buy in the U.S? Haldiram's entered the US e-commerce market via Amazon",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The viral claim states a total ban, but the text clarifies only a specific seizure and warning occurred, not a blanket ban. Haldiram's products are still sold in the U.S., as evidenced by their presence on Amazon. Therefore, the evidence refutes the claim by showing it is exaggerated and incorrect."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "Viral message claims that all Haldiram’s food products were banned in USA",
+    "content": "What does is  Haldiram’s ? Haldiram's Foods is an International packaged producer, based in Mumbai Who regulates food products in the U.S? UNITED STATES FOOD AND DRUG ADMINISTRATION (FDA OR USFDA) Has the usfda ever banned any Haldiram’s products from  the U.S? But the USFDA did seize a consignment and issued a warning letter in 2017 Are products form Haldiram foods available to buy in the U.S? Haldiram's entered the US e-commerce market via Amazon",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 59,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "The quote seems to be <mark>misinterpreted from a statement Pelosi made in 2013 in a CNN interview titled \"State of Union\"</mark> where she said, <mark>“Overwhelmingly for the American people, this is a liberation,”</mark> she answered, in part. <mark>“This is life, healthy life, liberty, the freedom to pursue your happiness which could be, follow your passion for good rather than follow your palate and be constrained by your policy.”</mark> after being asked if she was worried that the Affordable Care Act would result in employers reducing employee hours to keep the costs of providing health care to employees down.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The input text shows Pelosi's actual 2013 statement was about the Affordable Care Act giving people freedom to pursue passions, not about employers cutting hours being good. The provided quote directly contradicts her actual words by claiming she endorsed hour cuts. Since the quote misrepresents her statement, it refutes the accuracy of the claim."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "House Speaker Nancy Pelosi said of US employers, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.",
+    "content": "Did House Speaker Nancy Pelosi say, “Employers cutting hours is a good thing. It then gives that person time to pursue their dreams and passions.”? The quote seems to be misinterpreted from a statement Pelosi made in 2013 in a CNN interview titled \"State of Union\" where she said, “Overwhelmingly for the American people, this is a liberation,” she answered, in part. “This is life, healthy life, liberty, the freedom to pursue your happiness which could be, follow your passion for good rather than follow your palate and be constrained by your policy.” after being asked if she was worried that the Affordable Care Act would result in employers reducing employee hours to keep the costs of providing health care to employees down.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 62,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "The Trump campaign only asked that Biden to release his list of potential Supreme Court nominees <mark>after Justice Ruth Bader Ginsburg passed away</mark>. When did the Trump Campaign request for a supreme court nominees list from Biden <mark>He asked for the list on the 22nd of June</mark> Did trump make another such request? <mark>He made another request on the 24th of August</mark> When did Justice Ruth Bader Ginsburg die <mark>It’s been noted that she passed away on Rosh Hashanah which is on the 19th of September</mark>",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The text states Trump's first request was on June 22, which is before Justice Ginsburg's death on September 19, contradicting the initial claim that it only happened after her death. This contradiction refutes the claim by showing the request occurred earlier."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "The Trump campaign only asked that Biden to release his list of potential Supreme Court nominees after Justice Ruth Bader Ginsburg passed away.",
+    "content": "When did the Trump Campaign request for a supreme court nominees list from Biden He asked for the list on the 22nd of June Did trump make another such request? He made another request on the 24th of August When did Justice Ruth Bader Ginsburg die It’s been noted that she passed away on Rosh Hashanah which is on the 19th of September",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 65,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "Sadiq Khan <mark>faked getting the flu jab as the plastic cap was still on the needle</mark>. Why was Sadiq Khan being offered the flu jab? Flu kills an average of 8,000 people every year, and it can be particularly serious in older adults, very young children, and people with underlying health conditions. More people than ever are now eligible for the flu vaccine and 25 million people in England will be offered it for free by the NHS At what point do you need to take the cap off of the needle before use? 1. Holding the syringe barrel in one hand (avoid holding the syringe plunger), unscrew the syringe cap by twisting it anticlockwise. 2. To attach the needle to the syringe, twist the needle clockwise into the syringe until you feel it lock (see picture). 3. <mark>Remove the needle protector, which on occasion can be a little stiff</mark>. 4. Administer the vaccine.",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The text refutes the claim that Sadiq Khan faked getting the flu jab by explaining the correct procedure for administering the vaccine, which includes removing the needle cap before use, thus implying the initial accusation is based on a misunderstanding of standard medical protocol."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "Sadiq Khan faked getting the flu jab as the plastic cap was still on the needle.",
+    "content": "Why was Sadiq Khan being offered the flu jab? Flu kills an average of 8,000 people every year, and it can be particularly serious in older adults, very young children, and people with underlying health conditions.\nMore people than ever are now eligible for the flu vaccine and 25 million people in England will be offered it for free by the NHS At what point do you need to take the cap off of the needle before use? 1. Holding the syringe barrel in one hand (avoid holding the syringe plunger), unscrew the syringe cap by twisting it anticlockwise.\n\n2. To attach the needle to the syringe, twist the needle clockwise into the syringe until you feel it lock (see picture).\n\n3. Remove the needle protector, which on occasion can be a little stiff.\n\n4. Administer the vaccine.",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 67,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "<mark>Judith Collins is opposed to new environmental legislation because of her connection to Oravida</mark>",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The text states that Judith Collins is opposed to the legislation due to her connection to Oravida, specifically through her husband's former directorship. However, it also notes that he stepped down in 2017, which was before the claim in 2020, weakening the implied current conflict of interest. This temporal gap refutes the direct relevance of the connection to the 2020 opposition."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "New Zealand opposition leader Judith Collins is opposed to new environmental legislation because of her connection to Oravida, a local water and dairy company that exports produce to China.",
+    "content": "What is Judith Collins' connection to Oravida? Her husband, David Wong-Tung, was a company director of Oravida. When did David Wong-Tong stop being a director of Orvida? Wong-Tung stood down from the board of Oravida NZ in 2017. When was the claim made? 28/09/2020",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  },
+  {
+    "id": 72,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "category": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "highlightedContent": "Most deaths in the 1918 influenza pandemic originated from bacterial pneumonia caused by face masks and that Dr Anthony Fauci, the US government’s top expert in the fight against Covid-19, knew about it. Is wearing a mask an increasing factor or a direct cause of secondary bacterial pneumonia? <mark>there is no evidence to support this and it has not been mentioned in any studies.</mark> Did the National Institute of Allergy and Infectious Diseases undertake a study linking masks to bacterial pneumonia? NIAID told AFP in a statement: <mark>“The 2008 study does not mention masks and had nothing to do with masks”</mark> Instead, the study <mark>“analyzed data from fatal 1918 infections and showed that the majority of cases were associated with secondary bacterial pneumonias,”</mark>",
+      "counterfactualExplanation": "",
+      "naturalLanguageExplanation": "The text presents a claim that masks caused bacterial pneumonia in 1918 and that Dr. Fauci knew this, but then directly contradicts it by stating there's no evidence and quoting NIAID saying the cited study had nothing to do with masks. The NIAID statement explicitly refutes the connection between masks and pneumonia, showing the original claim is false. Therefore, the text refutes the initial assertion rather than supporting it."
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    },
+    "title": "Most deaths in the 1918 influenza pandemic originated from bacterial pneumonia caused by face masks and that Dr Anthony Fauci, the US government’s top expert in the fight against Covid-19, knew about it.",
+    "content": "Is wearing a mask an increasing factor or a direct cause of secondary bacterial pneumonia? There is no evidence to support this and it has not been mentioned in any studies. Did the National Institute of Allergy and Infectious Diseases undertake a study linking masks to bacterial pneumonia? NIAID told AFP in a statement: “The 2008 study does not mention masks and had nothing to do with masks” Instead, the study “analyzed data from fatal 1918 infections and showed that the majority of cases were associated with secondary bacterial pneumonias,”",
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+  }
+]

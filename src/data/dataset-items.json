@@ -1,0 +1,455 @@
+[
+  {
+    "id": 1,
+    "group": 1,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "boolean",
+    "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "true",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "hard",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "group": 1,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "multiple-choice",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "title": "Main Question Choice",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "ZebraLogic",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": "Option A",
+      "readability": "hard",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "group": 1,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "boolean",
+    "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "true",
+    "xaiFeatures": {
+      "truthfulness": false,
+      "readability": "hard",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "group": 1,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "multiple-choice",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "title": "Main Question Choice",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "Category",
+    "publishingDate": "10/28/2022",
+    "label": "true",
+    "xaiFeatures": {
+      "truthfulness": "Option D",
+      "readability": "hard",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "group": 1,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "boolean",
+     "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "easy",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "group": 1,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "multiple-choice",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "title": "Main Question Choice",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "Category",
+    "publishingDate": "10/28/2022",
+    "label": "true",
+    "xaiFeatures": {
+      "truthfulness": "Option B",
+      "readability": "medium",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "group": 2,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "boolean",
+    "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "true",
+    "xaiFeatures": {
+      "truthfulness": false,
+      "readability": "hard",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "group": 2,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "boolean",
+    "title": "Did the beatles ever play at red rocks?",
+    "subtitle": null,
+    "content": "The earliest notable rock-and-roll performance at Red Rocks was by The Beatles on August 26, 1964, the only concert not sold out during their US-tour. When Ringo Starr returned to Red Rocks with his All-Starr Band on June 28, 2000, he asked if anyone in the crowd had been at the Beatles concert thirty-six years earlier. On August 26, 2004, the East-Coast-based Beatles-tribute band, ``1964'' was flown to Denver to re-enact the Beatles concert held at the site exactly forty-years earlier to the date. The beautiful and unique setting has led to the venue becoming a favorite for many performers. Jimi Hendrix played at Red Rocks on September 1, 1968, along with Vanilla Fudge and Soft Machine.",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "true",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "easy",
+      "highlightedContent": "The earliest notable rock-and-roll performance at Red Rocks was by <sentiment>The Beatles on August 26, 1964</sentiment>, the only concert not sold out during their US-tour. When Ringo Starr returned to Red Rocks with his All-Starr Band on June 28, 2000, he asked if anyone in the crowd had been at the <sentiment>Beatles concert</sentiment> thirty-six years earlier. On August 26, 2004, the East-Coast-based Beatles-tribute band, ``1964'' was flown to Denver to re-enact <sentiment>the Beatles concert held at the site exactly forty-years earlier to the date<s/entiment>. The beautiful and unique setting has led to the venue becoming a favorite for many performers. Jimi Hendrix played at Red Rocks on September 1, 1968, along with Vanilla Fudge and Soft Machine.",
+      "naturalLanguageExplanation": "Step 1: The passage explicitly states, 'The earliest notable rock-and-roll performance at Red Rocks was by The Beatles on August 26, 1964.' \nStep 2: This indicates a specific instance where The Beatles performed at the venue. \nStep 3: Therefore, based on this information, the answer to the question 'did the beatles ever play at red rocks' is 'Yes'.",
+      "counterfactualExplanation": "If the passage had stated that The Beatles never performed at Red Rocks, then the answer to the question would have been 'No'. However, since it explicitly mentions their performance on August 26, 1964, we can conclude that they did indeed play at Red Rocks."
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "group": 2,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "multiple-choice",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "title": "Main Question Choice",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "Category",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": "Option B",
+      "readability": "easy",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "group": 2,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": true,
+    "ratingType": "boolean",
+    "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "easy",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "group": 2,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "multiple-choice",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "title": "Main Question Choice",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "Category",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "easy",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "Option A",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "group": 2,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": true,
+    "ratingType": "boolean",
+    "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "easy",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "group": 0,
+    "isFalsePositive": true,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "ratingType": "boolean",
+    "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "easy",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "group": 0,
+    "isFalsePositive": false,
+    "isTrueNegative": true,
+    "isQualification": false,
+    "ratingType": "boolean",
+    "title": "Main Question Boolean",
+    "subtitle": "Subtitle",
+    "content": "Content",
+    "source": "Source",
+    "category": "BoolQ",
+    "publishingDate": "10/28/2022",
+    "label": "fake",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "readability": "easy",
+      "highlightedContent": "<mark>marked content /<mark> and  <sentiment>sentiment</sentiment>",
+      "naturalLanguageExplanation": "Natural language explanation",
+      "counterfactualExplanation": "CounterFcatrual explanation"
+    },
+    "controlQuestion": {
+      "question": "What was the article about?",
+      "correctAnswer": "Correct answer",
+      "wrongAnswers": [
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
+      ]
+    }
+  }
+]
