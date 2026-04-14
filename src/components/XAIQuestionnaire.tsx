@@ -10,18 +10,36 @@ import { SurveyPart } from "@/model/survey-part";
 import { mainQuestionnaire } from "@/questionnaire/main-questionnaire";
 import { mergedQuestionnaire } from "@/questionnaire/merged-questionnaire";
 import { ExperimentType } from "@/model/experiment-type";
+import { useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 
 const XAIQuestionnaire = ({
   datasetItems,
   xaiFeature,
   part,
-  experimentType, 
+  experimentType,
 }: {
   datasetItems: DatasetItem[];
   xaiFeature: XAIFeatureLevel;
   part: SurveyPart;
-  experimentType: ExperimentType; 
+  experimentType: ExperimentType;
 }) => {
+  const router = useRouter();
+  const pageTimestamps = useRef<{ [pageName: string]: number }>({});
+  const lastPageEntryTime = useRef<number>(0);
+
+  useEffect(() => {
+    if (!router.isReady) return;
+
+    const pid = router.query.PROLIFIC_PID as string;
+    const studyId = router.query.STUDY_ID as string;
+    const sessId = router.query.SESSION_ID as string;
+
+    if (pid) localStorage.setItem("prolific.pid", pid);
+    if (studyId) localStorage.setItem("prolific.study_id", studyId);
+    if (sessId) localStorage.setItem("prolific.session_id", sessId);
+  }, [router.isReady, router.query]);
+
   console.log(`PART: ${part}; FEATURE: ${xaiFeature};`);
 
   let questionnaire: (
@@ -47,8 +65,11 @@ const XAIQuestionnaire = ({
   registerMyQuestion();
   const survey = new Model(questionnaire(datasetItems, xaiFeature, experimentType));
 
+  survey.onStarted.add(() => {
+    lastPageEntryTime.current = Date.now();
+  });
+
   survey.onAfterRenderPage.add((sender, options) => {
-    // hide "Previous" button on all pages except the "You are ready" page
     const prevButton = document.querySelector(
       ".sd-navigation__prev-btn"
     ) as HTMLElement;
@@ -60,15 +81,24 @@ const XAIQuestionnaire = ({
   });
 
   survey.onCurrentPageChanged.add((sender, options) => {
-    // jump back to start of tutorial when user clicks "Previous"
-    if (options.oldCurrentPage.name === "you-are-ready" && options.isPrevPage) {
+    if (options.oldCurrentPage) {
+      const timeSpent = Date.now() - lastPageEntryTime.current;
+      let pageName = options.oldCurrentPage.name;
+      if (pageName.startsWith("page") && options.oldCurrentPage.questions.length > 0) {
+        pageName = options.oldCurrentPage.questions[0].name;
+      }
+      pageTimestamps.current[pageName] = (pageTimestamps.current[pageName] || 0) + timeSpent;
+      sender.setValue(`TIME_SPENT_${pageName}`, timeSpent);
+    }
+    lastPageEntryTime.current = Date.now();
+
+    if (options.oldCurrentPage?.name === "you-are-ready" && options.isPrevPage) {
       sender.setValue("understand-task", undefined);
       sender.currentPage = sender.getPageByName("tutorial-text");
     }
-    // complete questionnaire if user answers incorrectly in the qualification survey
     else if (
       part === "qualification" &&
-      options.oldCurrentPage.name === "control-question"
+      options.oldCurrentPage?.name === "control-question"
     ) {
       const hasIncorrectAnswer = sender
         .getQuizQuestions()
@@ -90,9 +120,20 @@ const XAIQuestionnaire = ({
   });
 
   survey.onComplete.add((result) => {
-    // crowdee removes the id from the form, so in production we need to get it by the second selector
+    if (survey.currentPage) {
+      const timeSpent = Date.now() - lastPageEntryTime.current;
+      let pageName = survey.currentPage.name;
+      if (pageName.startsWith("page") && survey.currentPage.questions.length > 0) {
+        pageName = survey.currentPage.questions[0].name;
+      }
+      result.setValue(`TIME_SPENT_${pageName}`, timeSpent);
+    }
+
     const submitForm = (document.getElementById("submit-form") ??
       document.querySelector("body > form")) as HTMLFormElement;
+    const prolificPID = localStorage.getItem("prolific.pid") ?? "N/A";
+    const studyID     = localStorage.getItem("prolific.study_id") ?? "N/A";
+    const sessionID   = localStorage.getItem("prolific.session_id") ?? "N/A";
 
     const formData: { [key: string]: any } = {
       "x-crowdee-task": (
@@ -111,9 +152,11 @@ const XAIQuestionnaire = ({
         ) as HTMLInputElement
       )?.value,
       "METADATA.FEATURE": xaiFeature,
-      // "METADATA.GROUP": groupNumber,
       "METADATA.EXPERIMENT_TYPE": experimentType,
       "METADATA.PART": part,
+      "PROLIFIC_PID": prolificPID,
+      "STUDY_ID": studyID,
+      "SESSION_ID": sessionID,
       POINTS: result.getCorrectAnswerCount(),
     };
 
@@ -127,7 +170,7 @@ const XAIQuestionnaire = ({
       }
     }
 
-    console.log(formData);
+    console.log("Submitting formData:", formData);
 
     const options = {
       method: "POST",
@@ -140,13 +183,15 @@ const XAIQuestionnaire = ({
 
     fetch(submitForm.action, options)
       .then((response) => response.text())
-      .then((html) => {
-        // replace the entire page with the response from the server
-        document.open();
-        document.write(html);
-        document.close();
+      .then(() => {
+        // window.location.href = "https://app.prolific.com/submissions/complete?cc=YOUR_COMPLETION_CODE";
+        console.log("SUCCESS: Would redirect to Prolific now!");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        // window.location.href = "https://app.prolific.com/submissions/complete?cc=YOUR_COMPLETION_CODE";
+        console.log("ERROR: Would redirect to Prolific now!");
+      });
   });
 
   return (

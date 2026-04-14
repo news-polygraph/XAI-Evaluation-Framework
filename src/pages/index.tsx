@@ -18,11 +18,6 @@ const FEATURES = [
   { id: "counterfactual",  name: "Counterfactual"    },
 ];
 
-// const GROUPS = [
-//   { id: "group-1", name: "Group 1" },
-//   { id: "group-2", name: "Group 2" },
-// ];
-
 const EXPERIMENT_TYPES = [
   {
     id: "TwoStep",
@@ -225,9 +220,21 @@ const Home = () => {
   const [expType, setExpType]   = useState("TwoStep");
   const [part, setPart]         = useState("merged");
   const [expOnly, setExpOnly]   = useState(false);
+  const [attOnly, setAttOnly]   = useState(false);
+  const [evalOnly, setEvalOnly]   = useState(false);
   const [copied, setCopied]     = useState(false);
 
-  const path = `/${task}/${feature}/${expType}/${part}${expOnly ? "?experimentOnly=true" : ""}`;
+  let path = `/${task}/${feature}/${expType}/${part}`;
+  
+  const queryParams = new URLSearchParams();
+  if (expOnly) queryParams.append("experimentOnly", "true");
+  if (attOnly) queryParams.append("attn", "false");
+  if (evalOnly) queryParams.append("eval", "false");
+
+  const queryString = queryParams.toString();
+  if (queryString) {
+    path += `?${queryString}`;
+  }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.origin + path);
@@ -282,18 +289,6 @@ const Home = () => {
                 ))}
               </div>
             </div>
-{/* 
-            <hr css={S.divider} /> */}
-
-            {/* Group
-            <div css={S.row}>
-              <span css={S.label}>Group</span>
-              <div css={S.pillGroup}>
-                {GROUPS.map((g) => (
-                  <Pill key={g.id} label={g.name} active={group === g.id} onClick={() => setGroup(g.id)} />
-                ))}
-              </div>
-            </div> */}
 
             <hr css={S.divider} />
 
@@ -345,6 +340,38 @@ const Home = () => {
               </span>
               <span css={{ fontSize: "13px", color: "#999" }}>
                 — skips intro pages (<code>?experimentOnly=true</code>)
+              </span>
+            </label>
+            <label css={S.experimentOnlyRow}>
+              <button
+                css={S.toggle(attOnly)}
+                onClick={() => setAttOnly((v) => !v)}
+                aria-label="Toggle attention check"
+                type="button"
+              >
+                <span css={S.toggleThumb(attOnly)} />
+              </button>
+              <span css={{ fontSize: "14px", color: "#444", fontWeight: 500 }}>
+                Attention Check
+              </span>
+              <span css={{ fontSize: "13px", color: "#999" }}>
+                — skips attention page (<code>?attn=false</code>)
+              </span>
+            </label>
+            <label css={S.experimentOnlyRow}>
+              <button
+                css={S.toggle(evalOnly)}
+                onClick={() => setEvalOnly((v) => !v)}
+                aria-label="Toggle Question Evaluation"
+                type="button"
+              >
+                <span css={S.toggleThumb(evalOnly)} />
+              </button>
+              <span css={{ fontSize: "14px", color: "#444", fontWeight: 500 }}>
+                Evaluation
+              </span>
+              <span css={{ fontSize: "13px", color: "#999" }}>
+                — skips eval page (<code>?eval=false</code>)
               </span>
             </label>
 
