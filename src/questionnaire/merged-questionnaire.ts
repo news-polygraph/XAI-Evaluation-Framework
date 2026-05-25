@@ -13,9 +13,13 @@ import personalCode from "./parts/personal-code";
 import DatasetItem from "@/model/dataset-item";
 import newsDashboardEvaluation from "./parts/news-dashboard-evaluation";
 import { ExperimentType } from "@/model/experiment-type";
+import qualificationStartPage from "./parts/qualification-start-page";
+import welcomeToQualification from "./parts/welcome-to-qualification";
+import mainStartPage from "./parts/main-start-page";
 
 export const mergedQuestionnaire = (
   datasetItems: DatasetItem[],
+  dataset: string,
   xaiFeatures: XAIFeatureLevel,
   experimentType: ExperimentType
 ) => {
@@ -29,20 +33,48 @@ export const mergedQuestionnaire = (
     showProgressBar: "top",
     pages: [
       mergedStartPage,
-      ...tutorial(xaiFeatures),
+      welcomeToQualification,
+      ...tutorial(xaiFeatures, dataset, experimentType),
       youAreReady,
-      ...experimentPages(datasetItems, xaiFeatures, "merged", experimentType),
-      almostDone,
-      ...aiSystemEvaluation(xaiFeatures),
-      newsDashboardEvaluation,
-      demographics,
+      ...experimentPages(datasetItems, xaiFeatures, "qualification", experimentType),
+      mainStartPage,
+      ...experimentPages(datasetItems, xaiFeatures, "main", experimentType),
+      // almostDone,
+      // ...aiSystemEvaluation(xaiFeatures),
+      // newsDashboardEvaluation,
+      // demographics,
     ],
+    completedHtmlOnCondition: [
+      {
+        expression: `{correctAnswers} == {questionCount}`,
+        html: `<div style="max-width: 900px; margin: 0 auto;">
+        <p>
+        Thank you for taking part in the job, you have paid attention to the questions and answered the control questions correctly, your answers are recorded.
+        </p>
+        </br>
+        <p>
+        You can close this Tab now.
+        </p>
+        </div>`,
+      },
+    ],
+    completedHtml: `<div style="max-width: 900px; margin: 0 auto;">
+    <p>
+    Thank you for taking part in the qualification job! Unfortunately, you have not paid enough attention to the control questions and you are not qualified for the main job.
+    </p>
+    </br>
+    <p>
+    You can close this Tab now.
+    </p>
+    </div>`,
   };
 
   if (experimentOnly) {
     questionnaire.firstPageIsStarted = false;
     questionnaire.pages = [
-      ...experimentPages(datasetItems, xaiFeatures, "merged", experimentType),
+      ...experimentPages(datasetItems, xaiFeatures, "qualification", experimentType),
+      mainStartPage,
+      ...experimentPages(datasetItems, xaiFeatures, "main", experimentType),
     ];
   }
 

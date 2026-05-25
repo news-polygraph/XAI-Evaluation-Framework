@@ -90,9 +90,10 @@ const getPagesForDatasetItem = (
     ...(showControl
       ? [
           {
-            name: `${datasetItem.id}-control-question`,
+            name: `control-question`,
             title,
             description,
+            isQualification: datasetItem.isQualification,
             elements: [
               {
                 type: "radiogroup",
@@ -100,6 +101,7 @@ const getPagesForDatasetItem = (
                 title: datasetItem.controlQuestion.question,
                 hideNumber: true,
                 choicesOrder: "random",
+                isQualification: datasetItem.isQualification,
                 isRequired: true,
                 choices: [
                   {
@@ -122,7 +124,7 @@ const getPagesForDatasetItem = (
     ...(showEval
       ? [
           {
-            name: `${datasetItem.id}-system-evaluation`, // <--- ADDED UNIQUE PAGE NAME
+            name: `${datasetItem.id}-system-evaluation`,
             title: "Evaluate the system",
             description:
               "Evaluate the AI system based on the explanations it provided",
@@ -138,7 +140,7 @@ const getPagesForDatasetItem = (
                 isAllRowRequired: true,
                 rows: [
                   {
-                    text: "The AI-System classified the news items correctly",
+                    text: "The AI-System classified the answers correctly",
                     value: "classified-correctly",
                   },
                   {
@@ -146,15 +148,15 @@ const getPagesForDatasetItem = (
                     value: "understand-what-system-does",
                   },
                   {
-                    text: "The explainability features presented are useful to assess the truthfulness of the news article",
+                    text: "The explainability features presented are useful to assess the truthfulness of the answers",
                     value: "xai-features-useful",
                   },
                   {
-                    text: "The indications given by the AI-System are useful to assess the truthfulness of the news article",
+                    text: "The indications given by the AI-System are useful to assess the truthfulness of the answers",
                     value: "indications-useful",
                   },
                   {
-                    text: "The presented explanations are comprehensible and help me with assessing the news articles",
+                    text: "The presented explanations are comprehensible and help me with solving the task",
                     value: "explanations-comprehensible-and-help-assess",
                   },
                 ],
@@ -163,23 +165,23 @@ const getPagesForDatasetItem = (
           },
         ]
       : []),
-    ...(part === "main" && showControl
-      ? [
-          {
-            name: `${datasetItem.id}-control-question-warning`, // <--- ADDED UNIQUE PAGE NAME
-            visibleIf: `{datasetitem.${datasetItem.id}.control-question} != 'correct'`,
-            elements: [
-              {
-                type: "html",
-                maxWidth: "900px",
-                html: `<div>
-          <b>Attention</b>: you entered an incorrect answer to the control question! In order to receive the <b>bonus of 5 €</b> you need to answer at least <b>5 control questions correctly!</b> Please read the news items carefully.
-          </div>`,
-              },
-            ],
-          },
-        ]
-      : []),
+    // ...(part === "main" && showControl
+    //   ? [
+    //       {
+    //         name: `${datasetItem.id}-control-question-warning`,
+    //         visibleIf: `{datasetitem.${datasetItem.id}.control-question} != 'correct'`,
+    //         elements: [
+    //           {
+    //             type: "html",
+    //             maxWidth: "900px",
+    //             html: `<div>
+    //       <b>Attention</b>: you entered an incorrect answer to the control question! In order to receive the <b>bonus of 5 €</b> you need to answer at least <b>5 control questions correctly!</b> Please read the news items carefully.
+    //       </div>`,
+    //           },
+    //         ],
+    //       },
+    //     ]
+    //   : []),
   ];
 };
 
@@ -189,16 +191,18 @@ const experimentPages = (
   part: SurveyPart,
   experimentType: ExperimentType
 ) => {
-  return [
-    ...datasetItems.flatMap((datasetItem) =>
-      getPagesForDatasetItem(
-        datasetItem as any,
-        xaiFeatures,
-        part,
-        experimentType
-      )
-    ),
-  ];
+  let filteredItems = datasetItems;
+
+  if (part === "qualification") {
+    filteredItems = datasetItems.filter((item) => item.isQualification === true);
+  } else if (part === "main") {
+    filteredItems = datasetItems.filter(
+      (item) => item.isQualification !== true
+    );
+  }
+  return filteredItems.flatMap((datasetItem) =>
+    getPagesForDatasetItem(datasetItem, xaiFeatures, part, experimentType)
+  );
 };
 
 export default experimentPages;

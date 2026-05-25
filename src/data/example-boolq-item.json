@@ -1,0 +1,25 @@
+  {
+    "id": 39,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "dataset": "boolq",
+    "xaiFeatures": {
+      "truthfulness": true,
+      "counterfactualExplanation": "The myotonic goat, otherwise known as the fainting goat, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span.",
+      "naturalLanguageExplanation": "The passage explicitly states 'The myotonic goat, otherwise known as the fainting goat', confirming its existence. It describes the goat's behavior of temporarily seizing when startled, which aligns with the term 'fainting goat'. This establishes that fainting goats are real animals with a specific genetic condition.",
+      "highlightedContent": "The myotonic goat, otherwise known as the <mark>fainting goat</mark>, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain 'frozen' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span."
+    },
+    "controlQuestion": {
+      "question": "What was the passage about?",
+      "correctAnswer": "A specific genetic condition in goats that causes them to temporarily seize when startled.",
+      "wrongAnswers": [
+        "The moyotonic goat's diet and habitat",
+        "Severe conditions that affect goats",
+        "Moyotonic goats' ability to run away from danger"
+      ]
+    },
+    "title": "Is there such a thing as a fainting goat?",
+    "content": "The myotonic goat, otherwise known as the fainting goat, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span.",
+    "ratingType": "boolean"
+  }

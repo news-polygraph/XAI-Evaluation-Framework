@@ -7,7 +7,7 @@ export default function TruthfulnessMultipleChoice({
   onChange 
 }: { 
   initialScore?: string;
-  options: string[];
+  options: string[] | undefined;
   interactive?: boolean;
   onChange?: (score: string) => void;
 }) {

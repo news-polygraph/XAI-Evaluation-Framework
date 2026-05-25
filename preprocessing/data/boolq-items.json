@@ -7,22 +7,22 @@
     "dataset": "boolq",
     "xaiFeatures": {
       "truthfulness": false,
-      "counterfactualExplanation": "Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias 'Elizabeth Turner', but this later becomes her married name when she weds the character Jack Sparrow (played by Johnny Depp).",
+      "counterfactualExplanation": "Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias ``Elizabeth Turner'', but this later becomes her married name when she weds the character Jack Sparrow (played by Johnny Depp).",
       "naturalLanguageExplanation": "The passage states Elizabeth marries Will Turner, not Jack Sparrow. Therefore, Elizabeth and Jack Sparrow do not end up together.",
-      "highlightedContent": "Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias 'Elizabeth Turner', but <mark>this later becomes her married name when she weds the character Will Turner</mark> (played by Orlando Bloom)."
+      "highlightedContent": "Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias ``Elizabeth Turner'', but <mark>this later becomes her married name when she weds the character Will Turner</mark> (played by Orlando Bloom)."
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "Elizabeth Swann's husband in the film 'Pirates of the Caribbean'",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "Elizabeth Swann's role in the film 'Pirates of the Caribbean'",
-        "Pirates of the caribbean film series",
-        "The character of Jack Sparrow in the film 'Pirates of the Caribbean'",
-        "Orlando Bloom's role in the film 'Pirates of the Caribbean'"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Do Elizabeth and Jack Sparrow end up together?",
-    "content": "Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias 'Elizabeth Turner', but this later becomes her married name when she weds the character Will Turner (played by Orlando Bloom).",
+    "title": "Do elizabeth and jack sparrow end up together?",
+    "content": "Elizabeth Swann (later Elizabeth Turner) is a fictional character in the Pirates of the Caribbean film series. She appears in The Curse of the Black Pearl (2003) and three of its sequels, Dead Man's Chest (2006), At World's End (2007) and Dead Men Tell No Tales (2017). She is portrayed by Keira Knightley (and as a child by Lucinda Dryzek in the prologue of The Curse of the Black Pearl). She is known to use the alias ``Elizabeth Turner'', but this later becomes her married name when she weds the character Will Turner (played by Orlando Bloom).",
     "ratingType": "boolean"
   },
   {
@@ -34,19 +34,20 @@
     "xaiFeatures": {
       "truthfulness": false,
       "counterfactualExplanation": "Cabo San Lucas (Spanish pronunciation: (ˈkaβo san ˈlukas), Cape Saint Luke), commonly called Cabo in English, is a resort city at the southern tip of the Baja California Peninsula, in the Mexican state of Baja California Sur. As of 2015, the population of the city was 81,111 inhabitants. Cabo San Lucas together with San José del Cabo is known as Los Cabos. Together they form a metropolitan area of 305,983 inhabitants.",
-      "naturalLanguageExplanation": "The passage states that Cabo San Lucas and San José del Cabo together are known as Los Cabos. Therefore, Los Cabos refers to the combined area, not just Cabo San Lucas alone. This means they are not the same, so the answer is 'No' to confirm the distinction.",
+      "naturalLanguageExplanation": "The passage states that Cabo San Lucas and San José del Cabo together are known as Los Cabos. Therefore, Los Cabos refers to the combined area, not just Cabo San Lucas alone. This means they are not the same, so the answer is 'Yes' to confirm the distinction.",
       "highlightedContent": "Cabo San Lucas (Spanish pronunciation: (ˈkaβo san ˈlukas), Cape Saint Luke), commonly called Cabo in English, is a resort city at the southern tip of the Baja California Peninsula, in the Mexican state of Baja California Sur. As of 2015, the population of the city was 81,111 inhabitants. Cabo San Lucas together with San José del Cabo is known as <mark>Los Cabos</mark>. Together they form a metropolitan area of 305,983 inhabitants."
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "The distinction between Cabo San Lucas and Los Cabos",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "The number of inhabitants in Cabo San Lucas",
-        "The location of Los Cabos",
-        "a resort city at the southern tip of the Baja California Peninsula"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Is Los Cabos the same as Cabo San Lucas?",
+    "title": "Is los cabos the same as cabo san lucas?",
     "content": "Cabo San Lucas (Spanish pronunciation: (ˈkaβo san ˈlukas), Cape Saint Luke), commonly called Cabo in English, is a resort city at the southern tip of the Baja California Peninsula, in the Mexican state of Baja California Sur. As of 2015, the population of the city was 81,111 inhabitants. Cabo San Lucas together with San José del Cabo is known as Los Cabos. Together they form a metropolitan area of 305,983 inhabitants.",
     "ratingType": "boolean"
   },
@@ -58,20 +59,21 @@
     "dataset": "boolq",
     "xaiFeatures": {
       "truthfulness": true,
-      "counterfactualExplanation": "Bighorn sheep are named for the large, curved horns borne by the rams (males). Ewes (females) do not have horns, but they are shorter with less curvature. They range in color from light brown to grayish or dark, chocolate brown, with a white rump and lining on the backs of all four legs. Males typically weigh 58--143 kg (128--315 lb), are 90--105 cm (35--41 in) tall at the shoulder, and 1.6--1.85 m (63--73 in) long from the nose to the tail. Females are typically 34--91 kg (75--201 lb), 75--90 cm (30--35 in) tall, and 1.28--1.58 m (50--62 in) long. Male bighorn sheep have large horn cores, enlarged cornual and frontal sinuses, and internal bony septa. These adaptations serve to protect the brain by absorbing the impact of clashes. Bighorn sheep have preorbital glands on the anterior corner of each eye, inguinal glands in the groin, and pedal glands on each foot. Secretions from these glands may support dominance behaviors.",
+      "counterfactualExplanation": "Bighorn sheep are named for the large, curved horns borne by the rams (males). Ewes (females) do not have horns, but they are shorter with less curvature. They range in color from light brown to grayish or dark, chocolate brown, with a white rump and lining on the backs of all four legs. Males typically weigh 58--143 kg (128--315 lb), are 90--105 cm (35--41 in) tall at the shoulder, and 1.6--1.85 m (63--73 in) long from the nose to the tail. Females are typically 34--91 kg (75--201 lb), 75--90 cm (30--35 in) tall, and 1.28--1.58 m (50--62 in) long. Male bighorn sheep have large horn cores, enlarged cornual and frontal sinuses, and internal bony septa. These adaptations serve to protect the brain by absorbing the impact of clashes. Bighorn sheep have preorbital glands on the anterior corner of each eye, inguinal glands in the groin, and pedal glands on each foot. Secretions from these glands may support dominance behaviors.  Task: Generate counterfactual-based explanation.",
       "naturalLanguageExplanation": "The passage states that ewes (females) have horns, though shorter and less curved than males. This directly confirms that both sexes possess horns. Therefore, the answer 'Yes' is correct based on the provided information.",
       "highlightedContent": "Bighorn sheep are named for the large, curved horns borne by the rams (males). <mark>Ewes (females) also have horns</mark>, but they are shorter with less curvature. They range in color from light brown to grayish or dark, chocolate brown, with a white rump and lining on the backs of all four legs. Males typically weigh 58--143 kg (128--315 lb), are 90--105 cm (35--41 in) tall at the shoulder, and 1.6--1.85 m (63--73 in) long from the nose to the tail. Females are typically 34--91 kg (75--201 lb), 75--90 cm (30--35 in) tall, and 1.28--1.58 m (50--62 in) long. Male bighorn sheep have large horn cores, enlarged cornual and frontal sinuses, and internal bony septa. These adaptations serve to protect the brain by absorbing the impact of clashes. Bighorn sheep have preorbital glands on the anterior corner of each eye, inguinal glands in the groin, and pedal glands on each foot. Secretions from these glands may support dominance behaviors."
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "Bighorn sheep's horns",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "Bighorn sheep's weight differences between males and females",
-        "Bighorn sheep's dominance behaviours",
-        "Bighorn sheep's horn shapes in males an females"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Do both male and female Bighorn sheep have horns?",
+    "title": "Do both male and female bighorn sheep have horns?",
     "content": "Bighorn sheep are named for the large, curved horns borne by the rams (males). Ewes (females) also have horns, but they are shorter with less curvature. They range in color from light brown to grayish or dark, chocolate brown, with a white rump and lining on the backs of all four legs. Males typically weigh 58--143 kg (128--315 lb), are 90--105 cm (35--41 in) tall at the shoulder, and 1.6--1.85 m (63--73 in) long from the nose to the tail. Females are typically 34--91 kg (75--201 lb), 75--90 cm (30--35 in) tall, and 1.28--1.58 m (50--62 in) long. Male bighorn sheep have large horn cores, enlarged cornual and frontal sinuses, and internal bony septa. These adaptations serve to protect the brain by absorbing the impact of clashes. Bighorn sheep have preorbital glands on the anterior corner of each eye, inguinal glands in the groin, and pedal glands on each foot. Secretions from these glands may support dominance behaviors.",
     "ratingType": "boolean"
   },
@@ -83,20 +85,21 @@
     "dataset": "boolq",
     "xaiFeatures": {
       "truthfulness": true,
-      "counterfactualExplanation": "The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in two main pieces about a third of a mile (600 m) apart. The bow is still largely recognizable with many preserved interiors, despite its deterioration and the damage it sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms.",
+      "counterfactualExplanation": "The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in two main pieces about a third of a mile (600 m) apart. The bow is still largely recognizable with many preserved interiors, despite its deterioration and the damage it sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms.  Task: Generate counterfactual-based explanation.",
       "naturalLanguageExplanation": "The passage states the wreck lies in two main pieces, the bow and the stern, which are about a third of a mile apart. This directly confirms that both halves of the Titanic were found. Therefore, the answer is 'Yes'.",
       "highlightedContent": "The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in <mark>two main pieces</mark> about a third of a mile (600 m) apart. The bow is still largely recognizable with many preserved interiors, despite its deterioration and the damage it sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms."
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "The two halves of the Titanic's wreck",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "The aftermath of the RMS Titanic's wreck",
-        "The damage and costs of the RMS Titanic's wreck",
-        "The location where the titanic sank"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Did they find both halves of the Titanic?",
+    "title": "Did they find both halves of the titanic?",
     "content": "The wreck of the RMS Titanic lies at a depth of about 12,500 feet (3.8 km; 2.37 mi), about 370 miles (600 km) south-southeast off the coast of Newfoundland. It lies in two main pieces about a third of a mile (600 m) apart. The bow is still largely recognizable with many preserved interiors, despite its deterioration and the damage it sustained hitting the sea floor. In contrast, the stern is completely ruined. A debris field around the wreck contains hundreds of thousands of items spilled from the ship as she sank. The bodies of the passengers and crew would have also been distributed across the sea bed, but have been consumed by other organisms.",
     "ratingType": "boolean"
   },
@@ -114,14 +117,15 @@
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "The official language of New Zealand",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "The primary language used for court proceedings in New Zealand",
-        "How many languages are spoken in New Zealand",
-        "The most used language in New Zealand"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Is English an official language of New Zealand?",
+    "title": "Is english an official language of new zealand?",
     "content": "English is New Zealand's official language. It is the primary language used for court proceedings, and statutes and other official pronouncements. English is spoken by 96.1 percent of the population.",
     "ratingType": "boolean"
   },
@@ -133,20 +137,21 @@
     "dataset": "boolq",
     "xaiFeatures": {
       "truthfulness": true,
-      "counterfactualExplanation": "The cell membrane (also known as the cytoplasmic membrane, and historically referred to as the plasmalemma) is a biological membrane that separates the interior of all cells from the outside environment (the extracellular space). It consists of a lipid bilayer with embedded proteins. The basic function of the cell membrane is to protect the cell from its surroundings. The cell membrane controls the movement of substances in and out of cells and organelles. In this way, it is selectively permeable to ions and organic molecules. In addition, cell membranes are involved in a variety of cellular processes such as cell adhesion, ion conductivity and cell signalling and serve as the attachment surface for several extracellular structures, including the cell wall, the carbohydrate layer called the glycocalyx, and the intracellular network of protein fibers called the cytoskeleton. In the field of synthetic biology, cell membranes can be artificially reassembled.",
+      "counterfactualExplanation": "The cell membrane (also known as the cytoplasmic membrane, and historically referred to as the plasmalemma) is a biological membrane that separates the interior of all cells from the outside environment (the extracellular space). It consists of a lipid bilayer with embedded proteins. The basic function of the cell membrane is to protect the cell from its surroundings. The cell membrane controls the movement of substances in and out of cells and organelles. In this way, it is selectively permeable to ions and organic molecules. In addition, cell membranes are involved in a variety of cellular processes such as cell adhesion, ion conductivity and cell signalling and serve as the attachment surface for several extracellular structures, including the cell wall, the carbohydrate layer called the glycocalyx, and the intracellular network of protein fibers called the cytoskeleton. In the field of synthetic biology, cell membranes can be artificially reassembled.  Task: Generate counterfactual-based explanation.",
       "naturalLanguageExplanation": "The passage explicitly states that 'the cell membrane (also known as the plasma membrane or cytoplasmic membrane)', indicating they are the same structure. This is a direct synonym provided in the text, so the answer is 'Yes'.",
       "highlightedContent": "The cell membrane (also known as <mark>the plasma membrane</mark> or cytoplasmic membrane, and historically referred to as the plasmalemma) is a biological membrane that separates the interior of all cells from the outside environment (the extracellular space). It consists of a lipid bilayer with embedded proteins. The basic function of the cell membrane is to protect the cell from its surroundings. The cell membrane controls the movement of substances in and out of cells and organelles. In this way, it is selectively permeable to ions and organic molecules. In addition, cell membranes are involved in a variety of cellular processes such as cell adhesion, ion conductivity and cell signalling and serve as the attachment surface for several extracellular structures, including the cell wall, the carbohydrate layer called the glycocalyx, and the intracellular network of protein fibers called the cytoskeleton. In the field of synthetic biology, cell membranes can be artificially reassembled."
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "The distinction between the cell membrane and the plasma membrane",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "The function of the cell membrane",
-        "The composition of the cell membrane",
-        "The role of the cell membrane in synthetic biology"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Is the cell membrane and the plasma membrane the same?",
+    "title": "Is the cell membrane and plasma membrane same?",
     "content": "The cell membrane (also known as the plasma membrane or cytoplasmic membrane, and historically referred to as the plasmalemma) is a biological membrane that separates the interior of all cells from the outside environment (the extracellular space). It consists of a lipid bilayer with embedded proteins. The basic function of the cell membrane is to protect the cell from its surroundings. The cell membrane controls the movement of substances in and out of cells and organelles. In this way, it is selectively permeable to ions and organic molecules. In addition, cell membranes are involved in a variety of cellular processes such as cell adhesion, ion conductivity and cell signalling and serve as the attachment surface for several extracellular structures, including the cell wall, the carbohydrate layer called the glycocalyx, and the intracellular network of protein fibers called the cytoskeleton. In the field of synthetic biology, cell membranes can be artificially reassembled.",
     "ratingType": "boolean"
   },
@@ -164,14 +169,15 @@
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "brake fluid's interchangeability with hydraulic fluid",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "types of hydraulic fluid",
-        "automobile fluids",
-        "automobile brake systems"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Can I use hydraulic fluid for brake fluid?",
+    "title": "Can i use hydraulic fluid for brake fluid?",
     "content": "Brake fluid is a type of hydraulic fluid used in hydraulic brake and hydraulic clutch applications in automobiles, motorcycles, light trucks, and some bicycles. It is used to transfer force into pressure, and to amplify braking force. It works because liquids are not appreciably compressible.",
     "ratingType": "boolean"
   },
@@ -189,14 +195,15 @@
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "Female winners of the CMA Entertainer of the Year award",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "How many awards Garth Brooks has won",
-        "The history of the CMA Awards",
-        "The nominees for CMA Entertainer of the Year"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
-    "title": "Has a woman ever won CMA Entertainer of the Year?",
+    "title": "Has a woman ever won cma entertainer of the year?",
     "content": "The Country Music Association Awards is a major awards show in country music, with the highest honor being the award for Entertainer of the Year. Garth Brooks has won the most awards with six. In 1972, Loretta Lynn became the first female artist to be honored with this award. Barbara Mandrell became the first artist to win twice.",
     "ratingType": "boolean"
   },
@@ -214,11 +221,12 @@
     },
     "controlQuestion": {
       "question": "What was the question about?",
-      "correctAnswer": "the occurence of a shooting at a hospital.",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "Why a woman shot a nurse at a hospital",
-        "The number of people injured in the shooting at St. Elisabethen Hospital",
-        "The location of the 2010 Lörrach hospital shooting rampage"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
     "title": "Has there ever been a shooting at a hospital?",
@@ -233,17 +241,18 @@
     "dataset": "boolq",
     "xaiFeatures": {
       "truthfulness": true,
-      "counterfactualExplanation": "The myotonic goat, otherwise known as the fainting goat, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span.",
+      "counterfactualExplanation": "The myotonic goat, otherwise known as the fainting goat, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span.  Task: Generate counterfactual-based explanation.",
       "naturalLanguageExplanation": "The passage explicitly states 'The myotonic goat, otherwise known as the fainting goat', confirming its existence. It describes the goat's behavior of temporarily seizing when startled, which aligns with the term 'fainting goat'. This establishes that fainting goats are real animals with a specific genetic condition.",
-      "highlightedContent": "The myotonic goat, otherwise known as the <mark>fainting goat</mark>, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain 'frozen' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span."
+      "highlightedContent": "The myotonic goat, otherwise known as the <mark>fainting goat</mark>, is a domestic goat that temporarily seizes when it feels panic. If startled by sudden movements or loud noises, they will attempt to escape from the disturbance, generally followed by a startle reaction. In more severe cases, this reaction results in strong tetanic contractions of the agonist and antagonist muscles, causing an uncontrolled stiffness that may cause the goat to remain ``frozen'' in the position that it was in previous to the attack, or cause it to fall to the ground on its side. During an attack, which may last from 5-20 seconds, the goat can often be picked up without any bending or movement occurring in its body. In the case of goats that are less severely affected with the condition, there may be some minor localized stiffness observed in the legs, however, they are still capable of running away. This behaviour is caused by a hereditary genetic disorder called myotonia congenita. The myotonic goat, similar to humans with congenital myotonia, exhibits no obvious muscle wasting, is rarely incapacitated by the condition, and lives a normal and healthy life span."
     },
     "controlQuestion": {
-      "question": "What was the passage about?",
-      "correctAnswer": "A specific genetic condition in goats that causes them to temporarily seize when startled.",
+      "question": "What was the question about?",
+      "correctAnswer": "Correct answer",
       "wrongAnswers": [
-        "The moyotonic goat's diet and habitat",
-        "Severe conditions that affect goats",
-        "Moyotonic goats' ability to run away from danger"
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer",
+        "Wrong Answer"
       ]
     },
     "title": "Is there such a thing as a fainting goat?",

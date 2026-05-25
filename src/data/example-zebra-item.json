@@ -1,0 +1,82 @@
+{
+    "id": 91,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "dataset": "zebralogic",
+    "xaiFeatures": {
+      "truthfulness": "Ranch",
+      "counterfactualExplanation": "CONTEXT: There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:  - Each person has a unique name: `Alice`, `Carol`, `Peter`, `Bob`, `Arnold`, `Eric`  - They all have a unique favorite flower: `carnations`, `iris`, `tulips`, `daffodils`, `lilies`, `roses`  - Each person prefers a unique type of vacation: `camping`, `mountain`, `city`, `beach`, `cultural`, `cruise`  - Each person lives in a unique style of house: `colonial`, `modern`, `mediterranean`, `craftsman`, `ranch`, `victorian`  - People have unique heights: `short`, `very short`, `average`, `tall`, `super tall`, `very tall`  - People have unique hair colors: `red`, `black`, `gray`, `brown`, `auburn`, `blonde`  ## Clues: 1. The person who loves the boquet of lilies is not in the fifth house. 2. The person who is very short is the person who has auburn hair. 3. Arnold is the person who enjoys camping trips. 4. The person who has auburn hair is Eric. 5. The person who goes on cultural tours is somewhere to the left of the person who is super tall. 6. There are two houses between the person who has gray hair and the person who is short. 7. The person who is tall is somewhere to the left of the person who has brown hair. 8. The person in a Craftsman-style house is Bob. 9. The person who is very short is somewhere to the left of the person who has blonde hair. 10. The person who is very tall is Bob. 11. There are two houses between the person who loves the rose bouquet and Peter. 12. The person in a modern-style house is not in the fourth house. 13. The person who prefers city breaks is the person who is short. 14. The person living in a colonial-style house is somewhere to the left of the person who loves the vase of tulips. 15. The person who loves a carnations arrangement is the person who has brown hair. 16. The person who has red hair is the person who loves the boquet of lilies. 17. The person who enjoys mountain retreats is the person residing in a Victorian house. 18. The person who loves a bouquet of daffodils is the person in a modern-style house. 19. Arnold is the person who has an average height. 20. The person in a Mediterranean-style villa is not in the first house. 21. The person who is tall is not in the fifth house. 22. The person who loves the vase of tulips is not in the fourth house. 23. Carol is directly left of Bob. 24. The person who is very tall is the person who goes on cultural tours. 25. The person in a Mediterranean-style villa is the person who has red hair. 26. The person who is super tall is the person who has black hair. 27. Eric is the person who loves the rose bouquet. 28. The person who enjoys mountain retreats is directly left of the person who likes going on cruises.  QUESTION: What is HouseStyle of the person who lives in House 5?  OPTIONS: A) victorian B) mediterranean C) modern D) craftsman E) ranch F) colonial",
+      "naturalLanguageExplanation": "From clues 8 and 10, Bob is in a craftsman house and is very tall. Clue 23 states Carol is directly left of Bob, so Bob cannot be in house 1. Clue 24 says the very tall person (Bob) goes on cultural tours, and clue 5 places cultural tours left of super tall, limiting Bob's position. Testing placements, Bob fits in house 5 because it satisfies Carol in house 4 and other constraints, making house 5 craftsman.",
+      "highlightedContent": [
+        "The person in a <mark>Craftsman-style house is Bob</mark>.",
+        "The person who is <mark>very tall is Bob</mark>.",
+        "The person who is <mark>very tall is the person who goes on cultural tours</mark>.",
+        "The person who goes on cultural tours is <mark>somewhere to the left of the person who is super tall</mark>.",
+        "The person who is super tall is the person who has <mark>black hair</mark>.",
+        "There are two houses between the person who loves the <mark>rose bouquet and Peter</mark>.",
+        "Eric is the person who loves the <mark>rose bouquet</mark>.",
+        "<mark>Carol is directly left of Bob</mark>."
+      ]
+    },
+    "controlQuestion": {
+      "question": "What was the question about?",
+      "correctAnswer": "The style of House 5.",
+      "wrongAnswers": [
+        "Which house has a ranch style.",
+        "What type of flowers Eric likes.",
+        "The hair color of the person who lives in House 5.",
+        "The hair color of the very tall person."
+      ]
+    },
+    "title": "What is the house style of the person who lives in House 5?",
+    "content": "There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:\n - Each person has a unique name: Alice, Carol, Peter, Bob, Arnold, Eric\n - They all have a unique favorite flower: carnations, iris, tulips, daffodils, lilies, roses\n - Each person prefers a unique type of vacation: camping, mountain, city, beach, cultural, cruise\n - Each person lives in a unique style of house: colonial, modern, mediterranean, craftsman, ranch, victorian\n - People have unique heights: short, very short, average, tall, super tall, very tall\n - People have unique hair colors: red, black, gray, brown, auburn, blonde",
+    "clues": [
+      "The person who loves the boquet of lilies is not in the fifth house.",
+      "The person who is very short is the person who has auburn hair.",
+      "Arnold is the person who enjoys camping trips.",
+      "The person who has auburn hair is Eric.",
+      "The person who goes on cultural tours is somewhere to the left of the person who is super tall.",
+      "There are two houses between the person who has gray hair and the person who is short.",
+      "The person who is tall is somewhere to the left of the person who has brown hair.",
+      "The person in a Craftsman-style house is Bob.",
+      "The person who is very short is somewhere to the left of the person who has blonde hair.",
+      "The person who is very tall is Bob.",
+      "There are two houses between the person who loves the rose bouquet and Peter.",
+      "The person in a modern-style house is not in the fourth house.",
+      "The person who prefers city breaks is the person who is short.",
+      "The person living in a colonial-style house is somewhere to the left of the person who loves the vase of tulips.",
+      "The person who loves a carnations arrangement is the person who has brown hair.",
+      "The person who has red hair is the person who loves the boquet of lilies.",
+      "The person who enjoys mountain retreats is the person residing in a Victorian house.",
+      "The person who loves a bouquet of daffodils is the person in a modern-style house.",
+      "Arnold is the person who has an average height.",
+      "The person in a Mediterranean-style villa is not in the first house.",
+      "The person who is tall is not in the fifth house.",
+      "The person who loves the vase of tulips is not in the fourth house.",
+      "Carol is directly left of Bob.",
+      "The person who is very tall is the person who goes on cultural tours.",
+      "The person in a Mediterranean-style villa is the person who has red hair.",
+      "The person who is super tall is the person who has black hair.",
+      "Eric is the person who loves the rose bouquet.",
+      "The person who enjoys mountain retreats is directly left of the person who likes going on cruises."
+    ],
+    "entries":{
+      "Amount":6,
+      "Names": ["Alice", "Arnold", "Bob", "Eric", "Peter", "Carol"],
+      "Flowers": ["carnations", "iris", "tulips", "daffodils", "lilies", "roses"],
+      "Vacation": ["camping", "mountain", "city", "beach", "cultural", "cruise"],
+      "House Style": ["colonial", "modern", "mediterranean", "craftsman", "ranch", "victorian"],
+      "Height": ["short", "very short", "average", "tall", "super tall", "very tall"],
+      "Hair Color": ["red", "black", "gray", "brown", "auburn", "blonde"]
+    },
+    "ratingType": "multiple-choice",
+    "options": [
+      "Victorian",
+      "Mediterranean",
+      "Modern",
+      "Craftsman",
+      "Ranch",
+      "Colonial"
+    ]
+  }

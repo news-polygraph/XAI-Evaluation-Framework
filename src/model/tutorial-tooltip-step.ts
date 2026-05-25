@@ -1,11 +1,12 @@
 export type TutorialTooltipStep =
   | "overview"
-  | "article"
+  | "boolqarticle"
+  | "feverarticle"
+  | "zebralogicarticle"
+  | "draft"
   | "your-rating"
   | "ai-rating"
   | "redo-your-rating"
-  | "readability"
-  | "text-highlights"
-  | "sentiment-highlights"
+  | "salient-highlights"
   | "natural-language-explanation"
-  | 'counterfactual-explanation';
+  | "counterfactual-explanation";

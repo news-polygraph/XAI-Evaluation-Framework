@@ -12,14 +12,17 @@ import { mergedQuestionnaire } from "@/questionnaire/merged-questionnaire";
 import { ExperimentType } from "@/model/experiment-type";
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+import { ZebraLogicDraftProvider } from "./ZebraLogicDraftContext";
 
 const XAIQuestionnaire = ({
   datasetItems,
+  dataset,
   xaiFeature,
   part,
   experimentType,
 }: {
   datasetItems: DatasetItem[];
+  dataset: string;
   xaiFeature: XAIFeatureLevel;
   part: SurveyPart;
   experimentType: ExperimentType;
@@ -44,6 +47,7 @@ const XAIQuestionnaire = ({
 
   let questionnaire: (
     datasetItems: DatasetItem[],
+    dataset: string,
     xaiFeature: XAIFeatureLevel,
     experimentType: ExperimentType
   ) => any;
@@ -63,7 +67,13 @@ const XAIQuestionnaire = ({
   }
 
   registerMyQuestion();
-  const survey = new Model(questionnaire(datasetItems, xaiFeature, experimentType));
+  const survey = new Model(questionnaire(datasetItems, dataset, xaiFeature, experimentType));
+  const urlParams = new URLSearchParams(window.location.search)
+  const isExperimentOnly = urlParams.get('experimentOnly') === 'true'
+  if (isExperimentOnly) {
+    survey.widthMode = 'responsive'
+  }
+
 
   survey.onStarted.add(() => {
     lastPageEntryTime.current = Date.now();
@@ -97,13 +107,14 @@ const XAIQuestionnaire = ({
       sender.currentPage = sender.getPageByName("tutorial-text");
     }
     else if (
-      part === "qualification" &&
+    (part === "qualification" || part === "merged") &&
       options.oldCurrentPage?.name === "control-question"
     ) {
       const hasIncorrectAnswer = sender
         .getQuizQuestions()
+        .filter((q: any) => q.isQualification === true)
         .some((question) => !question.isEmpty() && !question.isAnswerCorrect());
-
+      
       if (hasIncorrectAnswer) {
         survey.doComplete();
       }
@@ -195,7 +206,7 @@ const XAIQuestionnaire = ({
   });
 
   return (
-    <>
+    <ZebraLogicDraftProvider>
       <Head>
         <title>XAI Experiment</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -240,7 +251,7 @@ const XAIQuestionnaire = ({
           </div>
         </div>
       </main>
-    </>
+    </ZebraLogicDraftProvider>
   );
 };
 

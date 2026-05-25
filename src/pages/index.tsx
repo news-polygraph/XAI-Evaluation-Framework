@@ -7,12 +7,11 @@ import { useRouter } from "next/router";
 
 const TASKS = [
   { id: "boolq",      name: "BoolQ"      },
-  { id: "zebralogic", name: "ZebraLogic" },
   { id: "fever",      name: "Fever"      },
+    { id: "zebralogic", name: "ZebraLogic" },
 ];
 
 const FEATURES = [
-  { id: "basic",           name: "Basic"             },
   { id: "salient",         name: "Salient"           },
   { id: "explanations",    name: "Natural Language"  },
   { id: "counterfactual",  name: "Counterfactual"    },
@@ -22,12 +21,10 @@ const EXPERIMENT_TYPES = [
   {
     id: "TwoStep",
     name: "Two-Step",
-    description: "Answer → view AI → re-answer",
   },
   {
     id: "OneStep",
     name: "One-Step",
-    description: "Answer with AI already visible",
   },
 ];
 
@@ -302,13 +299,12 @@ const Home = () => {
                     label={e.name}
                     active={expType === e.id}
                     onClick={() => setExpType(e.id)}
-                    description={e.description}
                   />
                 ))}
               </div>
-              <span css={{ fontSize: "12px", color: "#999", marginTop: "2px" }}>
+              {/* <span css={{ fontSize: "12px", color: "#999", marginTop: "2px" }}>
                 {EXPERIMENT_TYPES.find((e) => e.id === expType)?.description}
-              </span>
+              </span> */}
             </div>
 
             <hr css={S.divider} />

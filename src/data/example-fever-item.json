@@ -1,0 +1,46 @@
+{
+    "id": 49,
+    "isFalsePositive": false,
+    "isTrueNegative": false,
+    "isQualification": false,
+    "dataset": "fever",
+    "xaiFeatures": {
+      "truthfulness": "Refuted",
+      "counterfactualExplanation": "The median white household wealth in the US is 81 times that of the black median household wealth What is the average net worth of a typical white family in the USA compared to that of a typical black family? At $171,000, the net worth of a typical white family is nearly ten times greater than that of a Black family ($17,150) in 2016. What is the average net worth of a typical white family in the USA compared to that of a typical black family? White average wealth ($929,800), which is more influenced by very rich families and does not characterize the typical experience, is 6.7 times greater than Black average wealth ($138,100). Where does the claim get its facts from? An article from the DCFPI.",
+      "naturalLanguageExplanation": "The claim states a median wealth ratio of 81 times, but the text provides data showing typical net worth ratios of 10 times (median) and 6.7 times (average), which are much lower. This discrepancy directly contradicts the claim's specific figure, indicating it is not supported by the facts presented.",
+      "highlightedClaim":"<mark>The median white household wealth in the US is 81 times that of the black median household wealth",
+      "highlightedContent": [
+        "What is the average net worth of a typical white family in the USA compared to that of a typical black family?",
+        "At $171,000, the net worth of a typical white family is nearly ten times greater than that of a Black family ($17,150) in 2016.",
+        "What is the average net worth of a typical white family in the USA compared to that of a typical black family?",
+        "White average wealth ($929,800), which is more influenced by very rich families and does not characterize the typical experience, is 6.7 times greater than Black average wealth ($138,100).",
+        "Where does the claim get it's facts from?",
+        "An article from the DCFPI."
+      ]
+    },
+    "controlQuestion": {
+      "question": "What was the claim about?",
+      "correctAnswer": "The median racial wealth gap in the US.",
+      "wrongAnswers": [
+        "The equality of wealth in the US.",
+        "The average class wealth gap in the US.",
+        "The racial diversity of households in the US."
+      ]
+    },
+    "claim": "The median white household wealth in the US is 81 times that of the black median household wealth",
+    "evidence": [
+      "What is the average net worth of a typical white family in the USA compared to that of a typical black family?",
+      "At $171,000, the net worth of a typical white family is nearly ten times greater than that of a Black family ($17,150) in 2016.",
+      "What is the average net worth of a typical white family in the USA compared to that of a typical black family?",
+      "White average wealth ($929,800), which is more influenced by very rich families and does not characterize the typical experience, is 6.7 times greater than Black average wealth ($138,100).",
+      "Where does the claim get it's facts from?",
+      "An article from the DCFPI."
+    ],
+    "ratingType": "multiple-choice",
+    "options": [
+      "Supported",
+      "Refuted",
+      "Not Enough Evidence",
+      "Conflicting Evidence/Cherry-picking"
+    ]
+}

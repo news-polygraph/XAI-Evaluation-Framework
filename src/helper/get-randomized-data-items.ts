@@ -4,76 +4,81 @@ import feverData from "@/data/fever-items.json";
 import DatasetItem from "@/model/dataset-item";
 import { SurveyPart } from "@/model/survey-part";
 
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pickExcluding(lo: number, hi: number, exclude: number): number {
+  let idx: number;
+  do {
+    idx = lo + Math.floor(Math.random() * (hi - lo + 1));
+  } while (idx === exclude);
+  return idx;
+}
+
+function buildSequence(rawData: any[]): DatasetItem[] {
+  const shuffled = shuffle(rawData);
+  const items: any[] = shuffled.map((item, i) => ({
+    ...item,
+    isQualification: i < 2,
+    isFalsePositive: false,
+    isTrueNegative: false,
+  }));
+
+
+  const fpIdx = 5 + Math.floor(Math.random() * 5); 
+  const tnIdx = pickExcluding(5, 9, fpIdx);
+
+  items[fpIdx].isFalsePositive = true;
+  items[tnIdx].isTrueNegative = true;
+
+  return items as DatasetItem[];
+}
+
+const sequenceCache: Record<string, DatasetItem[]> = {};
+
+function getSequence(task: string): DatasetItem[] {
+  const key = task.toLowerCase();
+  if (!sequenceCache[key]) {
+    let raw: any[] = [];
+    switch (key) {
+      case "boolq":      raw = boolqData as any[];      break;
+      case "zebralogic": raw = zebraLogicData as any[];  break;
+      case "fever":      raw = feverData as any[];       break;
+      default:
+        console.error(`Unknown task: ${task}`);
+        return [];
+    }
+    sequenceCache[key] = buildSequence(raw);
+  }
+  return sequenceCache[key];
+}
+
 const getRandomizedDatasetItems = (
   task: string,
-  // group: number,
   part: SurveyPart
 ): DatasetItem[] => {
-  
-  // 1. Select the correct dataset based on the task
-  let data: any[] = [];
-  switch (task.toLowerCase()) {
-    case "boolq":
-      data = boolqData;
-      break;
-    case "zebralogic":
-      data = zebraLogicData;
-      break;
-    case "fever":
-      data = feverData;
-      break;
-    default:
-      console.error(`Unknown task provided: ${task}`);
-      return [];
-  }
+  const all = getSequence(task);
+  if (!all.length) return [];
 
-  // 2. Run the existing randomization logic on the selected dataset
   switch (part) {
-    case "qualification": {
-      const groupItems = data.filter(
-        (item) => item.isQualification
-      ) as DatasetItem[];
-      
-      console.assert(
-        groupItems.length === 2,
-        `There should be 2 qualification items for ${task}`
-      );
-      
-      // randomize the order of the items
-      return groupItems.sort(() => Math.random() - 0.5);
-    }
-    case "main": {
-      const groupItems = data.filter(
-        (item) => !item.isQualification
-      ) as DatasetItem[];
-      
-      const falsePositive = data.filter((item) => item.isFalsePositive)[0];
-      const trueNegative = data.filter((item) => item.isTrueNegative)[0];
+    // First 2 items of the shuffled sequence
+    case "qualification":
+      return all.filter((item) => item.isQualification);
 
-      // randomize the order of the items
-      groupItems.sort(() => Math.random() - 0.5);
+    // Items 2–9 (the 8 non-qualification ones)
+    case "main":
+      return all.filter((item) => !item.isQualification);
 
-      // add control items
-      if (falsePositive) groupItems.splice(2, 0, falsePositive as DatasetItem);
-      if (trueNegative) groupItems.splice(5, 0, trueNegative as DatasetItem);
+    // All 10
+    case "merged":
+      return all;
 
-      return groupItems;
-    }
-    case "merged": {
-      const groupItems = data;
-      
-      const falsePositive = data.filter((item) => item.isFalsePositive)[0];
-      const trueNegative = data.filter((item) => item.isTrueNegative)[0];
-
-      // randomize the order of the items
-      groupItems.sort(() => Math.random() - 0.5);
-
-      // add control items
-      if (falsePositive) groupItems.splice(3, 0, falsePositive as DatasetItem);
-      if (trueNegative) groupItems.splice(7, 0, trueNegative as DatasetItem);
-
-      return groupItems;
-    }
     default:
       return [];
   }

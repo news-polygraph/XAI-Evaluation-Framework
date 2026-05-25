@@ -13,6 +13,7 @@ import { ExperimentType } from "@/model/experiment-type";
 
 export const mainQuestionnaire = (
   datasetItems: DatasetItem[],
+  dataset: string,
   xaiFeatures: XAIFeatureLevel,
   experimentType: ExperimentType
 ) => {
@@ -26,14 +27,14 @@ export const mainQuestionnaire = (
     showProgressBar: "top",
     pages: [
       mainStartPage,
-      ...tutorial(xaiFeatures),
+      ...tutorial(xaiFeatures, dataset, experimentType),
       youAreReady,
       ...experimentPages(datasetItems, xaiFeatures, "main", experimentType),
-      almostDone,
-      ...aiSystemEvaluation(xaiFeatures),
-      newsDashboardEvaluation,
-      demographics,
-      bonusInfo,
+      // almostDone,
+      // ...aiSystemEvaluation(xaiFeatures),
+      // newsDashboardEvaluation,
+      // demographics,
+      // bonusInfo,
     ],
     completedHtml: `
       <div>

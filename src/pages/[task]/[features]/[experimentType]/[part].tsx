@@ -25,6 +25,7 @@ export default function Home({
   return (
     <XAIQuestionnaire
       datasetItems={datasetItems}
+      dataset={task}
       xaiFeature={features}
       // groupNumber={groupNumber}
       part={part}
